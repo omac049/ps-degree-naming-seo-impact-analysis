@@ -477,7 +477,7 @@ The following universities have established Professional Studies degree programs
 - **Penn State (MPS)**: [`ed.psu.edu`](https://ed.psu.edu/master-professional-studies-mps)
 - **Middle Tennessee State University (MPS)**: [`university-college.mtsu.edu`](https://university-college.mtsu.edu/mps_index/)
 - **Missouri State University (MPS)**: [`gip.missouristate.edu`](https://gip.missouristate.edu/mps/default.htm)
-- **Purdue Global (MPS)**: [`purdueglobal.edu`](https://www.purdueglobal.edu/)
+- **Purdue Global (MPS)**: [`purdueglobal.edu`](https://www.purdueglobal.edu/degree-programs/professional-studies/master-degree-professional-studies/)
 - **Cornell University (MPS)**: [`gradschool.cornell.edu`](https://gradschool.cornell.edu/academic-progress/degrees-fields/cugradfos/)
 
 #### 90-Credit / 3-Year Degree Trend Sources
