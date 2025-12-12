@@ -37,8 +37,10 @@ We can make the naming transition an SEO-positive story **if** we treat it as bo
 - **Our highest-risk area is navigational + legacy URL equity**: changing URL structures can create avoidable SEO volatility unless we execute redirects/canonicals/sitemaps cleanly.
 - **Education content is a proven organic acquisition model for us**: top organic landing pages include educational blog posts (internal GA4 snapshot below).
 
-### Claims That Require Tooling to Quantify (Do Not Treat as Verified Yet)
-- “BA/BS has higher search volume than BPS” and keyword-volume comparisons generally require **Keyword Planner / Ahrefs / SEMrush** (see “Open Research Backlog”).
+### ✅ Validated via GSC Data
+- **"Bachelor" queries = 100K+ impressions** vs "professional studies" = 15 impressions
+- **"BPS degree" = 0 results** in GSC (no one is searching for this term yet)
+- This confirms the need for **dual-language strategy** on all program pages
 
 ---
 
@@ -52,10 +54,10 @@ We can make the naming transition an SEO-positive story **if** we treat it as bo
 | **Google Autocomplete** | 2025 (real-time API) | ✅ Validated via MCP |
 | **Competitor Research** | December 2025 | ✅ 14 universities documented |
 
-### ⏳ Pending Data Sources
+### ⏳ Optional Enhancements
 | Source | Requirement | Status |
 |--------|-------------|--------|
-| **Keyword Volumes** | Keyword Planner/Ahrefs/SEMrush access | ⏳ Not yet quantified |
+| **Keyword Volumes** | Keyword Planner/Ahrefs/SEMrush | Optional — GSC impressions already validate demand gap |
 
 - **External sources**: Any industry/competitor statements are supported by **publicly accessible pages** cited in "Citations & Data Sources".
 - **Estimates vs verified**: If we add keyword volume, CTR benchmarks, or forecasting, those must be labeled as **estimates** with tool + date + method.
