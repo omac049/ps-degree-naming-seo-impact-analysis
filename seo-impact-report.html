@@ -1935,7 +1935,24 @@
         <section class="section">
             <div class="callout">
                 <h3>📊 Data Integrity & Usage Notes <span class="pill internal">Internal</span></h3>
-                <p>GA4 metrics shown reflect <strong>full-year 2025 data</strong> (January 1 – December 12, 2025). Keyword volume comparisons are validated using Google Autocomplete data (December 2025). Search Console query data requires GSC export for complete query mapping.</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                    <div style="padding: 1rem; background: rgba(16,185,129,0.08); border-radius: 10px; border-left: 3px solid var(--success);">
+                        <strong style="color: var(--success);">✓ GA4 Analytics</strong>
+                        <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Full year 2025 (Jan 1 – Dec 12)</p>
+                    </div>
+                    <div style="padding: 1rem; background: rgba(16,185,129,0.08); border-radius: 10px; border-left: 3px solid var(--success);">
+                        <strong style="color: var(--success);">✓ Keyword Validation</strong>
+                        <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Google Autocomplete API (Dec 2025)</p>
+                    </div>
+                    <div style="padding: 1rem; background: rgba(245,158,11,0.1); border-radius: 10px; border-left: 3px solid var(--warning);">
+                        <strong style="color: var(--warning);">⏳ GSC Query Mapping</strong>
+                        <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Requires service account setup for API access</p>
+                    </div>
+                    <div style="padding: 1rem; background: rgba(245,158,11,0.1); border-radius: 10px; border-left: 3px solid var(--warning);">
+                        <strong style="color: var(--warning);">⏳ Keyword Volumes</strong>
+                        <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Requires Keyword Planner/Ahrefs/SEMrush</p>
+                    </div>
+                </div>
             </div>
         </section>
 

@@ -44,8 +44,19 @@ We can make the naming transition an SEO-positive story **if** we treat it as bo
 
 ## Data Integrity & Usage Notes (Read This Before Sharing)
 
-- **Internal analytics**: All GA4 numbers in this document are **UAGC internal** for the **full year 2025** (January 1 – December 12, 2025).
-- **Keyword validation**: Keyword data validated using **Google Autocomplete API** (December 2025) via MCP keyword tools.
+### ✅ Validated Data Sources
+| Source | Date Range | Status |
+|--------|------------|--------|
+| **GA4 Analytics** | Jan 1 – Dec 12, 2025 | ✅ Complete |
+| **Google Autocomplete** | December 2025 | ✅ Validated via MCP |
+| **Competitor Research** | December 2025 | ✅ 14 universities documented |
+
+### ⏳ Pending Data Sources
+| Source | Requirement | Status |
+|--------|-------------|--------|
+| **Google Search Console** | Service account credentials needed | ⏳ Setup required |
+| **Keyword Volumes** | Keyword Planner/Ahrefs/SEMrush access | ⏳ Not yet quantified |
+
 - **External sources**: Any industry/competitor statements are supported by **publicly accessible pages** cited in "Citations & Data Sources".
 - **Estimates vs verified**: If we add keyword volume, CTR benchmarks, or forecasting, those must be labeled as **estimates** with tool + date + method.
 
@@ -293,10 +304,25 @@ Two acceptable paths; pick one and execute cleanly:
 
 ## Open Research Backlog (Remaining Work)
 
-1. **Keyword volume estimates**: Use Keyword Planner/Ahrefs/SEMrush to quantify monthly search volume for validated terms above.
-2. **Query mapping**: Export GSC query data to see which BA/BS queries currently land on our program pages.
-3. **SERP analysis**: Evaluate what page types rank for "what is BPS degree" (FAQ vs blog vs program page).
-4. **Google Trends validation**: Get interest-over-time data once rate limits reset (trends temporarily unavailable).
+### Priority 1: GSC Query Mapping (Estimated: 1–2 hours)
+To enable GSC API access for automated query analysis:
+1. Create a Google Cloud service account with Search Console API access
+2. Download the JSON credentials file
+3. Share UAGC GSC property with the service account email
+4. Configure MCP GSC tool with credentials
+
+**Value**: This will show which BA/BS/degree queries currently land on our program pages, enabling precise redirect mapping.
+
+### Priority 2: Keyword Volume Quantification
+- Use **Keyword Planner** (free with Google Ads account) or **Ahrefs/SEMrush** to quantify monthly search volume for validated terms
+- Focus on: "bachelor of professional studies", "90 credit bachelor degree", "BPS vs BA"
+
+### Priority 3: SERP Analysis
+- Evaluate what page types rank for "what is BPS degree" (FAQ vs blog vs program page)
+- Document competitor SERP patterns to inform content strategy
+
+### Priority 4: Google Trends Validation
+- Get interest-over-time data once rate limits reset (trends temporarily rate-limited)
 
 ---
 
