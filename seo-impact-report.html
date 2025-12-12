@@ -1338,6 +1338,452 @@
             outline-offset: 2px;
             border-radius: 6px;
         }
+
+        /* === UX IMPROVEMENTS === */
+
+        /* TL;DR Summary Box */
+        .tldr {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border: 2px solid #f59e0b;
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tldr::before {
+            content: '⚡';
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            font-size: 4rem;
+            opacity: 0.15;
+        }
+
+        .tldr-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: #f59e0b;
+            color: white;
+            padding: 0.3rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.75rem;
+        }
+
+        .tldr h4 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 1.1rem;
+            color: #92400e;
+            margin-bottom: 0.5rem;
+        }
+
+        .tldr p, .tldr li {
+            color: #78350f;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .tldr ul {
+            margin: 0.5rem 0 0;
+            padding-left: 1.25rem;
+        }
+
+        .tldr li {
+            margin-bottom: 0.35rem;
+        }
+
+        /* Reading Time Indicator */
+        .reading-time {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            margin-left: 1rem;
+            opacity: 0.8;
+        }
+
+        .reading-time svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        /* Collapsible Sections */
+        .collapsible-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            padding: 1rem 1.25rem;
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 0.75rem;
+            transition: all 0.25s ease;
+            user-select: none;
+        }
+
+        .collapsible-header:hover {
+            background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+            border-color: #cbd5e1;
+        }
+
+        .collapsible-header h4 {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .collapsible-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: white;
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .collapsible-header[aria-expanded="true"] .collapsible-toggle {
+            transform: rotate(180deg);
+            background: var(--uagc-red);
+            border-color: var(--uagc-red);
+            color: white;
+        }
+
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            padding: 0 1rem;
+        }
+
+        .collapsible-content.expanded {
+            max-height: 2000px;
+            padding: 1rem 1.25rem;
+        }
+
+        /* Quick Stats Strip */
+        .quick-stats {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 0.75rem;
+        }
+
+        .quick-stat {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: rgba(204,0,51,0.08);
+            color: var(--uagc-red);
+            padding: 0.3rem 0.65rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .quick-stat.success {
+            background: rgba(16,185,129,0.1);
+            color: #059669;
+        }
+
+        .quick-stat.warning {
+            background: rgba(245,158,11,0.12);
+            color: #d97706;
+        }
+
+        /* Key Takeaway Highlight */
+        .key-takeaway {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-left: 4px solid #3b82f6;
+            border-radius: 0 12px 12px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .key-takeaway-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: #3b82f6;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.25rem;
+        }
+
+        .key-takeaway-content h5 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 0.35rem;
+        }
+
+        .key-takeaway-content p {
+            color: #1e3a8a;
+            font-size: 0.9rem;
+            line-height: 1.55;
+        }
+
+        /* Scannable List with Icons */
+        .scan-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .scan-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.85rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .scan-list li:last-child {
+            border-bottom: none;
+        }
+
+        .scan-list-icon {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        .scan-list-icon.do {
+            background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+        }
+
+        .scan-list-icon.dont {
+            background: linear-gradient(135deg, #fee2e2, #fecaca);
+        }
+
+        .scan-list-icon.info {
+            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+        }
+
+        .scan-list-text strong {
+            display: block;
+            font-size: 0.95rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .scan-list-text span {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* Progress Indicator for Sections */
+        .section-progress {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .progress-dots {
+            display: flex;
+            gap: 0.3rem;
+        }
+
+        .progress-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--border);
+            transition: background 0.3s ease;
+        }
+
+        .progress-dot.active {
+            background: var(--uagc-red);
+        }
+
+        .progress-dot.completed {
+            background: var(--success);
+        }
+
+        /* Floating Quick Nav (for longer sections) */
+        .floating-nav {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: var(--shadow-lg);
+            z-index: 50;
+            max-width: 200px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .floating-nav.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .floating-nav h5 {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+        }
+
+        .floating-nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .floating-nav-list li {
+            margin-bottom: 0.4rem;
+        }
+
+        .floating-nav-list a {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 0.4rem 0.6rem;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .floating-nav-list a:hover,
+        .floating-nav-list a.active {
+            background: rgba(204,0,51,0.08);
+            color: var(--uagc-red);
+        }
+
+        .floating-nav-list a::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: currentColor;
+            opacity: 0.4;
+        }
+
+        .floating-nav-list a.active::before {
+            opacity: 1;
+        }
+
+        /* Improved Section Divider */
+        .section-divider {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 3rem 0;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-divider::before,
+        .section-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+        }
+
+        /* Action Card - Clear CTA */
+        .action-card {
+            background: linear-gradient(135deg, var(--uagc-dark) 0%, var(--uagc-navy) 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 2rem 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .action-card-content h3 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 1.35rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .action-card-content p {
+            opacity: 0.85;
+            font-size: 0.95rem;
+        }
+
+        .action-card .btn {
+            flex-shrink: 0;
+        }
+
+        /* Number Badge */
+        .number-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: var(--uagc-red);
+            color: white;
+            border-radius: 50%;
+            font-size: 0.85rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* Responsive improvements for mobile readability */
+        @media (max-width: 768px) {
+            .tldr {
+                padding: 1.25rem 1.5rem;
+            }
+
+            .floating-nav {
+                display: none;
+            }
+
+            .action-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.75rem;
+            }
+
+            .key-takeaway {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1389,34 +1835,96 @@
     </nav>
 
     <main class="container" id="main">
+        <!-- TL;DR Executive Summary -->
+        <div class="tldr">
+            <span class="tldr-label">⚡ TL;DR — 30-Second Summary</span>
+            <h4>The naming transition can be SEO-positive if we execute it as both a migration AND a market education initiative.</h4>
+            <ul>
+                <li><strong>Protect:</strong> Keep high-performing URLs, use 301 redirects only if absolutely necessary</li>
+                <li><strong>Educate:</strong> Build "What is BPS?" hub + comparison content before launch</li>
+                <li><strong>Differentiate:</strong> Own the 90-credit bachelor's narrative (low competition, high opportunity)</li>
+                <li><strong>Measure:</strong> Track organic traffic, conversions, and indexing health for 90 days post-launch</li>
+            </ul>
+        </div>
+
         <!-- Decisions + Success Criteria -->
         <section id="decisions" class="section">
             <div class="section-header">
                 <span class="section-label">Start Here</span>
                 <h2>What We Need to Decide + Success Criteria</h2>
-                <p class="section-desc">This transition is both a content education initiative and a technical SEO migration.</p>
+                <p class="section-desc">This transition is both a content education initiative and a technical SEO migration.
+                    <span class="reading-time">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        2 min read
+                    </span>
+                </p>
             </div>
 
             <div class="card-grid">
                 <div class="callout">
                     <h3>🎯 Objective</h3>
                     <p>Protect and grow <strong>organic discovery and lead generation</strong> while transitioning naming from AA/BA/BS/MA/MS to APS/BPS/MPS, including the 90-credit BPS pilot.</p>
+                    <div class="quick-stats">
+                        <span class="quick-stat success">✓ 115K monthly organic sessions at stake</span>
+                    </div>
                 </div>
                 <div class="callout">
-                    <h3>🤔 Decisions Needed</h3>
-                    <ul>
-                        <li><strong>URL strategy:</strong> preserve high-performing URLs vs introduce new <code>/bps</code>/<code>/mps</code> URLs with redirects.</li>
-                        <li><strong>On-page naming standard:</strong> how we pair "Professional Studies" with plain-language phrasing.</li>
-                        <li><strong>Minimum content set:</strong> BPS explainer + comparison + 90-credit landing before/at launch.</li>
+                    <h3>🤔 3 Decisions Needed</h3>
+                    <ul class="scan-list">
+                        <li>
+                            <span class="number-badge">1</span>
+                            <div class="scan-list-text">
+                                <strong>URL strategy</strong>
+                                <span>Preserve high-performing URLs vs introduce new <code>/bps</code>/<code>/mps</code> URLs with redirects</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="number-badge">2</span>
+                            <div class="scan-list-text">
+                                <strong>On-page naming standard</strong>
+                                <span>How we pair "Professional Studies" with plain-language phrasing</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="number-badge">3</span>
+                            <div class="scan-list-text">
+                                <strong>Minimum content set</strong>
+                                <span>BPS explainer + comparison + 90-credit landing before/at launch</span>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div class="callout">
                     <h3>✅ Success Criteria (First 90 Days)</h3>
-                    <ul>
-                        <li>No sustained organic loss beyond agreed tolerance on degree entry points.</li>
-                        <li>No sustained conversion-rate drop on top degree pages.</li>
-                        <li>No spikes in 404s, duplicates, or canonical conflicts.</li>
-                        <li>Positive trend in discovery for new intent terms (GSC).</li>
+                    <ul class="scan-list">
+                        <li>
+                            <div class="scan-list-icon do">✓</div>
+                            <div class="scan-list-text">
+                                <strong>No sustained organic loss</strong>
+                                <span>Beyond agreed tolerance on degree entry points</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="scan-list-icon do">✓</div>
+                            <div class="scan-list-text">
+                                <strong>No conversion-rate drop</strong>
+                                <span>On top degree pages (RFI / key events)</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="scan-list-icon do">✓</div>
+                            <div class="scan-list-text">
+                                <strong>Stable indexing health</strong>
+                                <span>No spikes in 404s, duplicates, or canonical conflicts</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="scan-list-icon do">✓</div>
+                            <div class="scan-list-text">
+                                <strong>Positive discovery trend</strong>
+                                <span>For "professional studies" + "90-credit" intent terms (GSC)</span>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -1461,7 +1969,21 @@
             <div class="section-header">
                 <span class="section-label">Executive Summary</span>
                 <h2>Key Findings</h2>
-                <p class="section-desc">Our research reveals both opportunities and risks requiring strategic content planning.</p>
+                <p class="section-desc">Our research reveals both opportunities and risks requiring strategic content planning.
+                    <span class="reading-time">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        3 min read
+                    </span>
+                </p>
+            </div>
+
+            <!-- Key Takeaway -->
+            <div class="key-takeaway">
+                <div class="key-takeaway-icon">💡</div>
+                <div class="key-takeaway-content">
+                    <h5>The Bottom Line</h5>
+                    <p>Professional Studies naming is <strong>already validated by tier-1 universities</strong> (Syracuse, Georgetown, Cornell). Our risk isn't the terminology—it's the <em>execution</em>. A clean migration with educational content will protect SEO equity while opening new keyword opportunities.</p>
+                </div>
             </div>
 
             <div class="card-grid">
@@ -1521,12 +2043,26 @@
             </div>
         </section>
 
+        <div class="section-divider">Quick Reference</div>
+
         <!-- New Program Structure -->
         <section id="programs" class="section">
             <div class="section-header">
                 <span class="section-label">Program Changes</span>
                 <h2>New Degree Designations</h2>
-                <p class="section-desc">Transitioning from traditional degree names to Professional Studies nomenclature.</p>
+                <p class="section-desc">Transitioning from traditional degree names to Professional Studies nomenclature.
+                    <span class="reading-time">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        1 min read
+                    </span>
+                </p>
+            </div>
+
+            <!-- Quick Reference TL;DR -->
+            <div class="tldr" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border-color: #3b82f6;">
+                <span class="tldr-label" style="background: #3b82f6;">📋 Quick Reference</span>
+                <h4 style="color: #1e40af;">The New Naming Convention at a Glance</h4>
+                <p style="color: #1e3a8a;"><strong>AA → APS</strong> (Associate of Professional Studies) • <strong>BA/BS → BPS</strong> (Bachelor of Professional Studies, 90 credits) • <strong>MA/MS → MPS</strong> (Master of Professional Studies)</p>
             </div>
 
             <div class="program-table">
@@ -1697,18 +2233,39 @@
             </div>
         </section>
 
+        <div class="section-divider">Competitive Intelligence</div>
+
         <!-- Competitors -->
         <section id="competitors" class="section">
             <div class="section-header">
                 <span class="section-label">Competitive Landscape</span>
                 <h2>Universities Using Professional Studies Degrees</h2>
-                <p class="section-desc">Comprehensive research on institutions ranking for BPS/MPS/APS terminology—organized by brand recognition, content quality, and SEO presence.</p>
+                <p class="section-desc">Comprehensive research on institutions ranking for BPS/MPS/APS terminology—organized by brand recognition, content quality, and SEO presence.
+                    <span class="reading-time">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        4 min read
+                    </span>
+                </p>
+            </div>
+
+            <!-- TL;DR for competitors -->
+            <div class="tldr" style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border-color: #22c55e;">
+                <span class="tldr-label" style="background: #22c55e;">⚡ TL;DR — Competitor Insights</span>
+                <h4 style="color: #166534;">14 universities already use Professional Studies naming successfully</h4>
+                <ul style="color: #15803d;">
+                    <li><strong>Best content model:</strong> Syracuse University's "What is BPS?" page structure</li>
+                    <li><strong>Our differentiation:</strong> 90-credit bachelor's + APS associate (low competition)</li>
+                    <li><strong>Key pattern:</strong> All successful programs pair BPS/MPS with plain-language degree terms</li>
+                </ul>
             </div>
 
             <!-- Tier 1: National Brand Recognition -->
-            <div class="callout" style="margin-bottom: 2rem;">
-                <h3>🏆 Tier 1: National Brand Recognition + Strong SEO</h3>
-                <p style="color: var(--text-secondary); margin-bottom: 1rem;">These institutions have premium brand equity and established Professional Studies programs with high-quality educational content.</p>
+            <div class="collapsible-header" aria-expanded="true" onclick="toggleCollapsible(this)">
+                <h4>🏆 Tier 1: National Brand Recognition + Strong SEO <span class="quick-stat success">5 universities</span></h4>
+                <span class="collapsible-toggle">▼</span>
+            </div>
+            <div class="collapsible-content expanded">
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">These institutions have premium brand equity and established Professional Studies programs with high-quality educational content.</p>
             </div>
             <div class="competitor-grid">
                 <div class="competitor-card">
@@ -1798,9 +2355,12 @@
             </div>
 
             <!-- Tier 2: Regional/Specialized -->
-            <div class="callout" style="margin-top: 2.5rem; margin-bottom: 2rem;">
-                <h3>🎯 Tier 2: Regional/Specialized + Effective Online Presence</h3>
-                <p style="color: var(--text-secondary); margin-bottom: 1rem;">Institutions with strong BPS degree completion programs specifically targeting adult learners and working professionals.</p>
+            <div class="collapsible-header" aria-expanded="true" onclick="toggleCollapsible(this)" style="margin-top: 2rem;">
+                <h4>🎯 Tier 2: Regional/Specialized + Effective Online Presence <span class="quick-stat">5 universities</span></h4>
+                <span class="collapsible-toggle">▼</span>
+            </div>
+            <div class="collapsible-content expanded">
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Institutions with strong BPS degree completion programs specifically targeting adult learners and working professionals.</p>
             </div>
             <div class="competitor-grid">
                 <div class="competitor-card">
@@ -1890,9 +2450,12 @@
             </div>
 
             <!-- Tier 3: Emerging/Niche -->
-            <div class="callout" style="margin-top: 2.5rem; margin-bottom: 2rem;">
-                <h3>🌱 Tier 3: Emerging/Niche Programs</h3>
-                <p style="color: var(--text-secondary); margin-bottom: 1rem;">Institutions with specialized or emerging Professional Studies offerings—including APS programs and interdisciplinary MPS degrees.</p>
+            <div class="collapsible-header" aria-expanded="true" onclick="toggleCollapsible(this)" style="margin-top: 2rem;">
+                <h4>🌱 Tier 3: Emerging/Niche Programs <span class="quick-stat warning">4 universities</span></h4>
+                <span class="collapsible-toggle">▼</span>
+            </div>
+            <div class="collapsible-content expanded">
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Institutions with specialized or emerging Professional Studies offerings—including APS programs and interdisciplinary MPS degrees.</p>
             </div>
             <div class="competitor-grid">
                 <div class="competitor-card">
@@ -2154,12 +2717,37 @@
             </div>
         </section>
 
+        <div class="section-divider">Execution Plan</div>
+
+        <!-- Action Card -->
+        <div class="action-card">
+            <div class="action-card-content">
+                <h3>Ready to Execute?</h3>
+                <p>The runbook below provides a phase-by-phase checklist. Recommended approach: <strong>preserve existing URLs</strong> (Option A) for lowest risk.</p>
+            </div>
+            <a href="#templates" class="btn primary">📄 Get Page Templates</a>
+        </div>
+
         <!-- SEO Migration Runbook -->
         <section id="runbook" class="section">
             <div class="section-header">
                 <span class="section-label">Execution</span>
                 <h2>SEO Migration Runbook</h2>
-                <p class="section-desc">A practical checklist to reduce volatility if/when URLs, titles, and degree labels change.</p>
+                <p class="section-desc">A practical checklist to reduce volatility if/when URLs, titles, and degree labels change.
+                    <span class="reading-time">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        3 min read
+                    </span>
+                </p>
+            </div>
+
+            <!-- Key Takeaway for Runbook -->
+            <div class="key-takeaway" style="margin-bottom: 2rem;">
+                <div class="key-takeaway-icon">🎯</div>
+                <div class="key-takeaway-content">
+                    <h5>Recommended Path: Option A (Preserve URLs)</h5>
+                    <p>Keep existing high-performing URL paths and update content in place. This minimizes redirect overhead and preserves URL equity. Only use Option B (new URLs) if there's a compelling business requirement.</p>
+                </div>
             </div>
 
             <div class="timeline">
@@ -2291,6 +2879,22 @@
         </section>
     </main>
 
+    <!-- Floating Quick Nav -->
+    <nav class="floating-nav" id="floatingNav" aria-label="Quick navigation">
+        <h5>On This Page</h5>
+        <ul class="floating-nav-list">
+            <li><a href="#decisions">Decisions</a></li>
+            <li><a href="#findings">Key Findings</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#analytics">Analytics</a></li>
+            <li><a href="#competitors">Competitors</a></li>
+            <li><a href="#risks">Risks</a></li>
+            <li><a href="#runbook">Runbook</a></li>
+            <li><a href="#templates">Templates</a></li>
+            <li><a href="#citations">Citations</a></li>
+        </ul>
+    </nav>
+
     <!-- Footer -->
     <footer class="report-footer">
         <div class="footer-content">
@@ -2304,6 +2908,20 @@
     <button class="back-to-top" aria-label="Back to top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
 
     <script>
+        // Collapsible Sections
+        function toggleCollapsible(header) {
+            const content = header.nextElementSibling;
+            const isExpanded = header.getAttribute('aria-expanded') === 'true';
+            
+            header.setAttribute('aria-expanded', !isExpanded);
+            
+            if (isExpanded) {
+                content.classList.remove('expanded');
+            } else {
+                content.classList.add('expanded');
+            }
+        }
+
         // Reading Progress Bar
         const progressBar = document.querySelector('.progress-bar');
         
@@ -2380,6 +2998,38 @@
             }
         }
 
+        // Floating Nav visibility
+        const floatingNav = document.getElementById('floatingNav');
+        
+        function updateFloatingNav() {
+            // Show floating nav after scrolling past the hero
+            if (window.scrollY > 600 && window.innerWidth > 1400) {
+                floatingNav.classList.add('visible');
+            } else {
+                floatingNav.classList.remove('visible');
+            }
+
+            // Update active state in floating nav
+            const scrollPos = window.scrollY + 150;
+            const floatingLinks = floatingNav.querySelectorAll('a');
+            
+            floatingLinks.forEach(link => {
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                
+                if (targetSection) {
+                    const sectionTop = targetSection.offsetTop;
+                    const sectionBottom = sectionTop + targetSection.offsetHeight;
+                    
+                    if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                }
+            });
+        }
+
         // Nav bar shadow on scroll
         const navBar = document.querySelector('.nav-bar');
         
@@ -2401,6 +3051,7 @@
                     updateActiveNav();
                     updateBackToTop();
                     updateNavShadow();
+                    updateFloatingNav();
                     ticking = false;
                 });
                 ticking = true;
