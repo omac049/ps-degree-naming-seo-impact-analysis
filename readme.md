@@ -49,7 +49,7 @@ We can make the naming transition an SEO-positive story **if** we treat it as bo
 |--------|------------|--------|
 | **GA4 Analytics** | Jan 1 – Dec 12, 2025 | ✅ Complete |
 | **Google Search Console** | Jan 1 – Dec 10, 2025 | ✅ Complete |
-| **Google Autocomplete** | December 2025 | ✅ Validated via MCP |
+| **Google Autocomplete** | 2025 (real-time API) | ✅ Validated via MCP |
 | **Competitor Research** | December 2025 | ✅ 14 universities documented |
 
 ### ⏳ Pending Data Sources
@@ -290,9 +290,9 @@ Two acceptable paths; pick one and execute cleanly:
 
 ---
 
-## Validated Keyword Research (Google Autocomplete Data — December 2025)
+## Validated Keyword Research (Google Autocomplete Data — 2025)
 
-*Data validated using Google Ads MCP server with live autocomplete API.*
+*Data validated using Google Ads MCP server with live autocomplete API. Autocomplete reflects real-time search behavior patterns.*
 
 ### Bachelor of Professional Studies (BPS) Keywords
 
