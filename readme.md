@@ -221,17 +221,78 @@ Two acceptable paths; pick one and execute cleanly:
 
 ---
 
-## Open Research Backlog (1–2 Days of Work With the Right Tools)
+## Validated Keyword Research (Google Autocomplete Data — December 2025)
 
-1. **Keyword volumes & SERP review** for:
-   - “Bachelor of Professional Studies”
-   - “BPS degree”
-   - “professional studies degree”
-   - “90 credit bachelor’s degree”
-   - “three-year bachelor’s degree”
-2. **Query mapping**: which BA/BS queries currently land on our program pages (GSC query export).
-3. **Competitor SERP patterns**: what page types win for “what is BPS” (FAQ vs blog vs program page).
-4. **Redirect decision**: run scenario analysis (URL preservation vs new slugs) with expected operational impact.
+*Data validated using Google Ads MCP server with live autocomplete API.*
+
+### Bachelor of Professional Studies (BPS) Keywords
+
+| Keyword | Intent Type | Opportunity |
+|---------|-------------|-------------|
+| `bachelor of professional studies` | Core term | Primary target — educational hub |
+| `bachelor of professional studies (bps)` | Definition | Include in H1/title |
+| `bachelor of professional studies vs bachelor of science` | Comparison | High-value comparison page |
+| `bachelor of professional studies jobs` | Career outcome | Address in program pages |
+| `bachelor of professional studies reddit` | Research/validation | Content opportunity |
+| `bps degree meaning` | Definition | FAQ content |
+| `bps degree accreditation` | Credibility concern | Address prominently |
+| `what is bps degree` | Definition | Hub page H1 candidate |
+| `is a bps degree good` | Evaluation | FAQ/testimonial content |
+
+**Note:** "BPS vs BA" query returns unrelated results (bits per second vs baud rate) — confirms need for full "Bachelor of Professional Studies" phrasing.
+
+### Master of Professional Studies (MPS) Keywords
+
+| Keyword | Intent Type | Opportunity |
+|---------|-------------|-------------|
+| `master of professional studies` | Core term | Primary MPS hub |
+| `mps degree salary` | ROI intent | Include salary/outcome data |
+| `mps degree worthless` / `mps degree worthless reddit` | Objection/concern | **Content opportunity** — address value proposition |
+| `master of professional studies cornell` / `georgetown` | Competitor brand | We're competing with tier-1 schools |
+| `master of professional studies in analytics` | Specialization | Program-specific content |
+
+### 90-Credit / 3-Year Degree Keywords
+
+| Keyword | Intent Type | Opportunity |
+|---------|-------------|-------------|
+| `90 credit bachelor's degree` | Core term | Primary landing page target |
+| `90 credit bachelor degree online` | Online intent | Strong match for UAGC |
+| `90 credit bachelor degree programs` | Program search | Landing page |
+| `3 year bachelor degree` | Alternative phrasing | Include in content |
+| `3 year bachelor degree vs 4 year` | Comparison | FAQ content |
+| `3 year bachelor degree programs` | Program search | Landing page |
+| `hlc 90 credit bachelor degree` | Accreditation concern | Address HLC compliance |
+
+### Accelerated / Degree Completion Keywords
+
+| Keyword | Intent Type | Opportunity |
+|---------|-------------|-------------|
+| `accelerated bachelor degree online` | Core term | Align with 90-credit messaging |
+| `accelerated bachelor's degree online accredited` | Credibility | Emphasize accreditation |
+| `finish bachelor's degree fast` | Urgency | Conversion-focused content |
+| `fastest way to finish bachelor's degree` | Question | FAQ content |
+| `finish my bachelor's degree online fast` | Personal intent | Testimonial content |
+
+### Key Insights from Keyword Validation
+
+1. **"BPS" alone has disambiguation issues** — search results mix "Bachelor of Professional Studies" with "bits per second" and other acronyms. Always use full name first.
+
+2. **"Worthless" objection exists** — "mps degree worthless reddit" appears in autocomplete. Create content addressing degree value, career outcomes, and employer recognition.
+
+3. **Competitor brands appear in suggestions** — Cornell, Georgetown, Northeastern, Syracuse all appear in MPS/BPS autocomplete, confirming competitive landscape.
+
+4. **90-credit/3-year opportunity is real** — Both phrasings appear in autocomplete with program-specific variants ("online", "programs", "vs 4 year").
+
+5. **Accreditation is a concern** — "accreditation" and "accredited" appear frequently, suggesting trust-building content is essential.
+
+---
+
+## Open Research Backlog (Remaining Work)
+
+1. **Keyword volume estimates**: Use Keyword Planner/Ahrefs/SEMrush to quantify monthly search volume for validated terms above.
+2. **Query mapping**: Export GSC query data to see which BA/BS queries currently land on our program pages.
+3. **SERP analysis**: Evaluate what page types rank for "what is BPS degree" (FAQ vs blog vs program page).
+4. **Google Trends validation**: Get interest-over-time data once rate limits reset (trends temporarily unavailable).
 
 ---
 
