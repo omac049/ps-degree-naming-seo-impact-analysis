@@ -44,8 +44,9 @@ We can make the naming transition an SEO-positive story **if** we treat it as bo
 
 ## Data Integrity & Usage Notes (Read This Before Sharing)
 
-- **Internal analytics**: All GA4 numbers in this document are **UAGC internal** for the 30-day period ending December 12, 2025.
-- **External sources**: Any industry/competitor statements are supported by **publicly accessible pages** cited in “Citations & Data Sources”.
+- **Internal analytics**: All GA4 numbers in this document are **UAGC internal** for the **full year 2025** (January 1 – December 12, 2025).
+- **Keyword validation**: Keyword data validated using **Google Autocomplete API** (December 2025) via MCP keyword tools.
+- **External sources**: Any industry/competitor statements are supported by **publicly accessible pages** cited in "Citations & Data Sources".
 - **Estimates vs verified**: If we add keyword volume, CTR benchmarks, or forecasting, those must be labeled as **estimates** with tool + date + method.
 
 ---
@@ -189,35 +190,38 @@ Two acceptable paths; pick one and execute cleanly:
 
 ---
 
-## GA4 Analytics Baseline (Internal; Last 30 Days)
+## GA4 Analytics Baseline (Internal; Full Year 2025)
 
-*Data pulled from UAGC GA4 property on December 12, 2025 (internal use).*
+*Data pulled from UAGC GA4 property for January 1 – December 12, 2025 (internal use).*
 
-### Channel Performance Overview
+### Channel Performance Overview (2025 YTD)
 
 | Channel | Sessions | Active Users | Key Events |
 |---------|----------|--------------|------------|
-| Unassigned | 274,355 | 184,651 | 8,054 |
-| Direct | 193,603 | 91,026 | 4,178 |
-| Paid Other | 139,569 | 93,338 | 633 |
-| **Organic Search** | **115,726** | **75,507** | **2,360** |
-| Paid Search | 108,778 | 67,191 | 2,590 |
-| Cross-network | 63,750 | 48,976 | 617 |
-| Referral | 21,489 | 12,318 | 440 |
-| Display | 16,836 | 11,377 | 178 |
+| Direct | 1,994,344 | 1,000,840 | 46,439 |
+| Unassigned | 1,734,313 | 1,095,027 | 101,349 |
+| **Organic Search** | **1,624,766** | **842,692** | **26,680** |
+| Paid Search | 1,432,313 | 933,121 | 77,098 |
+| Paid Other | 1,371,513 | 1,001,802 | 54,068 |
+| Cross-network | 951,972 | 686,654 | 25,089 |
+| Referral | 376,836 | 183,657 | 12,939 |
+| Display | 219,596 | 142,770 | 17,153 |
+| Organic Social | 165,205 | 115,283 | 4,403 |
+| Paid Social | 160,475 | 105,141 | 7,742 |
 
-### Top Organic Search Landing Pages (Internal)
+### Top Landing Pages (2025 YTD)
 
-| Landing Page | Organic Sessions | Channel |
-|--------------|------------------|---------|
-| `/apply-now` | 24,314 | Organic Search |
-| `/` (Homepage) | 19,643 | Organic Search |
-| `/blog/what-difference-between-phd-and-doctorate` | 10,131 | Organic Search |
-| `/blog/how-write-business-plan-step-by-step` | 5,136 | Organic Search |
-| `/blog/5-principles-of-great-management` | 2,322 | Organic Search |
-| `/blog/what-are-5-conflict-resolution-strategies` | 2,195 | Organic Search |
+| Landing Page | Sessions | Key Events | Risk Assessment |
+|--------------|----------|------------|-----------------|
+| `/apply-now` | 1,491,526 | 13,236 | Critical — Conversion |
+| `/` (Homepage) | 1,221,796 | 29,157 | Critical — Brand |
+| `/success/degree-types/bachelors-degrees-v5` | 424,668 | 18,788 | **Critical — BPS Transition** |
+| `/success/degree-types/masters-degrees-v5` | 153,613 | 5,652 | **Critical — MPS Transition** |
+| `/blog/what-difference-between-phd-and-doctorate` | 144,061 | 33 | High — Organic Traffic |
+| `/military` | 141,968 | 4,070 | Monitor |
+| `/blog/how-write-business-plan-step-by-step` | 84,630 | 90 | High — Organic Traffic |
 
-**Implication**: Our “explainers” win in organic. The BPS naming change should ship with explainer content, not just page renames.
+**Key Insight**: The bachelor's degrees page (424K sessions, 18.8K events) and master's degrees page (153K sessions, 5.6K events) are the highest-risk pages for the BPS/MPS transition. Educational blog content continues to drive significant organic traffic.
 
 ---
 
