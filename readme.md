@@ -235,6 +235,76 @@ Two acceptable paths; pick one and execute cleanly:
 
 ---
 
+## Competitor Landscape: Universities Using Professional Studies Degrees
+
+The following universities have established Professional Studies degree programs. This research provides both competitive context and content strategy inspiration.
+
+### Tier 1: National Brand Recognition + Strong SEO Presence
+
+| University | Degree | URL | Key SEO/Content Insights |
+|------------|--------|-----|--------------------------|
+| **Syracuse University** | BPS | professionalstudies.syracuse.edu | Best-in-class "What is BPS?" content. Clear BA/BS/BPS comparison page. Ranks well for informational intent. Strong FAQ section with schema markup. |
+| **Georgetown University** | MPS | scs.georgetown.edu | 20+ MPS programs (Sports, Real Estate, Urban Planning, etc.). Premium "industry expert" positioning. FAQ-rich content with video explainers. |
+| **Cornell University** | MPS | gradschool.cornell.edu | Ivy League credibility. MPS offered across multiple colleges (Agriculture, ILR). Research-practitioner hybrid positioning. |
+| **Penn State** | MPS | ed.psu.edu | MPS in Educational Leadership. Strong "working professional" messaging. Emphasizes practical application of knowledge. |
+| **Purdue Global** | MPS | purdueglobal.edu | Online-first positioning. Targets career changers and working professionals explicitly. Strong brand recognition in adult learning. |
+
+### Tier 2: Regional/Specialized + Effective Online Presence
+
+| University | Degree | URL | Key SEO/Content Insights |
+|------------|--------|-----|--------------------------|
+| **University of Kansas** | BPS | online.ku.edu | "Perfect for working professionals seeking a versatile degree." Strong accessibility messaging. Competency-based options. |
+| **Winthrop University** | BPS | online.winthrop.edu | Competency-based education structure. "Ultimate flexibility" positioning. Explicitly targets degree completion market. |
+| **Florida Atlantic University** | BPS | fau.edu/bps | "Degree completion for working adults." Management + leadership skill emphasis. High-demand workforce skills messaging. |
+| **College of Charleston** | BPS | charleston.edu | Clean meta tags with "bps degree, bps" keywords. Tagline: "Flexible. Practical. Achievable." Strong local SEO. |
+| **Rhode Island College** | BPS | ric.edu | "Finally cross the finish line!" Adult-focused messaging. Work-life balance understanding. Transfer-friendly positioning. |
+
+### Tier 3: Emerging/Niche Programs
+
+| University | Degree | URL | Key SEO/Content Insights |
+|------------|--------|-----|--------------------------|
+| **BYU Pathway Worldwide** | APS + BPS | byupathway.edu | Affordability-first positioning. Clear associate-to-bachelor's pathway. Faith-based differentiation. |
+| **Excelsior University** | BPS | excelsior.edu | BPS in Business Management. "Skills-based curriculum" for leadership roles. Prior learning assessment emphasis. |
+| **Middle Tennessee State (MTSU)** | MPS | university-college.mtsu.edu | Interdisciplinary graduate degree. "Excel in their careers" professional focus. Customizable program structure. |
+| **Missouri State University** | MPS | gip.missouristate.edu | "Hands-on skills and knowledge specific to your field." Practical application emphasis. |
+
+### Competitive Content Patterns We Should Emulate
+
+1. **Syracuse's "What is BPS?" page structure**
+   - Clear definition at the top
+   - Comparison to BA/BS (without unsourced percentages)
+   - "Who is this for?" section targeting working adults
+   - Strong FAQ section with structured data
+   - Clear CTAs to program pages
+
+2. **Georgetown's "What is an MPS?" approach**
+   - Video explainer content (1-2 minutes)
+   - "Industry experts" instructor positioning
+   - Program-specific landing pages with career outcomes
+   - FAQ-rich content for long-tail SEO
+
+3. **Winthrop/FAU's degree completion messaging**
+   - "Finish your degree" positioning
+   - Work-life balance understanding
+   - Transfer credit emphasis
+   - Competency-based/flexible format options
+
+4. **KU Online's accessibility messaging**
+   - "Learn at your own pace"
+   - "Balance academic, personal, and professional responsibilities"
+   - Real-world applications emphasis
+
+### Gaps in Competitor Content (Our Opportunity)
+
+| Gap | UAGC Opportunity |
+|-----|------------------|
+| **90-credit bachelor's degree content** | Very few competitors explicitly market 90-credit programs. We can own this emerging space. |
+| **3-year degree trend content** | Limited educational content explaining the three-year degree movement. Strong SEO opportunity. |
+| **BPS + career outcomes** | Most competitors lack specific salary/job placement data for BPS graduates. |
+| **APS (Associate) content** | Associate of Professional Studies has minimal search presence. Early-mover advantage. |
+
+---
+
 ## Citations & Data Sources
 
 ### Internal (UAGC)
@@ -242,12 +312,31 @@ Two acceptable paths; pick one and execute cleanly:
 - **UAGC Search Console**: linked via GA4 *(internal)*
 
 ### Competitor / Reference Pages (Public)
-- **Syracuse University (BPS program)**: [`https://professionalstudies.syracuse.edu/academics/online/bachelor-of-professional-studies/`](https://professionalstudies.syracuse.edu/academics/online/bachelor-of-professional-studies/)
-- **Syracuse University (BPS FAQs)**: [`https://professionalstudies.syracuse.edu/academics/online/bachelor-of-professional-studies/bps-faqs/`](https://professionalstudies.syracuse.edu/academics/online/bachelor-of-professional-studies/bps-faqs/)
-- **Georgetown University SCS (What is an MPS degree?)**: [`https://scs.georgetown.edu/what-is-mps-degree/`](https://scs.georgetown.edu/what-is-mps-degree/)
-- **Johnson & Wales University (3-year / 90–91 credit degree page)**: [`https://online.jwu.edu/academics/3-yr-90-91-degree/`](https://online.jwu.edu/academics/3-yr-90-91-degree/)
-- **University of Maine System (90-credit adult degree completion approval)**: [`https://www.mainepublic.org/education-news/2025-07-14/umaine-system-board-approves-shortened-adult-degree-completion-program-to-meet-workforce-needs`](https://www.mainepublic.org/education-news/2025-07-14/umaine-system-board-approves-shortened-adult-degree-completion-program-to-meet-workforce-needs)
-- **Three-year degree discussion (syndicated copy of Forbes-titled piece)**: [`https://www.mackeystrategies-mediadatabase.com/op-ed/has-the-time-for-three-year-college-degrees-finally-arrived/`](https://www.mackeystrategies-mediadatabase.com/op-ed/has-the-time-for-three-year-college-degrees-finally-arrived/)
+
+#### Bachelor of Professional Studies (BPS) Programs
+- **Syracuse University (BPS program)**: [`professionalstudies.syracuse.edu`](https://professionalstudies.syracuse.edu/academics/online/bachelor-of-professional-studies/)
+- **Syracuse University (BPS FAQs)**: [`professionalstudies.syracuse.edu/bps-faqs`](https://professionalstudies.syracuse.edu/academics/online/bachelor-of-professional-studies/bps-faqs/)
+- **College of Charleston (BPS)**: [`charleston.edu/bachelor-professional-studies`](https://charleston.edu/academics/majors-minors/bachelor-professional-studies.php)
+- **University of Kansas (BPS Online)**: [`online.ku.edu`](https://online.ku.edu/undergraduate-programs/online-bachelor-professional-studies-bps)
+- **Winthrop University (BPS Online)**: [`online.winthrop.edu`](https://online.winthrop.edu/programs/bps-bachelor-professional-studies)
+- **Excelsior University (BPS Business)**: [`excelsior.edu`](https://www.excelsior.edu/program/bachelor-of-professional-studies-business-management/)
+- **Florida Atlantic University (BPS)**: [`fau.edu/bps`](https://www.fau.edu/bps/)
+- **Rhode Island College (BPS)**: [`ric.edu`](https://www.ric.edu/academics/undergraduate-degree-programs/bachelor-professional-studies)
+- **BYU Pathway (APS + BPS)**: [`byupathway.edu`](https://www.byupathway.edu/)
+
+#### Master of Professional Studies (MPS) Programs
+- **Georgetown University SCS (MPS degrees)**: [`scs.georgetown.edu`](https://scs.georgetown.edu/master-of-professional-studies-degrees/)
+- **Georgetown SCS (What is an MPS?)**: [`scs.georgetown.edu/what-is-mps`](https://scs.georgetown.edu/what-is-mps-degree/)
+- **Penn State (MPS)**: [`ed.psu.edu`](https://ed.psu.edu/master-professional-studies-mps)
+- **Middle Tennessee State University (MPS)**: [`university-college.mtsu.edu`](https://university-college.mtsu.edu/mps_index/)
+- **Missouri State University (MPS)**: [`gip.missouristate.edu`](https://gip.missouristate.edu/mps/default.htm)
+- **Purdue Global (MPS)**: [`purdueglobal.edu`](https://www.purdueglobal.edu/)
+- **Cornell University (MPS)**: [`gradschool.cornell.edu`](https://gradschool.cornell.edu/academics/degrees-and-fields/)
+
+#### 90-Credit / 3-Year Degree Trend Sources
+- **Johnson & Wales University (3-year / 90–91 credit degree page)**: [`online.jwu.edu`](https://online.jwu.edu/academics/3-yr-90-91-degree/)
+- **University of Maine System (90-credit approval)**: [`mainepublic.org`](https://www.mainepublic.org/education-news/2025-07-14/umaine-system-board-approves-shortened-adult-degree-completion-program-to-meet-workforce-needs)
+- **Three-year degree discussion (Forbes op-ed)**: [`mackeystrategies-mediadatabase.com`](https://www.mackeystrategies-mediadatabase.com/op-ed/has-the-time-for-three-year-college-degrees-finally-arrived/)
 
 ---
 
