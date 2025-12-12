@@ -478,7 +478,7 @@ The following universities have established Professional Studies degree programs
 - **Middle Tennessee State University (MPS)**: [`university-college.mtsu.edu`](https://university-college.mtsu.edu/mps_index/)
 - **Missouri State University (MPS)**: [`gip.missouristate.edu`](https://gip.missouristate.edu/mps/default.htm)
 - **Purdue Global (MPS)**: [`purdueglobal.edu`](https://www.purdueglobal.edu/)
-- **Cornell University (MPS)**: [`gradschool.cornell.edu`](https://gradschool.cornell.edu/academics/degrees-and-fields/)
+- **Cornell University (MPS)**: [`gradschool.cornell.edu`](https://gradschool.cornell.edu/academic-progress/degrees-fields/cugradfos/)
 
 #### 90-Credit / 3-Year Degree Trend Sources
 - **Johnson & Wales University (3-year / 90–91 credit degree page)**: [`online.jwu.edu`](https://online.jwu.edu/academics/3-yr-90-91-degree/)
