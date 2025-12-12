@@ -1,0 +1,2174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Studies Degree Naming: SEO Impact Analysis (v2) | UAGC</title>
+    <meta name="description" content="Decision-ready SEO impact analysis and migration runbook for UAGC's transition to Professional Studies naming (APS/BPS/MPS), including a 90-credit BPS pilot.">
+    <meta name="author" content="UAGC Marketing and SEO Strategy Team">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --uagc-red: #CC0033;
+            --uagc-dark: #1a1a2e;
+            --uagc-navy: #16213e;
+            --accent-gold: #e8b923;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --bg-light: #f8fafc;
+            --bg-card: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border: #e2e8f0;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-light);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Reading Progress Bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--uagc-red), var(--accent-gold));
+            width: 0%;
+            z-index: 9999;
+            transition: width 0.1s ease-out;
+        }
+
+        /* Skip Link */
+        .skip-link {
+            position: absolute;
+            left: -999px;
+            top: 0;
+            background: white;
+            color: var(--uagc-dark);
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--uagc-red);
+            border-radius: 10px;
+            z-index: 9999;
+            font-weight: 600;
+        }
+
+        .skip-link:focus {
+            left: 1rem;
+            top: 1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--uagc-dark) 0%, var(--uagc-navy) 40%, #2d1f3d 70%, var(--uagc-red) 100%);
+            color: white;
+            padding: 5rem 2rem;
+            position: relative;
+            overflow: hidden;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            right: -20%;
+            width: 80%;
+            height: 100%;
+            background: radial-gradient(ellipse, rgba(232,185,35,0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.15);
+            animation: fadeInDown 0.6s ease-out;
+        }
+
+        .hero h1 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: clamp(2.25rem, 5vw, 3.75rem);
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            line-height: 1.15;
+            animation: fadeInUp 0.6s ease-out 0.1s both;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.92;
+            max-width: 640px;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+            animation: fadeInUp 0.6s ease-out 0.2s both;
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            font-size: 0.875rem;
+            opacity: 0.75;
+            animation: fadeInUp 0.6s ease-out 0.3s both;
+        }
+
+        .hero-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .hero-actions {
+            margin-top: 2rem;
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.6s ease-out 0.4s both;
+        }
+
+        .btn {
+            appearance: none;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.08);
+            color: white;
+            padding: 0.8rem 1.25rem;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.25s ease;
+        }
+
+        .btn:hover {
+            background: rgba(255,255,255,0.15);
+            border-color: rgba(255,255,255,0.35);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn.primary {
+            background: linear-gradient(135deg, rgba(232,185,35,0.25), rgba(232,185,35,0.15));
+            border-color: rgba(232,185,35,0.5);
+        }
+
+        .btn.primary:hover {
+            background: linear-gradient(135deg, rgba(232,185,35,0.35), rgba(232,185,35,0.25));
+            border-color: rgba(232,185,35,0.7);
+        }
+
+        /* Navigation */
+        .nav-bar {
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .nav-bar.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 0.25rem;
+            overflow-x: auto;
+            scrollbar-width: none;
+            padding: 0.5rem 0;
+        }
+
+        .nav-content::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            white-space: nowrap;
+            padding: 0.6rem 0.9rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--uagc-red);
+            background: rgba(204,0,51,0.06);
+        }
+
+        .nav-link.active {
+            color: var(--uagc-red);
+            background: rgba(204,0,51,0.1);
+            font-weight: 600;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Section Styles */
+        .section {
+            margin-bottom: 4rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-header {
+            margin-bottom: 2rem;
+        }
+
+        .section-label {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--uagc-red), #e8304a);
+            color: white;
+            padding: 0.3rem 0.85rem;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.75px;
+            margin-bottom: 0.75rem;
+        }
+
+        .section h2 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--uagc-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .callout {
+            background: linear-gradient(135deg, #ffffff, #fafbfc);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.5rem 1.75rem;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .callout:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .callout h3 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .callout p, .callout li {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .callout ul {
+            margin-top: 0.75rem;
+            padding-left: 1.25rem;
+        }
+
+        .callout li {
+            margin-bottom: 0.5rem;
+        }
+
+        .callout code {
+            background: rgba(204,0,51,0.08);
+            color: var(--uagc-red);
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-family: 'SF Mono', Monaco, monospace;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            background: #fff;
+            vertical-align: middle;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .pill.internal {
+            border-color: rgba(204,0,51,0.25);
+            color: rgba(204,0,51,0.9);
+            background: rgba(204,0,51,0.06);
+        }
+
+        .pill.external {
+            border-color: rgba(16,185,129,0.25);
+            color: rgba(16,185,129,0.95);
+            background: rgba(16,185,129,0.08);
+        }
+
+        /* Timeline */
+        .timeline {
+            display: grid;
+            gap: 1rem;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--uagc-red), var(--accent-gold));
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.5rem 1.75rem;
+            padding-left: 3.5rem;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 18px;
+            top: 1.75rem;
+            width: 14px;
+            height: 14px;
+            background: white;
+            border: 3px solid var(--uagc-red);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .timeline-item h4 {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+        }
+
+        .timeline-item p, .timeline-item li {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+        }
+
+        .timeline-item ul {
+            margin-top: 0.5rem;
+            padding-left: 1.25rem;
+        }
+
+        /* Citation List */
+        .citation-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .citation-list li {
+            padding: 0.85rem 0;
+            border-bottom: 1px solid var(--border);
+            transition: padding-left 0.2s ease;
+        }
+
+        .citation-list li:last-child {
+            border-bottom: none;
+        }
+
+        .citation-list li:hover {
+            padding-left: 0.5rem;
+        }
+
+        .citation-list a {
+            color: var(--uagc-red);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .citation-list a::after {
+            content: '↗';
+            opacity: 0;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .citation-list a:hover::after {
+            opacity: 1;
+            transform: translate(2px, -2px);
+        }
+
+        .citation-list a:hover {
+            text-decoration: underline;
+        }
+
+        /* Finding Cards */
+        .finding-card {
+            background: var(--bg-card);
+            border-radius: 14px;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            display: flex;
+            gap: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .finding-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .finding-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .finding-icon.positive {
+            background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+        }
+
+        .finding-icon.risk {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+        }
+
+        .finding-icon.opportunity {
+            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+        }
+
+        .finding-content h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.35rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .finding-content p {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .finding-badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            margin-top: 0.75rem;
+        }
+
+        .badge-high {
+            background: linear-gradient(135deg, #fee2e2, #fecaca);
+            color: #dc2626;
+        }
+
+        .badge-medium {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            color: #d97706;
+        }
+
+        .badge-critical {
+            background: linear-gradient(135deg, #fecaca, #fca5a5);
+            color: #b91c1c;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 1.75rem;
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--uagc-red), var(--accent-gold));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .stat-card:hover::before {
+            opacity: 1;
+        }
+
+        .stat-value {
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 2.75rem;
+            font-weight: 700;
+            color: var(--uagc-dark);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-value.highlight {
+            background: linear-gradient(135deg, var(--uagc-red), #e8304a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .stat-change {
+            font-size: 0.8rem;
+            margin-top: 0.6rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.25rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            background: #f1f5f9;
+        }
+
+        .stat-change.positive {
+            color: var(--success);
+            background: rgba(16,185,129,0.1);
+        }
+
+        /* Program Table */
+        .program-table {
+            background: var(--bg-card);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .program-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .program-table th {
+            background: linear-gradient(135deg, var(--uagc-dark), var(--uagc-navy));
+            color: white;
+            padding: 1.1rem 1.5rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .program-table td {
+            padding: 1.1rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.9rem;
+            transition: background 0.2s ease;
+        }
+
+        .program-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .program-table tbody tr:hover td {
+            background: #f8fafc;
+        }
+
+        .degree-badge {
+            display: inline-block;
+            padding: 0.35rem 0.85rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .degree-badge.aps {
+            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+            color: #1d4ed8;
+        }
+
+        .degree-badge.bps {
+            background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+            color: #16a34a;
+        }
+
+        .degree-badge.mps {
+            background: linear-gradient(135deg, #fae8ff, #f5d0fe);
+            color: #a21caf;
+        }
+
+        /* Competitor Cards */
+        .competitor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .competitor-card {
+            background: var(--bg-card);
+            border-radius: 14px;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .competitor-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .competitor-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .competitor-logo {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--uagc-navy), var(--uagc-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+            font-size: 1.2rem;
+            letter-spacing: -0.5px;
+        }
+
+        .competitor-name {
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .competitor-url {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-family: 'SF Mono', Monaco, monospace;
+        }
+
+        .competitor-insight {
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            border-radius: 10px;
+            padding: 1rem 1.25rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .competitor-insight strong {
+            color: var(--text-primary);
+        }
+
+        /* Chart Bars */
+        .bar-chart {
+            margin: 2rem 0;
+        }
+
+        .bar-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .bar-label {
+            width: 180px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            flex-shrink: 0;
+        }
+
+        .bar-container {
+            flex: 1;
+            height: 36px;
+            background: #f1f5f9;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            padding: 0 1rem;
+            justify-content: flex-end;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: white;
+            width: 0;
+            transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .bar-fill.animate {
+            width: var(--target-width);
+        }
+
+        .bar-fill.organic {
+            background: linear-gradient(90deg, var(--uagc-red), #e8304a);
+        }
+
+        .bar-fill.direct {
+            background: linear-gradient(90deg, #6366f1, #818cf8);
+        }
+
+        .bar-fill.paid {
+            background: linear-gradient(90deg, #f59e0b, #fbbf24);
+        }
+
+        .bar-value {
+            width: 110px;
+            text-align: right;
+            font-size: 0.9rem;
+            font-weight: 600;
+            flex-shrink: 0;
+            color: var(--text-secondary);
+        }
+
+        /* Risk Matrix */
+        .risk-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .risk-card {
+            background: var(--bg-card);
+            border-radius: 14px;
+            padding: 1.5rem;
+            border-left: 4px solid;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .risk-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .risk-card.high {
+            border-left-color: var(--danger);
+        }
+
+        .risk-card.medium {
+            border-left-color: var(--warning);
+        }
+
+        .risk-card h4 {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+            line-height: 1.4;
+            flex-wrap: wrap;
+        }
+
+        .risk-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .risk-mitigation {
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            border-radius: 10px;
+            padding: 0.85rem 1rem;
+            font-size: 0.85rem;
+        }
+
+        .risk-mitigation strong {
+            color: var(--success);
+        }
+
+        /* Recommendations */
+        .rec-list {
+            counter-reset: rec-counter;
+        }
+
+        .rec-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.75rem 0;
+            border-bottom: 1px solid var(--border);
+            transition: padding-left 0.3s ease;
+        }
+
+        .rec-item:hover {
+            padding-left: 0.5rem;
+        }
+
+        .rec-item:last-child {
+            border-bottom: none;
+        }
+
+        .rec-number {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--uagc-red), #e8304a);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', Georgia, serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(204,0,51,0.3);
+        }
+
+        .rec-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .rec-content p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .rec-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .rec-tag {
+            background: #f1f5f9;
+            padding: 0.3rem 0.85rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .rec-tag:first-child {
+            background: rgba(204,0,51,0.1);
+            color: var(--uagc-red);
+        }
+
+        /* Data Table */
+        .data-table-wrapper {
+            background: var(--bg-card);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .data-table th {
+            background: #f8fafc;
+            padding: 1rem 1.25rem;
+            text-align: left;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .data-table td {
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.9rem;
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .data-table tbody tr {
+            transition: background 0.2s ease;
+        }
+
+        .data-table tbody tr:hover td {
+            background: #fafafa;
+        }
+
+        .engagement-bar {
+            width: 70px;
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 4px;
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 0.5rem;
+        }
+
+        .engagement-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--success), #34d399);
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        .report-footer {
+            background: linear-gradient(135deg, var(--uagc-dark), var(--uagc-navy));
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .report-footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-logo {
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .footer-text {
+            opacity: 0.8;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .footer-date {
+            opacity: 0.5;
+            font-size: 0.8rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--uagc-red), #e8304a);
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 99;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(204,0,51,0.4);
+        }
+
+        /* Tooltip */
+        [data-tooltip] {
+            position: relative;
+            cursor: help;
+        }
+
+        [data-tooltip]::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-4px);
+            background: var(--uagc-dark);
+            color: white;
+            padding: 0.5rem 0.75rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease;
+            z-index: 100;
+            pointer-events: none;
+        }
+
+        [data-tooltip]:hover::after {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(-8px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 3rem 1.5rem;
+                min-height: auto;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 2rem 1.25rem;
+            }
+
+            .bar-label {
+                width: 100px;
+                font-size: 0.8rem;
+            }
+
+            .bar-value {
+                width: 80px;
+                font-size: 0.8rem;
+            }
+
+            .nav-bar {
+                padding: 0 1rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stat-value {
+                font-size: 2rem;
+            }
+
+            .program-table {
+                overflow-x: auto;
+            }
+
+            .program-table table {
+                min-width: 600px;
+            }
+
+            .rec-item {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .rec-number {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                padding-left: 3rem;
+            }
+
+            .timeline-item::before {
+                left: 14px;
+                width: 12px;
+                height: 12px;
+            }
+
+            .back-to-top {
+                bottom: 1rem;
+                right: 1rem;
+                width: 44px;
+                height: 44px;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .nav-bar,
+            .hero-actions,
+            .skip-link,
+            .back-to-top,
+            .progress-bar {
+                display: none !important;
+            }
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            body {
+                background: white;
+            }
+
+            .hero {
+                background: var(--uagc-dark) !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                padding: 2rem;
+                min-height: auto;
+            }
+
+            .section {
+                opacity: 1 !important;
+                transform: none !important;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .card, .callout, .finding-card, .competitor-card, .risk-card, .stat-card {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                box-shadow: none !important;
+                border: 1px solid #ddd !important;
+            }
+
+            .bar-fill {
+                width: var(--target-width) !important;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Focus states for accessibility */
+        a:focus,
+        button:focus {
+            outline: 2px solid var(--uagc-red);
+            outline-offset: 2px;
+        }
+
+        .nav-link:focus {
+            outline: 2px solid var(--uagc-red);
+            outline-offset: 2px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-bar" aria-hidden="true"></div>
+
+    <!-- Skip Link -->
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- Hero Section -->
+    <header class="hero" id="top">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span>📊</span>
+                SEO Impact Analysis — Version 2.0
+            </div>
+            <h1>Professional Studies<br>Degree Naming Transition</h1>
+            <p class="hero-subtitle">Decision-ready SEO migration + content plan for UAGC's shift to APS/BPS/MPS naming, including the 90-credit BPS pilot program.</p>
+            <div class="hero-meta">
+                <span>📅 December 12, 2025</span>
+                <span>🏛️ University of Arizona Global Campus</span>
+                <span>📈 Version 2.0</span>
+            </div>
+            <div class="hero-actions">
+                <button class="btn primary" type="button" onclick="window.print()">
+                    🖨️ Print / Save PDF
+                </button>
+                <a class="btn" href="#decisions">🧭 Jump to Decisions</a>
+                <a class="btn" href="#runbook">📋 View Runbook</a>
+                <a class="btn" href="#citations">🔗 Citations</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav-bar" role="navigation" aria-label="Main navigation">
+        <div class="nav-content">
+            <a href="#decisions" class="nav-link">Decisions</a>
+            <a href="#findings" class="nav-link">Key Findings</a>
+            <a href="#programs" class="nav-link">Programs</a>
+            <a href="#analytics" class="nav-link">Analytics</a>
+            <a href="#competitors" class="nav-link">Competitors</a>
+            <a href="#risks" class="nav-link">Risks</a>
+            <a href="#recommendations" class="nav-link">Recommendations</a>
+            <a href="#runbook" class="nav-link">Runbook</a>
+            <a href="#templates" class="nav-link">Templates</a>
+            <a href="#citations" class="nav-link">Citations</a>
+        </div>
+    </nav>
+
+    <main class="container" id="main">
+        <!-- Decisions + Success Criteria -->
+        <section id="decisions" class="section">
+            <div class="section-header">
+                <span class="section-label">Start Here</span>
+                <h2>What We Need to Decide + Success Criteria</h2>
+                <p class="section-desc">This transition is both a content education initiative and a technical SEO migration.</p>
+            </div>
+
+            <div class="card-grid">
+                <div class="callout">
+                    <h3>🎯 Objective</h3>
+                    <p>Protect and grow <strong>organic discovery and lead generation</strong> while transitioning naming from AA/BA/BS/MA/MS to APS/BPS/MPS, including the 90-credit BPS pilot.</p>
+                </div>
+                <div class="callout">
+                    <h3>🤔 Decisions Needed</h3>
+                    <ul>
+                        <li><strong>URL strategy:</strong> preserve high-performing URLs vs introduce new <code>/bps</code>/<code>/mps</code> URLs with redirects.</li>
+                        <li><strong>On-page naming standard:</strong> how we pair "Professional Studies" with plain-language phrasing.</li>
+                        <li><strong>Minimum content set:</strong> BPS explainer + comparison + 90-credit landing before/at launch.</li>
+                    </ul>
+                </div>
+                <div class="callout">
+                    <h3>✅ Success Criteria (First 90 Days)</h3>
+                    <ul>
+                        <li>No sustained organic loss beyond agreed tolerance on degree entry points.</li>
+                        <li>No sustained conversion-rate drop on top degree pages.</li>
+                        <li>No spikes in 404s, duplicates, or canonical conflicts.</li>
+                        <li>Positive trend in discovery for new intent terms (GSC).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Integrity -->
+        <section class="section">
+            <div class="callout">
+                <h3>📊 Data Integrity & Usage Notes <span class="pill internal">Internal</span></h3>
+                <p>GA4 metrics shown reflect an internal snapshot (30-day period ending December 12, 2025). Keyword volume comparisons require dedicated tooling (e.g., Keyword Planner/Ahrefs/SEMrush) and should be treated as research until validated.</p>
+            </div>
+        </section>
+
+        <!-- Executive Summary Stats -->
+        <section class="section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value highlight" data-tooltip="GA4 data, last 30 days">115,726</div>
+                    <div class="stat-label">Monthly Organic Sessions</div>
+                    <div class="stat-change positive">↑ Critical to protect</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" data-tooltip="RFI + key conversions">2,360</div>
+                    <div class="stat-label">Key Events from Organic</div>
+                    <div class="stat-change">Last 30 days</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" data-tooltip="Syracuse, Georgetown, Charleston, etc.">7+</div>
+                    <div class="stat-label">Competitor Universities</div>
+                    <div class="stat-change">Already using BPS/MPS</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" data-tooltip="Reduced from standard 120 credits">90</div>
+                    <div class="stat-label">Credit Bachelor's Pilot</div>
+                    <div class="stat-change positive">↑ Trending in Higher Ed</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Findings -->
+        <section id="findings" class="section">
+            <div class="section-header">
+                <span class="section-label">Executive Summary</span>
+                <h2>Key Findings</h2>
+                <p class="section-desc">Our research reveals both opportunities and risks requiring strategic content planning.</p>
+            </div>
+
+            <div class="card-grid">
+                <div class="finding-card">
+                    <div class="finding-icon positive">✅</div>
+                    <div class="finding-content">
+                        <h3>Established Search Presence</h3>
+                        <p>"Bachelor of Professional Studies" has an existing search footprint with multiple universities ranking.</p>
+                        <span class="finding-badge badge-high">High Impact</span>
+                    </div>
+                </div>
+
+                <div class="finding-card">
+                    <div class="finding-icon positive">✅</div>
+                    <div class="finding-content">
+                        <h3>Tier-1 University Adoption</h3>
+                        <p>Syracuse, Georgetown, and other prestigious universities already use BPS/MPS naming.</p>
+                        <span class="finding-badge badge-high">High Impact</span>
+                    </div>
+                </div>
+
+                <div class="finding-card">
+                    <div class="finding-icon risk">⚠️</div>
+                    <div class="finding-content">
+                        <h3>Search Demand Risk <span class="pill internal">Needs validation</span></h3>
+                        <p>Traditional BA/BS language is likely higher-volume than BPS terminology; quantify with keyword tools.</p>
+                        <span class="finding-badge badge-critical">Critical to quantify</span>
+                    </div>
+                </div>
+
+                <div class="finding-card">
+                    <div class="finding-icon opportunity">🚀</div>
+                    <div class="finding-content">
+                        <h3>90-Credit Trend</h3>
+                        <p>Three-year bachelor's programs are gaining momentum—first-mover advantage opportunity.</p>
+                        <span class="finding-badge badge-high">High Opportunity</span>
+                    </div>
+                </div>
+
+                <div class="finding-card">
+                    <div class="finding-icon positive">✅</div>
+                    <div class="finding-content">
+                        <h3>Career-Focused Intent</h3>
+                        <p>"Professional Studies" aligns with career-focused search intent from prospective students.</p>
+                        <span class="finding-badge badge-medium">Medium Impact</span>
+                    </div>
+                </div>
+
+                <div class="finding-card">
+                    <div class="finding-icon opportunity">📚</div>
+                    <div class="finding-content">
+                        <h3>Content Gap Opportunity</h3>
+                        <p>Educational content like "BPS vs BA" has low competition—opportunity to rank quickly.</p>
+                        <span class="finding-badge badge-high">High Opportunity</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Program Structure -->
+        <section id="programs" class="section">
+            <div class="section-header">
+                <span class="section-label">Program Changes</span>
+                <h2>New Degree Designations</h2>
+                <p class="section-desc">Transitioning from traditional degree names to Professional Studies nomenclature.</p>
+            </div>
+
+            <div class="program-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Current</th>
+                            <th>New Designation</th>
+                            <th>Credits</th>
+                            <th>Duration</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>AA (Associate of Arts)</td>
+                            <td><span class="degree-badge aps">APS</span> Associate of Professional Studies</td>
+                            <td>60 credits</td>
+                            <td>104 weeks</td>
+                            <td>Pilot Program</td>
+                        </tr>
+                        <tr>
+                            <td>BA/BS (Bachelor's)</td>
+                            <td><span class="degree-badge bps">BPS</span> Bachelor of Professional Studies</td>
+                            <td>90 credits</td>
+                            <td>156 weeks</td>
+                            <td>90-Credit Pilot</td>
+                        </tr>
+                        <tr>
+                            <td>MA/MS (Master's)</td>
+                            <td><span class="degree-badge mps">MPS</span> Master of Professional Studies</td>
+                            <td>Current</td>
+                            <td>Current</td>
+                            <td>Aligned</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card" style="margin-top: 2rem;">
+                <h3 style="margin-bottom: 1rem; font-family: 'Fraunces', Georgia, serif;">What Sets Professional Studies Apart</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">Competitors commonly position BPS as more career/practice-oriented than traditional BA/BS degrees.</p>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.9rem;"><strong>Note:</strong> The visualization below is <em>illustrative only</em>; actual curriculum structures vary by institution and program.</p>
+                
+                <div class="bar-chart">
+                    <div class="bar-item">
+                        <span class="bar-label">BA (Bachelor of Arts)</span>
+                        <div class="bar-container">
+                            <div class="bar-fill organic" style="--target-width: 72%;">Higher liberal arts emphasis</div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label">BS (Bachelor of Science)</span>
+                        <div class="bar-container">
+                            <div class="bar-fill direct" style="--target-width: 55%;">Balanced emphasis (varies)</div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label">BPS (Professional Studies)</span>
+                        <div class="bar-container">
+                            <div class="bar-fill paid" style="--target-width: 72%;">Higher career/practice emphasis</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GA4 Analytics -->
+        <section id="analytics" class="section">
+            <div class="section-header">
+                <span class="section-label">Current Performance</span>
+                <h2>GA4 Analytics Baseline</h2>
+                <p class="section-desc">Last 30 days of traffic data to establish pre-transition benchmarks.</p>
+            </div>
+
+            <div class="card" style="margin-bottom: 2rem;">
+                <h3 style="margin-bottom: 1.5rem; font-family: 'Fraunces', Georgia, serif;">Traffic by Channel</h3>
+                <div class="bar-chart">
+                    <div class="bar-item">
+                        <span class="bar-label">Organic Search</span>
+                        <div class="bar-container">
+                            <div class="bar-fill organic" style="--target-width: 42%;">115,726</div>
+                        </div>
+                        <span class="bar-value">2,360 events</span>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label">Direct</span>
+                        <div class="bar-container">
+                            <div class="bar-fill direct" style="--target-width: 70%;">193,603</div>
+                        </div>
+                        <span class="bar-value">4,178 events</span>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label">Paid Search</span>
+                        <div class="bar-container">
+                            <div class="bar-fill paid" style="--target-width: 40%;">108,778</div>
+                        </div>
+                        <span class="bar-value">2,590 events</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin-bottom: 1rem; font-family: 'Fraunces', Georgia, serif;">Top-Performing Degree Pages</h3>
+            <div class="data-table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Page</th>
+                            <th>Sessions</th>
+                            <th>Engagement</th>
+                            <th>RFI Submissions</th>
+                            <th>Risk Level</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>/online-degrees/business</strong></td>
+                            <td>9,498</td>
+                            <td>
+                                <span class="engagement-bar"><span class="engagement-fill" style="width: 86%;"></span></span>
+                                86.2%
+                            </td>
+                            <td><strong style="color: var(--success);">1,808</strong></td>
+                            <td><span class="finding-badge badge-medium">Monitor</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>/online-degrees/masters</strong></td>
+                            <td>7,457</td>
+                            <td>
+                                <span class="engagement-bar"><span class="engagement-fill" style="width: 91%;"></span></span>
+                                90.7%
+                            </td>
+                            <td><strong style="color: var(--success);">228</strong></td>
+                            <td><span class="finding-badge badge-critical">Critical</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>/online-degrees/bachelors</strong></td>
+                            <td>5,704</td>
+                            <td>
+                                <span class="engagement-bar"><span class="engagement-fill" style="width: 90%;"></span></span>
+                                89.8%
+                            </td>
+                            <td><strong style="color: var(--success);">352</strong></td>
+                            <td><span class="finding-badge badge-critical">Critical</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>/online-degrees/health-care</strong></td>
+                            <td>4,226</td>
+                            <td>
+                                <span class="engagement-bar"><span class="engagement-fill" style="width: 93%;"></span></span>
+                                93.0%
+                            </td>
+                            <td><strong style="color: var(--success);">117</strong></td>
+                            <td><span class="finding-badge badge-medium">Monitor</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>/online-degrees/associate</strong></td>
+                            <td>2,307</td>
+                            <td>
+                                <span class="engagement-bar"><span class="engagement-fill" style="width: 91%;"></span></span>
+                                91.4%
+                            </td>
+                            <td><strong style="color: var(--success);">152</strong></td>
+                            <td><span class="finding-badge badge-high">High</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Competitors -->
+        <section id="competitors" class="section">
+            <div class="section-header">
+                <span class="section-label">Competitive Landscape</span>
+                <h2>Universities Using Professional Studies</h2>
+                <p class="section-desc">Leading institutions already ranking for BPS/MPS terminology.</p>
+            </div>
+
+            <div class="competitor-grid">
+                <div class="competitor-card">
+                    <div class="competitor-header">
+                        <div class="competitor-logo">SU</div>
+                        <div>
+                            <div class="competitor-name">Syracuse University</div>
+                            <div class="competitor-url">professionalstudies.syracuse.edu</div>
+                        </div>
+                    </div>
+                    <div class="competitor-insight">
+                        <strong>Best-in-class:</strong> Clear "What is BPS" educational content with BA/BS/BPS comparison. Ranks well for informational queries.
+                    </div>
+                </div>
+
+                <div class="competitor-card">
+                    <div class="competitor-header">
+                        <div class="competitor-logo">GU</div>
+                        <div>
+                            <div class="competitor-name">Georgetown University</div>
+                            <div class="competitor-url">scs.georgetown.edu</div>
+                        </div>
+                    </div>
+                    <div class="competitor-insight">
+                        <strong>Premium positioning:</strong> FAQ-rich content with video explainers. Emphasizes "industry experts" as instructors.
+                    </div>
+                </div>
+
+                <div class="competitor-card">
+                    <div class="competitor-header">
+                        <div class="competitor-logo">CC</div>
+                        <div>
+                            <div class="competitor-name">College of Charleston</div>
+                            <div class="competitor-url">charleston.edu/bps</div>
+                        </div>
+                    </div>
+                    <div class="competitor-insight">
+                        <strong>Strong SEO:</strong> Meta keywords include "bps degree, bps". Tagline: "Flexible. Practical. Achievable."
+                    </div>
+                </div>
+
+                <div class="competitor-card">
+                    <div class="competitor-header">
+                        <div class="competitor-logo">PG</div>
+                        <div>
+                            <div class="competitor-name">Purdue Global</div>
+                            <div class="competitor-url">purdueglobal.edu</div>
+                        </div>
+                    </div>
+                    <div class="competitor-insight">
+                        <strong>Online focus:</strong> Strong presence for MPS programs targeting working professionals and career changers.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Risk Assessment -->
+        <section id="risks" class="section">
+            <div class="section-header">
+                <span class="section-label">Risk Analysis</span>
+                <h2>SEO Challenges & Mitigation</h2>
+                <p class="section-desc">Critical risks identified with recommended mitigation strategies.</p>
+            </div>
+
+            <div class="risk-grid">
+                <div class="risk-card high">
+                    <h4>⚠️ Search Demand Risk <span class="pill internal">Needs validation</span></h4>
+                    <p>Traditional "bachelor's degree" / BA / BS language is likely higher-demand than "BPS" terminology. Quantify with keyword tools before making volume claims.</p>
+                    <div class="risk-mitigation">
+                        <strong>Mitigation:</strong> Dual-keyword targeting—include both "Professional Studies" AND traditional degree terms on all program pages.
+                    </div>
+                </div>
+
+                <div class="risk-card high">
+                    <h4>⚠️ Existing Page Rankings at Risk</h4>
+                    <p>Current BA/BS program pages may lose organic rankings during URL/content transition.</p>
+                    <div class="risk-mitigation">
+                        <strong>Mitigation:</strong> Implement proper 301 redirects and canonical tags. Consider preserving URLs while updating content.
+                    </div>
+                </div>
+
+                <div class="risk-card medium">
+                    <h4>⚡ User Unfamiliarity</h4>
+                    <p>Prospective students may not recognize or search for "Professional Studies" terminology.</p>
+                    <div class="risk-mitigation">
+                        <strong>Mitigation:</strong> Create educational content explaining the value proposition and career advantages of BPS degrees.
+                    </div>
+                </div>
+
+                <div class="risk-card medium">
+                    <h4>⚡ Established Competition</h4>
+                    <p>Syracuse, Georgetown, and others already rank for BPS-related keywords.</p>
+                    <div class="risk-mitigation">
+                        <strong>Mitigation:</strong> Differentiate with 90-credit messaging and career-focused positioning unique to UAGC.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations -->
+        <section id="recommendations" class="section">
+            <div class="section-header">
+                <span class="section-label">Action Plan</span>
+                <h2>Strategic Recommendations</h2>
+                <p class="section-desc">Priority actions to protect SEO performance during the transition.</p>
+            </div>
+
+            <div class="card">
+                <div class="rec-list">
+                    <div class="rec-item">
+                        <div class="rec-number">1</div>
+                        <div class="rec-content">
+                            <h4>Create Educational Hub Content</h4>
+                            <p>Build comprehensive "What is a Bachelor of Professional Studies?" and "BPS vs BA vs BS" comparison pages. Syracuse already ranks for these—we need competitive content.</p>
+                            <div class="rec-tags">
+                                <span class="rec-tag">High Priority</span>
+                                <span class="rec-tag">Content Team</span>
+                                <span class="rec-tag">Q1 2026</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rec-item">
+                        <div class="rec-number">2</div>
+                        <div class="rec-content">
+                            <h4>Leverage 90-Credit Narrative</h4>
+                            <p>Create dedicated landing page for the 90-credit bachelor's program. This is a trending topic with first-mover advantage opportunity.</p>
+                            <div class="rec-tags">
+                                <span class="rec-tag">High Priority</span>
+                                <span class="rec-tag">SEO Team</span>
+                                <span class="rec-tag">Immediate</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rec-item">
+                        <div class="rec-number">3</div>
+                        <div class="rec-content">
+                            <h4>Implement Dual-Keyword Strategy</h4>
+                            <p>All program pages should target both Professional Studies AND traditional degree terms. Update meta titles, H1s, and body content accordingly.</p>
+                            <div class="rec-tags">
+                                <span class="rec-tag">Critical</span>
+                                <span class="rec-tag">SEO Team</span>
+                                <span class="rec-tag">Pre-Launch</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rec-item">
+                        <div class="rec-number">4</div>
+                        <div class="rec-content">
+                            <h4>Establish Redirect Strategy</h4>
+                            <p>If URLs must change, implement proper 301 redirects. Consider preserving high-performing URLs (/online-degrees/bachelors) while updating content.</p>
+                            <div class="rec-tags">
+                                <span class="rec-tag">Critical</span>
+                                <span class="rec-tag">Dev Team</span>
+                                <span class="rec-tag">Pre-Launch</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rec-item">
+                        <div class="rec-number">5</div>
+                        <div class="rec-content">
+                            <h4>Monitor Key Metrics Post-Launch</h4>
+                            <p>Track organic sessions (baseline: 115,726/mo), RFI submissions, and rankings weekly for the first 90 days after launch.</p>
+                            <div class="rec-tags">
+                                <span class="rec-tag">Ongoing</span>
+                                <span class="rec-tag">Analytics Team</span>
+                                <span class="rec-tag">Post-Launch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Keywords to Target -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-label">Keyword Strategy</span>
+                <h2>Priority Keywords to Target</h2>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <h4 style="color: var(--uagc-red); margin-bottom: 1rem;">🎯 Tier 1: High-Intent</h4>
+                    <ul style="list-style: none; font-size: 0.9rem;">
+                        <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border);">• Bachelor of Professional Studies online</li>
+                        <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border);">• BPS degree programs</li>
+                        <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border);">• 90 credit bachelor's degree</li>
+                        <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border);">• Accelerated bachelor's degree</li>
+                        <li style="padding: 0.6rem 0;">• Degree completion program</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h4 style="color: var(--warning); margin-bottom: 1rem;">📖 Tier 2: Educational</h4>
+                    <ul style="list-style: none; font-size: 0.9rem;">
+                        <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border);">• BPS vs BA degree</li>
+                        <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border);">• What is a BPS degree</li>
+                        <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border);">• Professional studies vs liberal arts</li>
+                        <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border);">• 3 year bachelor's degree</li>
+                        <li style="padding: 0.6rem 0;">• Professional studies degree worth it</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h4 style="color: var(--success); margin-bottom: 1rem;">💼 Tier 3: Career-Focused</h4>
+                    <ul style="list-style: none; font-size: 0.9rem;">
+                        <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border);">• Professional studies degree jobs</li>
+                        <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border);">• BPS degree salary</li>
+                        <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border);">• Career advancement degree online</li>
+                        <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border);">• Bachelor's for working adults</li>
+                        <li style="padding: 0.6rem 0;">• Finish my degree online</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO Migration Runbook -->
+        <section id="runbook" class="section">
+            <div class="section-header">
+                <span class="section-label">Execution</span>
+                <h2>SEO Migration Runbook</h2>
+                <p class="section-desc">A practical checklist to reduce volatility if/when URLs, titles, and degree labels change.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>🧾 Phase 0 — Discovery <span style="font-weight: 400; color: var(--text-secondary);">(2–3 weeks pre-launch)</span></h4>
+                    <ul>
+                        <li>Inventory impacted URLs and identify "do not break" pages (highest organic + conversions).</li>
+                        <li>Export baselines: GA4 by page; GSC by page/query; crawl/index status.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h4>🛠️ Phase 1 — Build <span style="font-weight: 400; color: var(--text-secondary);">(1–2 weeks pre-launch)</span></h4>
+                    <ul>
+                        <li>Implement dual-language naming (spell out + plain language first mention).</li>
+                        <li>Ship minimum content set: BPS explainer, comparison page, 90-credit landing.</li>
+                        <li>Add FAQ modules where appropriate to support FAQ schema.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h4>🚀 Phase 2 — Launch <span style="font-weight: 400; color: var(--text-secondary);">(Day 0)</span></h4>
+                    <p><strong>Option A (preferred):</strong> Preserve URLs, update on-page content + metadata.</p>
+                    <p><strong>Option B:</strong> New <code>/bps</code>/<code>/mps</code> URLs with one-to-one 301 redirects, updated canonicals, sitemaps, and internal links.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>🩺 Phase 3 — Stabilize <span style="font-weight: 400; color: var(--text-secondary);">(Weeks 1–4)</span></h4>
+                    <ul>
+                        <li>Monitor 404/soft-404, index coverage, rankings, traffic, and conversion deltas daily (first 7–10 days), then weekly.</li>
+                        <li>Fix fast: redirect gaps, canonical mistakes, internal-link stranding.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h4>📈 Phase 4 — Optimize <span style="font-weight: 400; color: var(--text-secondary);">(Weeks 4–12)</span></h4>
+                    <ul>
+                        <li>Expand content clusters: "What can you do with a professional studies degree?", "Is a BPS worth it?", "How the 90-credit bachelor's works."</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page Brief Templates -->
+        <section id="templates" class="section">
+            <div class="section-header">
+                <span class="section-label">Content Ops</span>
+                <h2>Page Brief Templates</h2>
+                <p class="section-desc">Hand-off ready outlines for content/SEO production.</p>
+            </div>
+
+            <div class="card-grid">
+                <div class="callout">
+                    <h3>📄 BPS Hub Page</h3>
+                    <ul>
+                        <li><strong>Working title:</strong> What Is a Bachelor of Professional Studies (BPS)?</li>
+                        <li><strong>Intent:</strong> definition/education + soft conversion</li>
+                        <li><strong>Modules:</strong> definition + who it's for; how it differs; time/credits; FAQs (6–10); CTA to programs.</li>
+                    </ul>
+                </div>
+                <div class="callout">
+                    <h3>⚖️ Comparison Page</h3>
+                    <ul>
+                        <li><strong>Working title:</strong> BPS vs BA vs BS: Which Bachelor's Degree Is Right for You?</li>
+                        <li><strong>Intent:</strong> comparison + conversion assist</li>
+                        <li><strong>Rule:</strong> avoid unverifiable claims unless sourced to published academic policy.</li>
+                    </ul>
+                </div>
+                <div class="callout">
+                    <h3>⚡ 90-Credit Landing Page</h3>
+                    <ul>
+                        <li><strong>Working title:</strong> 90-Credit Bachelor's Degree (BPS) at UAGC</li>
+                        <li><strong>Intent:</strong> accelerated-degree + conversion</li>
+                        <li><strong>Modules:</strong> value prop; eligibility; credit map; FAQs; strong CTA.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Citations -->
+        <section id="citations" class="section">
+            <div class="section-header">
+                <span class="section-label">Sources</span>
+                <h2>Citations & Data Sources</h2>
+                <p class="section-desc">Internal analytics are labeled; external sources are linked to specific public pages.</p>
+            </div>
+
+            <div class="card-grid">
+                <div class="callout">
+                    <h3>🏠 Internal (UAGC) <span class="pill internal">Internal</span></h3>
+                    <ul>
+                        <li>UAGC GA4 property: GA4 dashboard snapshot (December 12, 2025).</li>
+                        <li>UAGC Search Console: linked via GA4.</li>
+                    </ul>
+                </div>
+                <div class="callout">
+                    <h3>🌐 Public Sources <span class="pill external">External</span></h3>
+                    <ul class="citation-list">
+                        <li><a href="https://professionalstudies.syracuse.edu/academics/online/bachelor-of-professional-studies/" target="_blank" rel="noopener noreferrer">Syracuse University — Bachelor of Professional Studies (BPS)</a></li>
+                        <li><a href="https://professionalstudies.syracuse.edu/academics/online/bachelor-of-professional-studies/bps-faqs/" target="_blank" rel="noopener noreferrer">Syracuse University — BPS FAQs</a></li>
+                        <li><a href="https://scs.georgetown.edu/what-is-mps-degree/" target="_blank" rel="noopener noreferrer">Georgetown SCS — What is an MPS degree?</a></li>
+                        <li><a href="https://online.jwu.edu/academics/3-yr-90-91-degree/" target="_blank" rel="noopener noreferrer">Johnson &amp; Wales University — 3-year / 90–91 credit degree</a></li>
+                        <li><a href="https://www.mainepublic.org/education-news/2025-07-14/umaine-system-board-approves-shortened-adult-degree-completion-program-to-meet-workforce-needs" target="_blank" rel="noopener noreferrer">Maine Public — UMaine System 90-credit approval</a></li>
+                        <li><a href="https://www.mackeystrategies-mediadatabase.com/op-ed/has-the-time-for-three-year-college-degrees-finally-arrived/" target="_blank" rel="noopener noreferrer">Three-year degree discussion (syndicated op-ed)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="report-footer">
+        <div class="footer-content">
+            <div class="footer-logo">UAGC</div>
+            <p class="footer-text">Professional Studies Degree Naming: SEO Impact Analysis<br>Prepared for Marketing and SEO Strategy Team</p>
+            <p class="footer-date">Report Generated: December 12, 2025 • Version 2.0 • Data: GA4 (internal) + public citations</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+    <script>
+        // Reading Progress Bar
+        const progressBar = document.querySelector('.progress-bar');
+        
+        function updateProgressBar() {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (scrollTop / docHeight) * 100;
+            progressBar.style.width = progress + '%';
+        }
+
+        // Active Navigation State
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        function updateActiveNav() {
+            const scrollPos = window.scrollY + 120;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + sectionId) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }
+
+        // Scroll-triggered animations for sections
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -100px 0px',
+            threshold: 0.1
+        };
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section').forEach(section => {
+            sectionObserver.observe(section);
+        });
+
+        // Animate bar charts when visible
+        const barObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.bar-fill').forEach(bar => {
+            barObserver.observe(bar);
+        });
+
+        // Back to top button visibility
+        const backToTop = document.querySelector('.back-to-top');
+        
+        function updateBackToTop() {
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        }
+
+        // Nav bar shadow on scroll
+        const navBar = document.querySelector('.nav-bar');
+        
+        function updateNavShadow() {
+            if (window.scrollY > 10) {
+                navBar.classList.add('scrolled');
+            } else {
+                navBar.classList.remove('scrolled');
+            }
+        }
+
+        // Throttle scroll events
+        let ticking = false;
+        
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    updateProgressBar();
+                    updateActiveNav();
+                    updateBackToTop();
+                    updateNavShadow();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        // Initial calls
+        updateProgressBar();
+        updateActiveNav();
+        updateBackToTop();
+        updateNavShadow();
+
+        // Smooth scroll for nav links (fallback for older browsers)
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const target = document.querySelector(targetId);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
