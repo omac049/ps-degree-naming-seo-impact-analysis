@@ -126,7 +126,7 @@ We should publish (or refresh) these pages before/at the naming switch:
 
 ## SEO Migration Runbook (Execution Checklist)
 
-### Phase 0 — Discovery (2–3 weeks before launch)
+### Phase 0 — Discovery
 - Inventory all impacted URLs (degree hubs, program pages, blog posts, internal search pages).
 - Tag “**do not break**” pages: highest organic sessions + conversions (GA4 + GSC).
 - Export baseline:
@@ -134,7 +134,7 @@ We should publish (or refresh) these pages before/at the naming switch:
   - GSC: clicks, impressions, CTR, avg position by page/query
   - Crawl: indexable URLs, canonicals, status codes, internal links (Screaming Frog or similar)
 
-### Phase 1 — Build (1–2 weeks before launch)
+### Phase 1 — Build
 - Implement naming changes in content + metadata using the dual-language standard.
 - Create the Minimum Page Set (BPS hub, comparison, 90-credit landing).
 - Add **FAQ sections** where appropriate to support FAQ schema.
@@ -151,10 +151,10 @@ Two acceptable paths; pick one and execute cleanly:
 - Create new URLs.
 - 301 redirect old → new (one-to-one mapping; avoid chains).
 - Update canonicals, sitemaps, internal links, and navigation.
-- Add GSC annotations + monitor 404s daily for first 2 weeks.
+- Add GSC annotations + monitor 404s daily post-launch.
 
-### Phase 3 — Stabilize (Weeks 1–4)
-- Daily checks (first 7–10 days), then weekly:
+### Phase 3 — Stabilize
+- Daily checks initially, then transition to weekly:
   - 404/soft-404 spikes
   - Index coverage changes
   - Ranking and traffic deltas on priority pages
@@ -164,7 +164,7 @@ Two acceptable paths; pick one and execute cleanly:
   - Canonical mistakes
   - Internal-link stranding
 
-### Phase 4 — Optimize (Weeks 4–12)
+### Phase 4 — Optimize
 - Expand content clusters:
   - “What can you do with a professional studies degree?”
   - “Is a BPS worth it?” (FAQ + outcomes framing)
