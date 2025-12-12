@@ -48,13 +48,13 @@ We can make the naming transition an SEO-positive story **if** we treat it as bo
 | Source | Date Range | Status |
 |--------|------------|--------|
 | **GA4 Analytics** | Jan 1 – Dec 12, 2025 | ✅ Complete |
+| **Google Search Console** | Jan 1 – Dec 10, 2025 | ✅ Complete |
 | **Google Autocomplete** | December 2025 | ✅ Validated via MCP |
 | **Competitor Research** | December 2025 | ✅ 14 universities documented |
 
 ### ⏳ Pending Data Sources
 | Source | Requirement | Status |
 |--------|-------------|--------|
-| **Google Search Console** | Service account credentials needed | ⏳ Setup required |
 | **Keyword Volumes** | Keyword Planner/Ahrefs/SEMrush access | ⏳ Not yet quantified |
 
 - **External sources**: Any industry/competitor statements are supported by **publicly accessible pages** cited in "Citations & Data Sources".
@@ -233,6 +233,60 @@ Two acceptable paths; pick one and execute cleanly:
 | `/blog/how-write-business-plan-step-by-step` | 84,630 | 90 | High — Organic Traffic |
 
 **Key Insight**: The bachelor's degrees page (424K sessions, 18.8K events) and master's degrees page (153K sessions, 5.6K events) are the highest-risk pages for the BPS/MPS transition. Educational blog content continues to drive significant organic traffic.
+
+---
+
+## Google Search Console Baseline (Full Year 2025)
+
+*Data pulled from GSC property `sc-domain:uagc.edu` for January 1 – December 10, 2025.*
+
+### Performance Overview (2025 YTD)
+
+| Metric | Value |
+|--------|-------|
+| **Total Clicks** | 1,926,437 |
+| **Total Impressions** | 166,044,644 |
+| **Average CTR** | 1.16% |
+| **Average Position** | 17.1 |
+
+### Top Search Queries (Clicks)
+
+| Query | Clicks | Impressions | CTR | Position |
+|-------|--------|-------------|-----|----------|
+| uagc student portal | 195,396 | 214,877 | 90.93% | 1.0 |
+| uagc student login | 119,652 | 131,116 | 91.26% | 1.0 |
+| uagc | 111,418 | 250,150 | 44.54% | 1.0 |
+| university of arizona global campus | 60,491 | 173,675 | 34.83% | 1.0 |
+| thesis statement generator | 27,957 | 75,201 | 37.18% | 1.2 |
+| thesis generator | 22,495 | 48,055 | 46.81% | 1.3 |
+| ashford university | 21,255 | 141,150 | 15.06% | 1.2 |
+| phd meaning | 16,122 | 1,412,611 | 1.14% | 4.2 |
+
+### Degree-Related Search Queries
+
+| Query | Clicks | Impressions | CTR | Position |
+|-------|--------|-------------|-----|----------|
+| uagc bachelor degrees | 143 | 228 | 62.72% | 1.0 |
+| uagc bachelor's degree | 56 | 149 | 37.58% | 1.0 |
+| online bachelor's degree | 54 | 14,020 | 0.39% | 69.1 |
+| instructional design bachelor's degree | 44 | 426 | 10.33% | 2.0 |
+| bachelor of education studies | 19 | 467 | 4.07% | 8.8 |
+| bachelor of arts in homeland security | 16 | 560 | 2.86% | 2.8 |
+
+### Top Degree Pages (Organic Search)
+
+| Page | Clicks | Impressions | CTR | Position |
+|------|--------|-------------|-----|----------|
+| /online-degrees | 15,977 | 3,381,510 | 0.47% | 7.6 |
+| /online-degrees/masters | 5,260 | 1,990,605 | 0.26% | 21.0 |
+| /success/degree-types/doctoral-degrees-v5 | 3,779 | 254,996 | 1.48% | 32.5 |
+| /success/degree/doctorate-psychology-v5 | 3,272 | 360,354 | 0.91% | 15.7 |
+| /online-degrees/masters/business-administration | 2,575 | 629,508 | 0.41% | 47.9 |
+| /online-degrees/bachelors | 2,012 | 927,906 | 0.22% | 14.9 |
+| /online-degrees/associate | 1,240 | 600,484 | 0.21% | 23.0 |
+| /online-degrees/masters/psychology | 1,218 | 421,817 | 0.29% | 46.9 |
+
+**Key Insight**: The `/online-degrees/bachelors` page has strong impressions (927K) but relatively low CTR (0.22%), indicating opportunity to improve click-through with better title/descriptions. The `/success/degree-types/bachelors-degrees-v5` page has only 1 click and 210 impressions in GSC, suggesting it may be receiving traffic primarily through internal navigation rather than organic search.
 
 ---
 
