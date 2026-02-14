@@ -5676,6 +5676,33 @@
             sectionObserver.observe(section);
         });
 
+        // Handle direct navigation via hash - make target section visible immediately
+        function showHashTarget() {
+            if (window.location.hash) {
+                const targetSection = document.querySelector(window.location.hash);
+                if (targetSection) {
+                    if (targetSection.classList.contains('section')) {
+                        targetSection.classList.add('visible');
+                    }
+                    // Also make any parent section visible
+                    const parentSection = targetSection.closest('.section');
+                    if (parentSection) {
+                        parentSection.classList.add('visible');
+                    }
+                }
+            }
+        }
+        
+        showHashTarget();
+        window.addEventListener('hashchange', showHashTarget);
+
+        // Fallback: Make all sections visible after 500ms if they haven't animated
+        setTimeout(() => {
+            document.querySelectorAll('.section:not(.visible)').forEach(section => {
+                section.classList.add('visible');
+            });
+        }, 500);
+
         // Animate bar charts when visible
         const barObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
