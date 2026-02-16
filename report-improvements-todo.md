@@ -1,7 +1,7 @@
 # SEO Impact Report — Improvement Todo List
 
 **Created:** January 7, 2026  
-**Status:** In Progress (Phase 1 Complete)  
+**Status:** In Progress (Phase 1 & 2 Complete)  
 **Report:** `seo-impact-report.html`
 
 ---
@@ -164,9 +164,10 @@ Feb 2026 ━━━━━━━━━ Mar 2026 ━━━━━━━━━ Apr 20
 ---
 
 ### 8. Technical SEO Checklist
-- [ ] Create detailed technical requirements
-- [ ] Add to Runbook as pre-launch checklist
+- [x] Create detailed technical requirements
+- [x] Add to Runbook as pre-launch checklist
 - **Location:** Phase 1 of Runbook
+- **Status:** ✅ COMPLETE - Added 6-category checklist with checkboxes and sign-off section
 
 #### Pre-Launch Technical Checklist
 - [ ] FAQ schema implemented on all hub pages
@@ -183,10 +184,11 @@ Feb 2026 ━━━━━━━━━ Mar 2026 ━━━━━━━━━ Apr 20
 ---
 
 ### 9. Internal Linking Strategy
-- [ ] Create site architecture diagram
-- [ ] Define linking rules
-- [ ] Document hub-and-spoke model
+- [x] Create site architecture diagram
+- [x] Define linking rules
+- [x] Document hub-and-spoke model
 - **Location:** New subsection in Content Strategy
+- **Status:** ✅ COMPLETE - Added visual architecture diagram, linking rules by content type, min requirements
 
 **Linking Architecture:**
 ```
@@ -215,10 +217,11 @@ Homepage
 ---
 
 ### 10. Enhanced Content Brief Templates
-- [ ] Add word count targets
-- [ ] Include detailed outlines
-- [ ] Add reference links
+- [x] Add word count targets
+- [x] Include detailed outlines
+- [x] Add reference links
 - **Location:** Update existing Templates section
+- **Status:** ✅ COMPLETE - Added comprehensive requirements table with word counts, H2 outlines, keyword targets
 
 **Template Enhancement Spec:**
 | Element | Requirement |
@@ -283,9 +286,9 @@ Homepage
 5. ✅ Create FAQ Content Bank
 
 ### Phase 2: Content Production (Feb-Mar 2026)
-6. [ ] Add Technical SEO Checklist
-7. [ ] Add Internal Linking Strategy
-8. [ ] Enhance Content Brief Templates
+6. ✅ Add Technical SEO Checklist
+7. ✅ Add Internal Linking Strategy
+8. ✅ Enhance Content Brief Templates
 
 ### Phase 3: Launch Prep (Mar 2026)
 9. [ ] Add Rollback Plan
@@ -306,4 +309,4 @@ Homepage
 
 ---
 
-*Last updated: January 7, 2026 — Phase 1 items implemented*
+*Last updated: January 7, 2026 — Phase 1 & 2 items implemented*
