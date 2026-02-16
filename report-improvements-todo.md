@@ -1,7 +1,7 @@
 # SEO Impact Report — Improvement Todo List
 
 **Created:** January 7, 2026  
-**Status:** In Progress (Phase 1 & 2 Complete)  
+**Status:** In Progress (Phase 1, 2 & 3 Complete)  
 **Report:** `seo-impact-report.html`
 
 ---
@@ -143,10 +143,11 @@ Feb 2026 ━━━━━━━━━ Mar 2026 ━━━━━━━━━ Apr 20
 ---
 
 ### 7. Rollback / Contingency Plan
-- [ ] Define rollback triggers
-- [ ] Document reversal steps
-- [ ] Assign decision authority
+- [x] Define rollback triggers
+- [x] Document reversal steps
+- [x] Assign decision authority
 - **Location:** After Runbook section
+- **Status:** ✅ COMPLETE - Added trigger thresholds, 5-step response protocol, decision authority matrix
 
 **Rollback Triggers:**
 - Organic traffic drops >20% for 14+ consecutive days
@@ -241,10 +242,11 @@ Homepage
 ## Priority: Low (Ongoing Maintenance)
 
 ### 11. Monitoring Dashboard Specification
-- [ ] Define tracking frequency
-- [ ] Set up alerts
-- [ ] Create reporting template
+- [x] Define tracking frequency
+- [x] Set up alerts
+- [x] Create reporting template
 - **Location:** New section in Execution
+- **Status:** ✅ COMPLETE - Added monitoring schedule, alert thresholds (critical/warning/normal), 15 keyword KPIs, weekly report template
 
 **Monitoring Schedule:**
 | Timeframe | Metrics | Tool | Owner |
@@ -291,8 +293,8 @@ Homepage
 8. ✅ Enhance Content Brief Templates
 
 ### Phase 3: Launch Prep (Mar 2026)
-9. [ ] Add Rollback Plan
-10. [ ] Add Monitoring Dashboard Spec
+9. ✅ Add Rollback Plan
+10. ✅ Add Monitoring Dashboard Spec
 
 ### Phase 4: Post-Launch (Apr+ 2026)
 11. [ ] Add DPS/MPS Competitor Analysis
@@ -309,4 +311,4 @@ Homepage
 
 ---
 
-*Last updated: January 7, 2026 — Phase 1 & 2 items implemented*
+*Last updated: January 7, 2026 — Phase 1, 2 & 3 items implemented*

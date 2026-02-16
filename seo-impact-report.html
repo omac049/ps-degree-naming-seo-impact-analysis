@@ -1839,8 +1839,9 @@
             <span style="color: var(--border); padding: 0 0.25rem;">|</span>
             <span style="color: #7c3aed; font-size: 0.7rem; font-weight: 700; padding: 0.4rem 0.5rem; opacity: 0.7;">EXECUTE</span>
             <a href="#runbook" class="nav-link">Runbook</a>
+            <a href="#rollback" class="nav-link">Rollback</a>
+            <a href="#monitoring" class="nav-link">Monitoring</a>
             <a href="#templates" class="nav-link">Templates</a>
-            <a href="#faq-bank" class="nav-link">FAQs</a>
         </div>
     </nav>
 
@@ -1937,8 +1938,9 @@
                     <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">Step-by-step migration checklist and templates</p>
                     <div style="font-size: 0.8rem; color: var(--text-secondary);">
                         <a href="#runbook" style="color: #7c3aed; text-decoration: none;">→ Runbook</a> • 
-                        <a href="#templates" style="color: #7c3aed; text-decoration: none;">Templates</a> • 
-                        <a href="#risks" style="color: #7c3aed; text-decoration: none;">Risks</a>
+                        <a href="#rollback" style="color: #7c3aed; text-decoration: none;">Rollback</a> • 
+                        <a href="#monitoring" style="color: #7c3aed; text-decoration: none;">Monitoring</a> • 
+                        <a href="#templates" style="color: #7c3aed; text-decoration: none;">Templates</a>
                     </div>
                 </div>
             </div>
@@ -5984,6 +5986,422 @@
             </div>
         </section>
 
+        <!-- Rollback / Contingency Plan -->
+        <section id="rollback" class="section">
+            <div class="section-header">
+                <span class="section-label">Risk Management</span>
+                <h2>Rollback & Contingency Plan</h2>
+                <p class="section-desc">Pre-defined triggers and actions if metrics fall outside acceptable thresholds.
+                    <span class="reading-time">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        2 min read
+                    </span>
+                </p>
+            </div>
+
+            <!-- Rollback Triggers -->
+            <div class="card" style="margin-bottom: 2rem; border: 2px solid #ef4444;">
+                <h3 style="margin-bottom: 1rem; font-family: 'Fraunces', Georgia, serif; display: flex; align-items: center; gap: 0.75rem;">
+                    <span style="background: #ef4444; color: white; padding: 0.5rem; border-radius: 8px; font-size: 1.25rem;">🚨</span>
+                    Rollback Triggers — When to Act
+                </h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.9rem;">If ANY of these thresholds are breached, initiate the contingency plan immediately. Do not wait for multiple triggers.</p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+                    <!-- Critical Triggers -->
+                    <div style="background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%); padding: 1.25rem; border-radius: 12px; border: 2px solid #ef4444;">
+                        <h4 style="color: #dc2626; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="background: #ef4444; color: white; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem;">CRITICAL</span>
+                            Traffic & Conversion
+                        </h4>
+                        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.9rem; color: #991b1b;">
+                            <li style="margin-bottom: 0.5rem;"><strong>Organic traffic drops &gt;20%</strong> for 14+ consecutive days</li>
+                            <li style="margin-bottom: 0.5rem;"><strong>Conversion rate drops &gt;30%</strong> on affected pages</li>
+                            <li><strong>Lead volume drops &gt;25%</strong> from organic sources</li>
+                        </ul>
+                    </div>
+
+                    <!-- High Priority Triggers -->
+                    <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 1.25rem; border-radius: 12px; border: 2px solid #f59e0b;">
+                        <h4 style="color: #d97706; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="background: #f59e0b; color: white; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem;">HIGH</span>
+                            Indexing & Technical
+                        </h4>
+                        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.9rem; color: #92400e;">
+                            <li style="margin-bottom: 0.5rem;"><strong>Critical pages not indexed</strong> within 7 days of publish</li>
+                            <li style="margin-bottom: 0.5rem;"><strong>Redirect chains/loops</strong> affecting &gt;10 URLs</li>
+                            <li><strong>404 errors spike &gt;50</strong> on monitored pages</li>
+                        </ul>
+                    </div>
+
+                    <!-- Warning Triggers -->
+                    <div style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); padding: 1.25rem; border-radius: 12px; border: 2px solid #3b82f6;">
+                        <h4 style="color: #1d4ed8; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="background: #3b82f6; color: white; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem;">WARNING</span>
+                            Rankings & Visibility
+                        </h4>
+                        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.9rem; color: #1e40af;">
+                            <li style="margin-bottom: 0.5rem;"><strong>Target keywords drop &gt;10 positions</strong> for 7+ days</li>
+                            <li style="margin-bottom: 0.5rem;"><strong>Impressions drop &gt;30%</strong> week-over-week</li>
+                            <li><strong>CTR drops &gt;20%</strong> on key landing pages</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contingency Actions -->
+            <div class="card" style="margin-bottom: 2rem;">
+                <h3 style="margin-bottom: 1rem; font-family: 'Fraunces', Georgia, serif; display: flex; align-items: center; gap: 0.75rem;">
+                    <span style="background: #7c3aed; color: white; padding: 0.5rem; border-radius: 8px; font-size: 1.25rem;">⚡</span>
+                    Contingency Actions — Response Protocol
+                </h3>
+
+                <div class="timeline" style="margin-bottom: 1.5rem;">
+                    <div class="timeline-item" style="background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%); border-color: #ef4444;">
+                        <h4 style="color: #dc2626;">Step 1: Immediate Pause <span style="font-weight: 400; color: #991b1b; font-size: 0.85rem;">(Within 1 hour)</span></h4>
+                        <ul>
+                            <li><strong>Stop all further changes</strong> — freeze deployments, content updates, redirect changes</li>
+                            <li>Document current state: screenshot GSC, GA4, and ranking data</li>
+                            <li>Identify scope: which pages/URLs are affected?</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item" style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-color: #f59e0b;">
+                        <h4 style="color: #d97706;">Step 2: Stakeholder Notification <span style="font-weight: 400; color: #92400e; font-size: 0.85rem;">(Within 24 hours)</span></h4>
+                        <ul>
+                            <li><strong>Notify Marketing Lead</strong> (accountable per RACI)</li>
+                            <li>Brief SEO Team lead and Dev Team lead</li>
+                            <li>Prepare initial impact assessment and timeline for resolution</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Step 3: Root Cause Analysis <span style="font-weight: 400; color: var(--text-secondary); font-size: 0.85rem;">(Within 48 hours)</span></h4>
+                        <ul>
+                            <li>Check GSC for crawl errors, indexing issues, manual actions</li>
+                            <li>Review redirect mappings for loops or chains</li>
+                            <li>Audit internal links for broken references</li>
+                            <li>Compare pre/post content changes for unintended removals</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item" style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); border-color: #10b981;">
+                        <h4 style="color: #059669;">Step 4: Implement Fix or Revert <span style="font-weight: 400; color: #047857; font-size: 0.85rem;">(Based on RCA)</span></h4>
+                        <ul>
+                            <li><strong>If redirect issue:</strong> Fix mapping, clear redirect chains, resubmit to GSC</li>
+                            <li><strong>If content issue:</strong> Restore previous version from backup/CMS history</li>
+                            <li><strong>If indexing issue:</strong> Remove noindex, fix canonicals, request re-indexing</li>
+                            <li><strong>If URL change caused:</strong> Restore original URLs + content (Option A fallback)</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Step 5: Monitor Recovery <span style="font-weight: 400; color: var(--text-secondary); font-size: 0.85rem;">(7-14 days)</span></h4>
+                        <ul>
+                            <li>Daily monitoring of affected metrics</li>
+                            <li>Document recovery timeline for post-mortem</li>
+                            <li>Conduct post-mortem when metrics stabilize</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Decision Authority -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+                <div style="background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); padding: 1.25rem; border-radius: 12px; border: 2px solid #7c3aed;">
+                    <h4 style="color: #7c3aed; margin-bottom: 0.75rem;">🔑 Decision Authority</h4>
+                    <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.9rem; color: #5b21b6;">
+                        <li><strong>Pause deployment:</strong> SEO Lead</li>
+                        <li><strong>Revert content:</strong> Marketing Lead</li>
+                        <li><strong>Restore URLs:</strong> Tech Lead + SEO Lead</li>
+                        <li><strong>Escalation:</strong> VP Marketing</li>
+                    </ul>
+                </div>
+                <div style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); padding: 1.25rem; border-radius: 12px; border: 2px solid #64748b;">
+                    <h4 style="color: #475569; margin-bottom: 0.75rem;">📞 Emergency Contacts</h4>
+                    <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.9rem; color: #64748b;">
+                        <li><strong>SEO Team:</strong> [Add contact]</li>
+                        <li><strong>Dev Team:</strong> [Add contact]</li>
+                        <li><strong>Marketing Lead:</strong> [Add contact]</li>
+                        <li><strong>After-hours:</strong> [Add contact]</li>
+                    </ul>
+                </div>
+                <div style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); padding: 1.25rem; border-radius: 12px; border: 2px solid #10b981;">
+                    <h4 style="color: #059669; margin-bottom: 0.75rem;">📁 Backup Resources</h4>
+                    <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.9rem; color: #047857;">
+                        <li><strong>CMS history:</strong> [URL/location]</li>
+                        <li><strong>Pre-launch snapshot:</strong> [Date saved]</li>
+                        <li><strong>Redirect map backup:</strong> [File location]</li>
+                        <li><strong>GSC baseline export:</strong> [File location]</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Key Takeaway -->
+            <div class="key-takeaway">
+                <div class="key-takeaway-icon">⚠️</div>
+                <div class="key-takeaway-content">
+                    <h5>Golden Rule: Act Fast, Document Everything</h5>
+                    <p>The first 48-72 hours after detecting an issue are critical. <strong>Speed of response</strong> directly impacts recovery time. Every rollback action should be documented for the post-mortem and to prevent recurrence.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Monitoring Dashboard Specification -->
+        <section id="monitoring" class="section">
+            <div class="section-header">
+                <span class="section-label">Performance Tracking</span>
+                <h2>Monitoring Dashboard Specification</h2>
+                <p class="section-desc">Tracking schedule, alert thresholds, and reporting cadence for post-launch monitoring.
+                    <span class="reading-time">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        3 min read
+                    </span>
+                </p>
+            </div>
+
+            <!-- Monitoring Schedule -->
+            <div class="card" style="margin-bottom: 2rem;">
+                <h3 style="margin-bottom: 1rem; font-family: 'Fraunces', Georgia, serif; display: flex; align-items: center; gap: 0.75rem;">
+                    <span style="background: #3b82f6; color: white; padding: 0.5rem; border-radius: 8px; font-size: 1.25rem;">📊</span>
+                    Monitoring Schedule — By Timeframe
+                </h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.9rem;">Follow this monitoring cadence starting from the April 2026 DPS/MPS launch date. Intensity decreases as metrics stabilize.</p>
+
+                <div class="program-table" style="margin-bottom: 1.5rem;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Timeframe</th>
+                                <th>Metrics to Track</th>
+                                <th>Tool</th>
+                                <th>Owner</th>
+                                <th style="text-align: center;">Frequency</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);">
+                                <td><strong>Days 1-14</strong><br><span style="font-size: 0.75rem; color: #991b1b;">Critical Period</span></td>
+                                <td>Index status, 404 errors, crawl errors</td>
+                                <td>Google Search Console</td>
+                                <td>SEO Team</td>
+                                <td style="text-align: center;"><span style="background: #ef4444; color: white; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">Daily</span></td>
+                            </tr>
+                            <tr style="background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);">
+                                <td><strong>Days 1-14</strong><br><span style="font-size: 0.75rem; color: #991b1b;">Critical Period</span></td>
+                                <td>Traffic to new DPS/MPS pages, bounce rate</td>
+                                <td>GA4</td>
+                                <td>SEO Team</td>
+                                <td style="text-align: center;"><span style="background: #ef4444; color: white; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">Daily</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Weeks 2-8</strong><br><span style="font-size: 0.75rem; color: var(--text-secondary);">Stabilization</span></td>
+                                <td>Keyword rankings for 15 target keywords</td>
+                                <td>Rank Tracker / GSC</td>
+                                <td>SEO Team</td>
+                                <td style="text-align: center;"><span style="background: #f59e0b; color: white; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">Weekly</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Weeks 2-8</strong><br><span style="font-size: 0.75rem; color: var(--text-secondary);">Stabilization</span></td>
+                                <td>Conversion rates (RFI submissions)</td>
+                                <td>GA4</td>
+                                <td>Marketing</td>
+                                <td style="text-align: center;"><span style="background: #f59e0b; color: white; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">Weekly</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Monthly</strong><br><span style="font-size: 0.75rem; color: var(--text-secondary);">Ongoing</span></td>
+                                <td>Full content performance report</td>
+                                <td>GA4 + GSC</td>
+                                <td>SEO Lead</td>
+                                <td style="text-align: center;"><span style="background: #10b981; color: white; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">Monthly</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Quarterly</strong><br><span style="font-size: 0.75rem; color: var(--text-secondary);">Review</span></td>
+                                <td>Full SEO audit, content gap analysis</td>
+                                <td>All tools</td>
+                                <td>SEO Team</td>
+                                <td style="text-align: center;"><span style="background: #7c3aed; color: white; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">Quarterly</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Alert Thresholds -->
+            <div class="card" style="margin-bottom: 2rem; border: 2px solid #f59e0b;">
+                <h3 style="margin-bottom: 1rem; font-family: 'Fraunces', Georgia, serif; display: flex; align-items: center; gap: 0.75rem;">
+                    <span style="background: #f59e0b; color: white; padding: 0.5rem; border-radius: 8px; font-size: 1.25rem;">🔔</span>
+                    Alert Thresholds — Automated Notifications
+                </h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.9rem;">Set up these alerts in GA4 and GSC to catch issues before they become critical. Each threshold triggers the corresponding action.</p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+                    <!-- Critical Alerts -->
+                    <div style="background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%); padding: 1.25rem; border-radius: 12px; border-left: 4px solid #ef4444;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                            <span style="font-size: 1.5rem;">🔴</span>
+                            <h4 style="color: #dc2626; margin: 0;">Critical Alerts</h4>
+                        </div>
+                        <p style="font-size: 0.8rem; color: #991b1b; margin-bottom: 0.75rem;"><strong>Action:</strong> Initiate rollback protocol immediately</p>
+                        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem; color: #7f1d1d;">
+                            <li style="margin-bottom: 0.5rem;">Traffic drop <strong>&gt;20%</strong> vs previous period</li>
+                            <li style="margin-bottom: 0.5rem;">New pages <strong>not indexed after 7 days</strong></li>
+                            <li style="margin-bottom: 0.5rem;"><strong>&gt;50 new 404 errors</strong> in 24 hours</li>
+                            <li>Conversion rate drops <strong>&gt;30%</strong></li>
+                        </ul>
+                    </div>
+
+                    <!-- Warning Alerts -->
+                    <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 1.25rem; border-radius: 12px; border-left: 4px solid #f59e0b;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                            <span style="font-size: 1.5rem;">🟡</span>
+                            <h4 style="color: #d97706; margin: 0;">Warning Alerts</h4>
+                        </div>
+                        <p style="font-size: 0.8rem; color: #92400e; margin-bottom: 0.75rem;"><strong>Action:</strong> Investigate within 24 hours</p>
+                        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem; color: #78350f;">
+                            <li style="margin-bottom: 0.5rem;">Traffic drop <strong>&gt;10%</strong> vs previous period</li>
+                            <li style="margin-bottom: 0.5rem;">Target keywords drop <strong>&gt;5 positions</strong></li>
+                            <li style="margin-bottom: 0.5rem;">Impressions drop <strong>&gt;15%</strong> week-over-week</li>
+                            <li>Bounce rate increases <strong>&gt;20%</strong></li>
+                        </ul>
+                    </div>
+
+                    <!-- Normal Range -->
+                    <div style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); padding: 1.25rem; border-radius: 12px; border-left: 4px solid #10b981;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                            <span style="font-size: 1.5rem;">🟢</span>
+                            <h4 style="color: #059669; margin: 0;">Normal Range</h4>
+                        </div>
+                        <p style="font-size: 0.8rem; color: #047857; margin-bottom: 0.75rem;"><strong>Action:</strong> Continue regular monitoring</p>
+                        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem; color: #065f46;">
+                            <li style="margin-bottom: 0.5rem;">Traffic fluctuations <strong>within ±10%</strong></li>
+                            <li style="margin-bottom: 0.5rem;">Rankings stable <strong>within ±3 positions</strong></li>
+                            <li style="margin-bottom: 0.5rem;">New pages indexed <strong>within 3-5 days</strong></li>
+                            <li>Conversion rates <strong>match or exceed baseline</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KPIs to Track -->
+            <div class="card" style="margin-bottom: 2rem;">
+                <h3 style="margin-bottom: 1rem; font-family: 'Fraunces', Georgia, serif; display: flex; align-items: center; gap: 0.75rem;">
+                    <span style="background: #10b981; color: white; padding: 0.5rem; border-radius: 8px; font-size: 1.25rem;">🎯</span>
+                    Key Performance Indicators — 15 Target Keywords
+                </h3>
+
+                <div class="program-table" style="margin-bottom: 1.5rem;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Keyword</th>
+                                <th style="text-align: center;">Current Position</th>
+                                <th style="text-align: center;">Target Position</th>
+                                <th style="text-align: center;">Monthly Volume</th>
+                                <th style="text-align: center;">Priority</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);">
+                                <td><strong>mps degree</strong></td>
+                                <td style="text-align: center;">Not ranking</td>
+                                <td style="text-align: center;"><span style="color: #059669; font-weight: 600;">Top 10</span></td>
+                                <td style="text-align: center;">1,900</td>
+                                <td style="text-align: center;"><span style="background: #ef4444; color: white; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem;">CRITICAL</span></td>
+                            </tr>
+                            <tr style="background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);">
+                                <td><strong>what is an mps degree</strong></td>
+                                <td style="text-align: center;">Not ranking</td>
+                                <td style="text-align: center;"><span style="color: #059669; font-weight: 600;">Top 10</span></td>
+                                <td style="text-align: center;">880</td>
+                                <td style="text-align: center;"><span style="background: #ef4444; color: white; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem;">CRITICAL</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>doctor of professional studies</strong></td>
+                                <td style="text-align: center;">#15</td>
+                                <td style="text-align: center;"><span style="color: #059669; font-weight: 600;">#5-8</span></td>
+                                <td style="text-align: center;">720</td>
+                                <td style="text-align: center;"><span style="background: #f59e0b; color: white; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem;">HIGH</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>dps vs phd</strong></td>
+                                <td style="text-align: center;">Not ranking</td>
+                                <td style="text-align: center;"><span style="color: #059669; font-weight: 600;">Top 10</span></td>
+                                <td style="text-align: center;">590</td>
+                                <td style="text-align: center;"><span style="background: #f59e0b; color: white; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem;">HIGH</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>mps vs mba</strong></td>
+                                <td style="text-align: center;">Not ranking</td>
+                                <td style="text-align: center;"><span style="color: #059669; font-weight: 600;">Top 10</span></td>
+                                <td style="text-align: center;">480</td>
+                                <td style="text-align: center;"><span style="background: #f59e0b; color: white; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem;">HIGH</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>emotional intelligence in leadership</strong></td>
+                                <td style="text-align: center;">Not ranking</td>
+                                <td style="text-align: center;"><span style="color: #059669; font-weight: 600;">Top 20</span></td>
+                                <td style="text-align: center;">6,600</td>
+                                <td style="text-align: center;"><span style="background: #10b981; color: white; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem;">MEDIUM</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>organizational development degree</strong></td>
+                                <td style="text-align: center;">Not ranking</td>
+                                <td style="text-align: center;"><span style="color: #059669; font-weight: 600;">Top 15</span></td>
+                                <td style="text-align: center;">1,300</td>
+                                <td style="text-align: center;"><span style="background: #10b981; color: white; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem;">MEDIUM</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0;"><em>* Full list of 15 keywords tracked in rank monitoring tool. Above shows priority keywords for executive reporting.</em></p>
+            </div>
+
+            <!-- Reporting Template -->
+            <div class="card" style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);">
+                <h3 style="margin-bottom: 1rem; font-family: 'Fraunces', Georgia, serif; display: flex; align-items: center; gap: 0.75rem;">
+                    <span style="background: #64748b; color: white; padding: 0.5rem; border-radius: 8px; font-size: 1.25rem;">📝</span>
+                    Weekly Report Template
+                </h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.9rem;">Use this structure for weekly stakeholder updates during the first 8 weeks post-launch.</p>
+
+                <div style="background: white; padding: 1.25rem; border-radius: 10px; border: 1px solid var(--border); font-size: 0.9rem;">
+                    <div style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border);">
+                        <strong style="color: #1d4ed8;">📅 Week [X] Post-Launch Report — DPS/MPS</strong>
+                        <p style="margin: 0.5rem 0 0; color: var(--text-secondary); font-size: 0.85rem;">Report Date: [Date] | Prepared by: [Name]</p>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <div>
+                            <h5 style="color: #059669; margin-bottom: 0.5rem;">✅ What's Working</h5>
+                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.8rem; color: var(--text-secondary);">
+                                <li>[Metric up X%]</li>
+                                <li>[Pages indexed: X/X]</li>
+                                <li>[Top keyword gain]</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 style="color: #f59e0b; margin-bottom: 0.5rem;">⚠️ Watch List</h5>
+                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.8rem; color: var(--text-secondary);">
+                                <li>[Metric to monitor]</li>
+                                <li>[Keyword movement]</li>
+                                <li>[Technical item]</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 style="color: #ef4444; margin-bottom: 0.5rem;">🚨 Issues/Blockers</h5>
+                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.8rem; color: var(--text-secondary);">
+                                <li>[Issue + status]</li>
+                                <li>[Action needed]</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 style="color: #7c3aed; margin-bottom: 0.5rem;">📋 Next Week Focus</h5>
+                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.8rem; color: var(--text-secondary);">
+                                <li>[Priority 1]</li>
+                                <li>[Priority 2]</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Page Brief Templates -->
         <section id="templates" class="section">
             <div class="section-header">
@@ -6363,6 +6781,8 @@
             <li style="font-size: 0.65rem; color: #7c3aed; font-weight: 700; padding-top: 0.5rem;">EXECUTE</li>
             <li><a href="#raci">RACI Matrix</a></li>
             <li><a href="#runbook">Runbook</a></li>
+            <li><a href="#rollback">Rollback Plan</a></li>
+            <li><a href="#monitoring">Monitoring</a></li>
             <li><a href="#templates">Templates</a></li>
             <li><a href="#faq-bank">FAQ Bank</a></li>
         </ul>
