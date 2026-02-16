@@ -1,7 +1,7 @@
 # SEO Impact Report — Improvement Todo List
 
 **Created:** January 7, 2026  
-**Status:** Planning  
+**Status:** In Progress (Phase 1 Complete)  
 **Report:** `seo-impact-report.html`
 
 ---
@@ -9,10 +9,11 @@
 ## Priority: High (Before April Launch)
 
 ### 1. Risk Assessment Matrix
-- [ ] Create risk matrix with probability/impact scores
-- [ ] Include mitigation strategies for each risk
-- [ ] Add visual risk cards to Executive Summary section
+- [x] Create risk matrix with probability/impact scores
+- [x] Include mitigation strategies for each risk
+- [x] Add visual risk cards to Executive Summary section
 - **Location:** After "Key Findings" section
+- **Status:** ✅ COMPLETE - Added 6 risks with probability/impact badges and mitigations
 
 | Risk | Probability | Impact | Mitigation |
 |------|-------------|--------|------------|
@@ -25,9 +26,10 @@
 ---
 
 ### 2. RACI Responsibility Matrix
-- [ ] Define ownership for each workstream
-- [ ] Add to Execution (Part 4) section
+- [x] Define ownership for each workstream
+- [x] Add to Execution (Part 4) section
 - **Location:** Before Runbook section
+- **Status:** ✅ COMPLETE - Added full RACI table with 6 tasks and 4 team columns
 
 | Task | Responsible | Accountable | Consulted | Informed |
 |------|-------------|-------------|-----------|----------|
@@ -41,9 +43,10 @@
 ---
 
 ### 3. Success Metrics with Specific Targets
-- [ ] Add quantified KPIs to Decisions section
-- [ ] Create monitoring dashboard spec
+- [x] Add quantified KPIs to Decisions section
+- [ ] Create monitoring dashboard spec (see item #11)
 - **Location:** Update existing Success Criteria
+- **Status:** ✅ PARTIAL - Added KPI targets grid with baselines and targets
 
 | Metric | Current Baseline | Target | Timeline |
 |--------|------------------|--------|----------|
@@ -57,10 +60,11 @@
 ---
 
 ### 4. Visual Timeline / Gantt Chart
-- [ ] Create visual timeline graphic
-- [ ] Update Runbook phases with new dates
-- [ ] Add critical path indicators
+- [x] Create visual timeline graphic
+- [x] Update Runbook phases with new dates
+- [x] Add critical path indicators
 - **Location:** Runbook section
+- **Status:** ✅ COMPLETE - Added visual Feb-Jul timeline with colored milestones
 
 ```
 Timeline: Feb 2026 — July 2026
@@ -82,9 +86,10 @@ Feb 2026 ━━━━━━━━━ Mar 2026 ━━━━━━━━━ Apr 20
 ---
 
 ### 5. FAQ Content Bank
-- [ ] Create ready-to-use FAQ content for schema markup
-- [ ] Organize by program type (DPS, MPS)
+- [x] Create ready-to-use FAQ content for schema markup
+- [x] Organize by program type (DPS, MPS)
 - **Location:** New section after Templates
+- **Status:** ✅ COMPLETE - Added 5 DPS FAQs + 5 MPS FAQs with schema implementation note
 
 #### DPS FAQs (for schema)
 1. **What is a Doctor of Professional Studies (DPS)?**
@@ -272,10 +277,10 @@ Homepage
 
 ### Phase 1: Pre-Content Creation (Feb 2026)
 1. ✅ Update timeline to Feb-Mar start
-2. [ ] Add Risk Assessment Matrix
-3. [ ] Add RACI table
-4. [ ] Add quantified KPIs
-5. [ ] Create FAQ Content Bank
+2. ✅ Add Risk Assessment Matrix
+3. ✅ Add RACI table
+4. ✅ Add quantified KPIs
+5. ✅ Create FAQ Content Bank
 
 ### Phase 2: Content Production (Feb-Mar 2026)
 6. [ ] Add Technical SEO Checklist
@@ -301,4 +306,4 @@ Homepage
 
 ---
 
-*Last updated: January 7, 2026*
+*Last updated: January 7, 2026 — Phase 1 items implemented*
