@@ -1,516 +1,145 @@
-# Professional Studies Degree Naming: SEO Impact Analysis (v2)
+# Program Rename: SEO & Enrollment Impact Analysis
 
 **University of Arizona Global Campus (UAGC)**  
-**Report Date:** December 12, 2025  
-**Version:** 2.0
+**Report Date:** July 31, 2026  
+**Version:** 4.0
 
 ---
 
-## Hero (What We Need to Decide + What Success Looks Like)
+## Overview
 
-### Objective
-Protect and grow **organic discovery and lead generation** as we transition from traditional degree designations (AA/BA/BS/MA/MS) to **Professional Studies** naming (APS/BPS/MPS), including a **90-credit BPS pilot**.
+Data-driven analysis of how renaming 10 UAGC programs from traditional degree designations (BA/MA/MS) to Professional Studies naming (BPS/MPS) will affect search visibility, organic discovery, and enrollment.
 
-### Decisions Needed (Marketing + SEO + Web + Academics)
-1. **URL strategy**: preserve current high-performing URL structures vs introduce new `/bps`/`/mps` URLs (with redirects).
-2. **On-page naming standard**: when and how we use “Professional Studies” + degree abbreviations (BPS/APS/MPS) alongside traditional language (Bachelor’s, Master’s).
-3. **Content deliverables**: commit to a minimum set of “education + comparison + 90-credit” pages before/at launch.
+**Primary deliverable:** `seo-impact-report.html` — a self-contained HTML report with enrollment data, search demand analysis, risk ratings, and mitigation strategies.
 
-### Success Criteria (First 90 Days Post-Launch)
-- **No sustained organic traffic loss** beyond agreed tolerance on degree/program entry points.
-- **No sustained conversion-rate drop** on top degree pages (RFI / key events).
-- **Stable indexing + crawl health** (no spikes in 404s, duplicate content, or canonical conflicts).
-- **Positive trend** in discovery for “professional studies” + “90-credit bachelor’s” intent terms (measured via GSC impressions/clicks + rankings tool).
+**Companion report:** `program-rename-proposal-shareable.html` — enrollment funnel data, demographics, migration flows, and Sankey diagrams for the 10 programs under consideration.
 
 ---
 
-## Executive Summary
+## Key Findings
 
-We can make the naming transition an SEO-positive story **if** we treat it as both a **migration** and a **market education** problem. The high-leverage path is to:
+### Search Demand Gap
+- Current program names generate **~13,910 monthly searches** — proposed names total just **50 combined**
+- "MA in Psychology online" alone drives 5,400/mo; proposed MPS equivalent: **0 searches**
 
-1. **Run a dual-language strategy** on-page: pair “Professional Studies” with plain-language degree terms (e.g., “Bachelor’s degree”, “online bachelor’s”) so we don’t rely on unfamiliar abbreviations alone.
-2. **Build an education hub + comparison content** (“What is a BPS?” / “BPS vs BA vs BS”) to capture and convert intent we expect during the transition.
-3. **Lead with the 90-credit narrative** with an explicit landing page and supporting FAQs, aligned to the broader three-year/accelerated-degree conversation in higher ed.
+### Designation Market Gap (New in v4.0)
+- **"Bachelor of Arts degree"** = 40,500/mo vs **"Bachelor of Professional Studies"** = 390/mo (104x less)
+- **"Bachelor of Science degree"** = 60,500/mo vs **"Bachelor of Professional Studies"** = 390/mo (155x less)
+- **"Master of Science degree"** = 12,100/mo vs **"Master of Professional Studies"** = 1,600/mo (8x less)
+- **"BPS degree online"** and **"MPS degree online"** = **0 monthly searches**
+- Arts & Science designations ARE the search market — Professional Studies is not
 
-### Key Findings (What We Can Say With Confidence Today)
-- **BPS/MPS naming is established in higher ed**: multiple universities use these designations, and competitor content patterns show how they explain them (see citations).
-- **Our highest-risk area is navigational + legacy URL equity**: changing URL structures can create avoidable SEO volatility unless we execute redirects/canonicals/sitemaps cleanly.
-- **Education content is a proven organic acquisition model for us**: top organic landing pages include educational blog posts (internal GA4 snapshot below).
+### Enrollment Context
+- These 10 programs generated **56,317 leads** and **832 enrollments** (Jul 2025 – Jun 2026)
+- Graduate decisions grew **+15% YoY** under current names
 
-### ✅ Validated via GSC Data
-- **"Bachelor" queries = 100K+ impressions** vs "professional studies" = 15 impressions
-- **"BPS degree" = 0 results** in GSC (no one is searching for this term yet)
-- This confirms the need for **dual-language strategy** on all program pages
+### Strategic Recommendation
+If renames proceed, **lean into the existing Arts/Science market where demand exists** — keep BA/MA/MS keywords prominent on every page. Use "Professional Studies" as supplemental positioning, not a replacement for SEO-critical terminology. Preserve URLs and implement dual-language naming.
 
 ---
 
-## Data Integrity & Usage Notes (Read This Before Sharing)
+## Programs Under Consideration
 
-### ✅ Validated Data Sources
+| Current Name | Proposed Name |
+|---|---|
+| MA in Psychology | Master of Professional Studies in Applied Psychology |
+| MA in Special Education | Master of Professional Studies in Accessible Education and Disability-Informed Practice |
+| MA in Teaching and Learning with Technology | Master of Professional Studies in Educational Technology |
+| Master of Information Systems Management | Master of Professional Studies in Strategic Business Intelligence & Technology |
+| Master of Public Health | Master of Professional Studies in Community Health |
+| MS in Finance | Master of Professional Studies in Financial Leadership |
+| BA in Business Leadership | Bachelor of Arts in Leadership |
+| BA in Liberal Arts | Bachelor of Arts in Applied Liberal Arts |
+| BA in Psychology | Bachelor of Arts in Applied Psychology |
+| BA in Social Science | Bachelor of Arts in Applied Social Science |
+
+---
+
+## Data Sources
+
 | Source | Date Range | Status |
-|--------|------------|--------|
-| **GA4 Analytics** | Jan 1 – Dec 12, 2025 | ✅ Complete |
-| **Google Search Console** | Jan 1 – Dec 10, 2025 | ✅ Complete |
-| **Google Autocomplete** | 2025 (real-time API) | ✅ Validated via MCP |
-| **Competitor Research** | December 2025 | ✅ 14 universities documented |
-
-### ⏳ Optional Enhancements
-| Source | Requirement | Status |
-|--------|-------------|--------|
-| **Keyword Volumes** | Keyword Planner/Ahrefs/SEMrush | Optional — GSC impressions already validate demand gap |
-
-- **External sources**: Any industry/competitor statements are supported by **publicly accessible pages** cited in "Citations & Data Sources".
-- **Estimates vs verified**: If we add keyword volume, CTR benchmarks, or forecasting, those must be labeled as **estimates** with tool + date + method.
+|---|---|---|
+| **Enrollment/CRM Data** | Jul 2025 – Jun 2026 (vs YoY Jul 2024 – Jun 2025) | Verified |
+| **Keywords Everywhere** | July 31, 2026 | Verified |
+| **Google Search Console** | Last 90/180 days (as of Jul 31, 2026) | Verified |
+| **Google Trends** | 12-month lookback (US) | Verified |
+| **GA4 Analytics** | Jan 1 – Dec 12, 2025 (baseline) | Verified |
+| **Google Autocomplete** | 2025 (real-time API) | Validated via MCP |
+| **Competitor Research** | December 2025 – July 2026 | 14 universities documented |
 
 ---
 
-## Program Naming Overview
+## Report Structure (seo-impact-report.html)
 
-### New Degree Designations (As Provided)
+### Part 1: Impact Data
+- **TL;DR** — 30-second executive summary
+- **Rename Impact Analysis** — full enrollment funnel for all 10 programs
+- **Search Demand Analysis** — current vs proposed name keyword volumes
+- **Designation Market Gap** — BA/BS vs BPS, MA/MS vs MPS structural comparison
+- **Decisions & Success Criteria** — what leadership needs to decide
 
-| Current | New Designation | Credits | Duration | Notes |
-|---------|-----------------|---------|----------|-------|
-| AA | APS (Associate of Professional Studies) | 60 | 104 weeks | Pilot program |
-| BA/BS | BPS (Bachelor of Professional Studies) | 90 | 156 weeks | 90-credit pilot |
-| MA/MS | MPS (Master of Professional Studies) | Current | Current | Aligned to existing structure |
+### Part 2: Baseline Data
+- **Key Findings** — validated findings with risk ratings
+- **Risk Matrix** — per-program SEO risk assessment
+- **GA4 Analytics Baseline** — channel performance, top pages
+- **Google Search Console** — clicks, impressions, CTR, position
+- **Keyword Research** — validated keyword landscape
+- **Competitive Intelligence** — 14 university comparison
 
-### Recommended On-Page Naming Standard (Dual-Language)
+### Part 3: Strategy
+- **Strategic Recommendations** — 7 prioritized action items
+- **SEO Mitigation Strategy** — dual-language naming, URL preservation, phased rollout
+- **Transferability & Employer Acceptance** — accreditation messaging
 
-Use a consistent rule across pages:
-- **First mention**: spell out + plain language  
-  - Example: “Bachelor of Professional Studies (BPS) — an online bachelor’s degree…”
-- **Subsequent mentions**: abbreviation is allowed when unambiguous  
-  - Example: “In this BPS program…”
-- **Always include a plain-language anchor** near the top (H1, intro, or first module)  
-  - Example: “online bachelor’s degree”, “degree completion”, “working adults”
-
----
-
-## SEO Strategy (What We’re Actually Going to Do)
-
-### 1) Keyword + Intent Framework (Operational)
-
-We will organize content and reporting by intent, not just by degree abbreviations:
-
-#### Tier A: Program + Enrollment Intent
-- “Bachelor of Professional Studies online”
-- “BPS degree online”
-- “degree completion program”
-- “online bachelor’s degree for working adults”
-
-#### Tier B: Education / Definition Intent
-- “What is a BPS degree”
-- “Bachelor of Professional Studies meaning”
-- “Professional studies degree”
-
-#### Tier C: Comparison Intent
-- “BPS vs BA”
-- “BPS vs BS”
-- “Professional studies vs liberal arts”
-
-#### Tier D: Accelerated / 90-credit Intent
-- “90 credit bachelor’s degree”
-- “three-year bachelor’s degree”
-- “accelerated bachelor’s degree”
-
-### 2) SERP Ownership Plan (The Minimum Page Set)
-
-We should publish (or refresh) these pages before/at the naming switch:
-
-1. **BPS hub**: “What is a Bachelor of Professional Studies (BPS)?”
-2. **Comparison**: “BPS vs BA vs BS (and who each is for)”
-3. **90-credit landing**: “90-credit Bachelor of Professional Studies at UAGC”
-4. **Program pages**: each program page uses dual-language titles + metadata and links back to (1)–(3).
+### Part 4: Execution
+- **Content Strategy** — (v3.x archive, retained as reference)
+- **RACI Matrix** — ownership assignments
+- **Runbook** — phased rollout timeline
+- **Rollback Plan** — reversion criteria and procedures
+- **Monitoring Dashboard** — KPIs and tracking cadence
 
 ---
 
-## SEO Migration Runbook (Execution Checklist)
+## Strategic Recommendations (Summary)
 
-### Phase 0 — Discovery
-- Inventory all impacted URLs (degree hubs, program pages, blog posts, internal search pages).
-- Tag “**do not break**” pages: highest organic sessions + conversions (GA4 + GSC).
-- Export baseline:
-  - GA4: sessions, key events, engagement rate by page
-  - GSC: clicks, impressions, CTR, avg position by page/query
-  - Crawl: indexable URLs, canonicals, status codes, internal links (Screaming Frog or similar)
-
-### Phase 1 — Build
-- Implement naming changes in content + metadata using the dual-language standard.
-- Create the Minimum Page Set (BPS hub, comparison, 90-credit landing).
-- Add **FAQ sections** where appropriate to support FAQ schema.
-
-### Phase 2 — Launch (Day 0)
-Two acceptable paths; pick one and execute cleanly:
-
-#### Option A: Preserve URLs (Preferred for risk reduction)
-- Keep existing high-performing URL paths (e.g., `/online-degrees/bachelors/*`) and update:
-  - Titles, H1s, intro copy, structured data, internal links
-- Benefit: preserves URL equity; lowest technical volatility.
-
-#### Option B: Introduce new `/bps` + `/mps` URLs (Only if we must)
-- Create new URLs.
-- 301 redirect old → new (one-to-one mapping; avoid chains).
-- Update canonicals, sitemaps, internal links, and navigation.
-- Add GSC annotations + monitor 404s daily post-launch.
-
-### Phase 3 — Stabilize
-- Daily checks initially, then transition to weekly:
-  - 404/soft-404 spikes
-  - Index coverage changes
-  - Ranking and traffic deltas on priority pages
-  - Conversion rate deltas
-- Fix fast:
-  - Redirect gaps
-  - Canonical mistakes
-  - Internal-link stranding
-
-### Phase 4 — Optimize
-- Expand content clusters:
-  - “What can you do with a professional studies degree?”
-  - “Is a BPS worth it?” (FAQ + outcomes framing)
-  - “How the 90-credit bachelor’s works” (admissions + transfer)
+1. **Preserve All Existing URLs** — non-negotiable
+2. **Implement Dual-Language Naming on Every Page** — title tags, H1s, meta descriptions must include both new and traditional terms
+3. **Lean Into Arts/Science Designation Keywords** — don't abandon the search market that actually exists
+4. **Stagger the Rollout in 3 Phases** — low-risk first, critical-risk last, 90 days between
+5. **Establish Rollback Criteria** — define thresholds before any rename goes live
+6. **Monitor GSC + Enrollment Weekly for 6 Months** — cross-reference search and funnel data
+7. **Build "What Is Professional Studies?" Hub Content** — capture educational intent and AI citation placement
 
 ---
 
-## Page Briefs (Copy/SEO Templates We Can Hand to Content)
+## Competitor Landscape
 
-### Template: BPS Hub Page
-- **Working title**: What Is a Bachelor of Professional Studies (BPS)?
-- **Primary intent**: education/definition + soft conversion
-- **Recommended modules**:
-  - Definition + who it’s for (working adults, degree completion)
-  - How BPS differs from BA/BS (high-level, non-controversial, no unsourced percentages)
-  - How long it takes / credit expectations (our program specifics only)
-  - FAQs (6–10) + FAQ schema
-  - Clear next step CTA to programs
-- **Internal links**: to program category hubs + comparison page + 90-credit page
+### Tier 1: National Brand Recognition
+| University | Degree | Key Insight |
+|---|---|---|
+| Syracuse University | BPS | Best-in-class "What is BPS?" content |
+| Georgetown University | MPS | 20+ MPS programs, premium positioning |
+| Cornell University | MPS | Ivy League credibility, multi-college MPS |
+| Penn State | MPS | Strong "working professional" messaging |
+| Purdue Global | MPS | Online-first, adult learner targeting |
 
-### Template: Comparison Page
-- **Working title**: BPS vs BA vs BS: Which Bachelor’s Degree Is Right for You?
-- **Primary intent**: comparison + conversion assist
-- **Content rules**:
-  - Avoid unverifiable “% liberal arts” claims unless we can cite a program/academic policy source per institution.
-  - Use “typical differences” language and focus on outcomes + audience fit.
+### Tier 2: Regional/Specialized
+University of Kansas, Winthrop University, Florida Atlantic University, College of Charleston, Rhode Island College
 
-### Template: 90-Credit Landing Page
-- **Working title**: 90-Credit Bachelor’s Degree (BPS) at UAGC
-- **Primary intent**: accelerated-degree intent + conversion
-- **Key modules**:
-  - The value proposition (time-to-degree, working adults)
-  - Who qualifies (transfer/experience rules; admissions-verified)
-  - How credits map (visual)
-  - FAQs + schema
+### Tier 3: Emerging/Niche
+BYU Pathway Worldwide, Excelsior University, Middle Tennessee State, Missouri State University
 
 ---
 
-## GA4 Analytics Baseline (Internal; Full Year 2025)
-
-*Data pulled from UAGC GA4 property for January 1 – December 12, 2025 (internal use).*
-
-### Channel Performance Overview (2025 YTD)
-
-| Channel | Sessions | Active Users | Key Events |
-|---------|----------|--------------|------------|
-| Direct | 1,994,344 | 1,000,840 | 46,439 |
-| Unassigned | 1,734,313 | 1,095,027 | 101,349 |
-| **Organic Search** | **1,624,766** | **842,692** | **26,680** |
-| Paid Search | 1,432,313 | 933,121 | 77,098 |
-| Paid Other | 1,371,513 | 1,001,802 | 54,068 |
-| Cross-network | 951,972 | 686,654 | 25,089 |
-| Referral | 376,836 | 183,657 | 12,939 |
-| Display | 219,596 | 142,770 | 17,153 |
-| Organic Social | 165,205 | 115,283 | 4,403 |
-| Paid Social | 160,475 | 105,141 | 7,742 |
-
-### Top Landing Pages (2025 YTD)
-
-| Landing Page | Sessions | Key Events | Risk Assessment |
-|--------------|----------|------------|-----------------|
-| `/apply-now` | 1,491,526 | 13,236 | Critical — Conversion |
-| `/` (Homepage) | 1,221,796 | 29,157 | Critical — Brand |
-| `/success/degree-types/bachelors-degrees-v5` | 424,668 | 18,788 | **Critical — BPS Transition** |
-| `/success/degree-types/masters-degrees-v5` | 153,613 | 5,652 | **Critical — MPS Transition** |
-| `/blog/what-difference-between-phd-and-doctorate` | 144,061 | 33 | High — Organic Traffic |
-| `/military` | 141,968 | 4,070 | Monitor |
-| `/blog/how-write-business-plan-step-by-step` | 84,630 | 90 | High — Organic Traffic |
-
-**Key Insight**: The bachelor's degrees page (424K sessions, 18.8K events) and master's degrees page (153K sessions, 5.6K events) are the highest-risk pages for the BPS/MPS transition. Educational blog content continues to drive significant organic traffic.
-
----
-
-## Google Search Console Baseline (Full Year 2025)
-
-*Data pulled from GSC property `sc-domain:uagc.edu` for January 1 – December 10, 2025.*
-
-### Performance Overview (2025 YTD)
-
-| Metric | Value |
-|--------|-------|
-| **Total Clicks** | 1,926,437 |
-| **Total Impressions** | 166,044,644 |
-| **Average CTR** | 1.16% |
-| **Average Position** | 17.1 |
-
-### Top Search Queries (Clicks)
-
-| Query | Clicks | Impressions | CTR | Position |
-|-------|--------|-------------|-----|----------|
-| uagc student portal | 195,396 | 214,877 | 90.93% | 1.0 |
-| uagc student login | 119,652 | 131,116 | 91.26% | 1.0 |
-| uagc | 111,418 | 250,150 | 44.54% | 1.0 |
-| university of arizona global campus | 60,491 | 173,675 | 34.83% | 1.0 |
-| thesis statement generator | 27,957 | 75,201 | 37.18% | 1.2 |
-| thesis generator | 22,495 | 48,055 | 46.81% | 1.3 |
-| ashford university | 21,255 | 141,150 | 15.06% | 1.2 |
-| phd meaning | 16,122 | 1,412,611 | 1.14% | 4.2 |
-
-### Degree-Related Search Queries
-
-| Query | Clicks | Impressions | CTR | Position |
-|-------|--------|-------------|-----|----------|
-| uagc bachelor degrees | 143 | 228 | 62.72% | 1.0 |
-| uagc bachelor's degree | 56 | 149 | 37.58% | 1.0 |
-| online bachelor's degree | 54 | 14,020 | 0.39% | 69.1 |
-| instructional design bachelor's degree | 44 | 426 | 10.33% | 2.0 |
-| bachelor of education studies | 19 | 467 | 4.07% | 8.8 |
-| bachelor of arts in homeland security | 16 | 560 | 2.86% | 2.8 |
-
-### Top Degree Pages (Organic Search)
-
-| Page | Clicks | Impressions | CTR | Position |
-|------|--------|-------------|-----|----------|
-| /online-degrees | 15,977 | 3,381,510 | 0.47% | 7.6 |
-| /online-degrees/masters | 5,260 | 1,990,605 | 0.26% | 21.0 |
-| /success/degree-types/doctoral-degrees-v5 | 3,779 | 254,996 | 1.48% | 32.5 |
-| /success/degree/doctorate-psychology-v5 | 3,272 | 360,354 | 0.91% | 15.7 |
-| /online-degrees/masters/business-administration | 2,575 | 629,508 | 0.41% | 47.9 |
-| /online-degrees/bachelors | 2,012 | 927,906 | 0.22% | 14.9 |
-| /online-degrees/associate | 1,240 | 600,484 | 0.21% | 23.0 |
-| /online-degrees/masters/psychology | 1,218 | 421,817 | 0.29% | 46.9 |
-
-**Key Insight**: The `/online-degrees/bachelors` page has strong impressions (927K) but relatively low CTR (0.22%), indicating opportunity to improve click-through with better title/descriptions. The `/success/degree-types/bachelors-degrees-v5` page has only 1 click and 210 impressions in GSC, suggesting it may be receiving traffic primarily through internal navigation rather than organic search.
-
----
-
-## Validated Keyword Research (Google Autocomplete Data — 2025)
-
-*Data validated using Google Ads MCP server with live autocomplete API. Autocomplete reflects real-time search behavior patterns.*
-
-### Bachelor of Professional Studies (BPS) Keywords
-
-| Keyword | Intent Type | Opportunity |
-|---------|-------------|-------------|
-| `bachelor of professional studies` | Core term | Primary target — educational hub |
-| `bachelor of professional studies (bps)` | Definition | Include in H1/title |
-| `bachelor of professional studies vs bachelor of science` | Comparison | High-value comparison page |
-| `bachelor of professional studies jobs` | Career outcome | Address in program pages |
-| `bachelor of professional studies reddit` | Research/validation | Content opportunity |
-| `bps degree meaning` | Definition | FAQ content |
-| `bps degree accreditation` | Credibility concern | Address prominently |
-| `what is bps degree` | Definition | Hub page H1 candidate |
-| `is a bps degree good` | Evaluation | FAQ/testimonial content |
-
-**Note:** "BPS vs BA" query returns unrelated results (bits per second vs baud rate) — confirms need for full "Bachelor of Professional Studies" phrasing.
-
-### Master of Professional Studies (MPS) Keywords
-
-| Keyword | Intent Type | Opportunity |
-|---------|-------------|-------------|
-| `master of professional studies` | Core term | Primary MPS hub |
-| `mps degree salary` | ROI intent | Include salary/outcome data |
-| `mps degree worthless` / `mps degree worthless reddit` | Objection/concern | **Content opportunity** — address value proposition |
-| `master of professional studies cornell` / `georgetown` | Competitor brand | We're competing with tier-1 schools |
-| `master of professional studies in analytics` | Specialization | Program-specific content |
-
-### 90-Credit / 3-Year Degree Keywords
-
-| Keyword | Intent Type | Opportunity |
-|---------|-------------|-------------|
-| `90 credit bachelor's degree` | Core term | Primary landing page target |
-| `90 credit bachelor degree online` | Online intent | Strong match for UAGC |
-| `90 credit bachelor degree programs` | Program search | Landing page |
-| `3 year bachelor degree` | Alternative phrasing | Include in content |
-| `3 year bachelor degree vs 4 year` | Comparison | FAQ content |
-| `3 year bachelor degree programs` | Program search | Landing page |
-| `hlc 90 credit bachelor degree` | Accreditation concern | Address HLC compliance |
-
-### Accelerated / Degree Completion Keywords
-
-| Keyword | Intent Type | Opportunity |
-|---------|-------------|-------------|
-| `accelerated bachelor degree online` | Core term | Align with 90-credit messaging |
-| `accelerated bachelor's degree online accredited` | Credibility | Emphasize accreditation |
-| `finish bachelor's degree fast` | Urgency | Conversion-focused content |
-| `fastest way to finish bachelor's degree` | Question | FAQ content |
-| `finish my bachelor's degree online fast` | Personal intent | Testimonial content |
-
-### Key Insights from Keyword Validation
-
-1. **"BPS" alone has disambiguation issues** — search results mix "Bachelor of Professional Studies" with "bits per second" and other acronyms. Always use full name first.
-
-2. **"Worthless" objection exists** — "mps degree worthless reddit" appears in autocomplete. Create content addressing degree value, career outcomes, and employer recognition.
-
-3. **Competitor brands appear in suggestions** — Cornell, Georgetown, Northeastern, Syracuse all appear in MPS/BPS autocomplete, confirming competitive landscape.
-
-4. **90-credit/3-year opportunity is real** — Both phrasings appear in autocomplete with program-specific variants ("online", "programs", "vs 4 year").
-
-5. **Accreditation is a concern** — "accreditation" and "accredited" appear frequently, suggesting trust-building content is essential.
-
----
-
-## Open Research Backlog (Remaining Work)
-
-### Priority 1: GSC Query Mapping (Estimated: 1–2 hours)
-To enable GSC API access for automated query analysis:
-1. Create a Google Cloud service account with Search Console API access
-2. Download the JSON credentials file
-3. Share UAGC GSC property with the service account email
-4. Configure MCP GSC tool with credentials
-
-**Value**: This will show which BA/BS/degree queries currently land on our program pages, enabling precise redirect mapping.
-
-### Priority 2: Keyword Volume Quantification
-- Use **Keyword Planner** (free with Google Ads account) or **Ahrefs/SEMrush** to quantify monthly search volume for validated terms
-- Focus on: "bachelor of professional studies", "90 credit bachelor degree", "BPS vs BA"
-
-### Priority 3: SERP Analysis
-- Evaluate what page types rank for "what is BPS degree" (FAQ vs blog vs program page)
-- Document competitor SERP patterns to inform content strategy
-
-### Priority 4: Google Trends Validation
-- Get interest-over-time data once rate limits reset (trends temporarily rate-limited)
-
----
-
-## Competitor Landscape: Universities Using Professional Studies Degrees
-
-The following universities have established Professional Studies degree programs. This research provides both competitive context and content strategy inspiration.
-
-### Tier 1: National Brand Recognition + Strong SEO Presence
-
-| University | Degree | URL | Key SEO/Content Insights |
-|------------|--------|-----|--------------------------|
-| **Syracuse University** | BPS | professionalstudies.syracuse.edu | Best-in-class "What is BPS?" content. Clear BA/BS/BPS comparison page. Ranks well for informational intent. Strong FAQ section with schema markup. |
-| **Georgetown University** | MPS | scs.georgetown.edu | 20+ MPS programs (Sports, Real Estate, Urban Planning, etc.). Premium "industry expert" positioning. FAQ-rich content with video explainers. |
-| **Cornell University** | MPS | gradschool.cornell.edu | Ivy League credibility. MPS offered across multiple colleges (Agriculture, ILR). Research-practitioner hybrid positioning. |
-| **Penn State** | MPS | ed.psu.edu | MPS in Educational Leadership. Strong "working professional" messaging. Emphasizes practical application of knowledge. |
-| **Purdue Global** | MPS | purdueglobal.edu | Online-first positioning. Targets career changers and working professionals explicitly. Strong brand recognition in adult learning. |
-
-### Tier 2: Regional/Specialized + Effective Online Presence
-
-| University | Degree | URL | Key SEO/Content Insights |
-|------------|--------|-----|--------------------------|
-| **University of Kansas** | BPS | online.ku.edu | "Perfect for working professionals seeking a versatile degree." Strong accessibility messaging. Competency-based options. |
-| **Winthrop University** | BPS | online.winthrop.edu | Competency-based education structure. "Ultimate flexibility" positioning. Explicitly targets degree completion market. |
-| **Florida Atlantic University** | BPS | fau.edu/bps | "Degree completion for working adults." Management + leadership skill emphasis. High-demand workforce skills messaging. |
-| **College of Charleston** | BPS | charleston.edu | Clean meta tags with "bps degree, bps" keywords. Tagline: "Flexible. Practical. Achievable." Strong local SEO. |
-| **Rhode Island College** | BPS | ric.edu | "Finally cross the finish line!" Adult-focused messaging. Work-life balance understanding. Transfer-friendly positioning. |
-
-### Tier 3: Emerging/Niche Programs
-
-| University | Degree | URL | Key SEO/Content Insights |
-|------------|--------|-----|--------------------------|
-| **BYU Pathway Worldwide** | APS + BPS | byupathway.edu | Affordability-first positioning. Clear associate-to-bachelor's pathway. Faith-based differentiation. |
-| **Excelsior University** | BPS | excelsior.edu | BPS in Business Management. "Skills-based curriculum" for leadership roles. Prior learning assessment emphasis. |
-| **Middle Tennessee State (MTSU)** | MPS | university-college.mtsu.edu | Interdisciplinary graduate degree. "Excel in their careers" professional focus. Customizable program structure. |
-| **Missouri State University** | MPS | gip.missouristate.edu | "Hands-on skills and knowledge specific to your field." Practical application emphasis. |
-
-### Competitive Content Patterns We Should Emulate
-
-1. **Syracuse's "What is BPS?" page structure**
-   - Clear definition at the top
-   - Comparison to BA/BS (without unsourced percentages)
-   - "Who is this for?" section targeting working adults
-   - Strong FAQ section with structured data
-   - Clear CTAs to program pages
-
-2. **Georgetown's "What is an MPS?" approach**
-   - Video explainer content (1-2 minutes)
-   - "Industry experts" instructor positioning
-   - Program-specific landing pages with career outcomes
-   - FAQ-rich content for long-tail SEO
-
-3. **Winthrop/FAU's degree completion messaging**
-   - "Finish your degree" positioning
-   - Work-life balance understanding
-   - Transfer credit emphasis
-   - Competency-based/flexible format options
-
-4. **KU Online's accessibility messaging**
-   - "Learn at your own pace"
-   - "Balance academic, personal, and professional responsibilities"
-   - Real-world applications emphasis
-
-### Gaps in Competitor Content (Our Opportunity)
-
-| Gap | UAGC Opportunity |
-|-----|------------------|
-| **90-credit bachelor's degree content** | Very few competitors explicitly market 90-credit programs. We can own this emerging space. |
-| **3-year degree trend content** | Limited educational content explaining the three-year degree movement. Strong SEO opportunity. |
-| **BPS + career outcomes** | Most competitors lack specific salary/job placement data for BPS graduates. |
-| **APS (Associate) content** | Associate of Professional Studies has minimal search presence. Early-mover advantage. |
-
----
-
-## Citations & Data Sources
-
-### Internal (UAGC)
-- **UAGC GA4 property**: GA4 dashboard snapshot (December 12, 2025) *(internal)*
-- **UAGC Search Console**: linked via GA4 *(internal)*
-
-### Competitor / Reference Pages (Public)
-
-#### Bachelor of Professional Studies (BPS) Programs
-- **Syracuse University (BPS program)**: [`professionalstudies.syracuse.edu`](https://professionalstudies.syracuse.edu/academics/online/bachelor-of-professional-studies/)
-- **Syracuse University (BPS FAQs)**: [`professionalstudies.syracuse.edu/bps-faqs`](https://professionalstudies.syracuse.edu/academics/online/bachelor-of-professional-studies/bps-faqs/)
-- **College of Charleston (BPS)**: [`charleston.edu/bachelor-professional-studies`](https://charleston.edu/academics/majors-minors/bachelor-professional-studies.php)
-- **University of Kansas (BPS Online)**: [`online.ku.edu`](https://online.ku.edu/undergraduate-programs/online-bachelor-professional-studies-bps)
-- **Winthrop University (BPS Online)**: [`online.winthrop.edu`](https://online.winthrop.edu/programs/bps-bachelor-professional-studies)
-- **Excelsior University (BPS Business)**: [`excelsior.edu`](https://www.excelsior.edu/program/bachelor-of-professional-studies-business-management/)
-- **Florida Atlantic University (BPS)**: [`fau.edu/bps`](https://www.fau.edu/bps/)
-- **Rhode Island College (BPS)**: [`ric.edu`](https://www.ric.edu/academics/undergraduate-degree-programs/bachelor-professional-studies)
-- **BYU Pathway (APS + BPS)**: [`byupathway.edu`](https://www.byupathway.edu/)
-
-#### Master of Professional Studies (MPS) Programs
-- **Georgetown University SCS (MPS degrees)**: [`scs.georgetown.edu`](https://scs.georgetown.edu/master-of-professional-studies-degrees/)
-- **Georgetown SCS (What is an MPS?)**: [`scs.georgetown.edu/what-is-mps`](https://scs.georgetown.edu/what-is-mps-degree/)
-- **Penn State (MPS)**: [`ed.psu.edu`](https://ed.psu.edu/master-professional-studies-mps)
-- **Middle Tennessee State University (MPS)**: [`university-college.mtsu.edu`](https://university-college.mtsu.edu/mps_index/)
-- **Missouri State University (MPS)**: [`gip.missouristate.edu`](https://gip.missouristate.edu/mps/default.htm)
-- **Purdue Global (MPS)**: [`purdueglobal.edu`](https://www.purdueglobal.edu/degree-programs/professional-studies/master-degree-professional-studies/)
-- **Cornell University (MPS)**: [`gradschool.cornell.edu`](https://gradschool.cornell.edu/academic-progress/degrees-fields/cugradfos/)
-
-#### 90-Credit / 3-Year Degree Trend Sources
-- **Johnson & Wales University (3-year / 90–91 credit degree page)**: [`online.jwu.edu`](https://online.jwu.edu/academics/3-yr-90-91-degree/)
-- **University of Maine System (90-credit approval)**: [`mainepublic.org`](https://www.mainepublic.org/education-news/2025-07-14/umaine-system-board-approves-shortened-adult-degree-completion-program-to-meet-workforce-needs)
-- **Three-year degree discussion (Forbes op-ed)**: [`mackeystrategies-mediadatabase.com`](https://www.mackeystrategies-mediadatabase.com/op-ed/has-the-time-for-three-year-college-degrees-finally-arrived/)
-
----
-
-## Appendix: Original ECAR Phase Notes (Internal)
-
-*The following contains internal planning notes from the ECAR submission process:*
-
-### Phase 1: Doctoral Submission and ECAR Cleanup
-- Doctoral of Professional Studies in Organizational Leadership
-- MAL revision submitted for weeks/credits and CIP code update
-- 12 programs with revised naming conventions added to ECAR
-- BA Sociology discontinuation in progress (216 current active students)
-
-### Phase 2: New Degree Programs Under New Designations
-- APS: Associate of Professional Studies – 60 credits / 104 weeks
-- BPS: Bachelor of Professional Studies – 90 credits / 156 weeks
-- MPS: Master of Professional Studies – aligned to current credits/weeks
-
-### Phase 3: Remaining Program Adjustments
-- Additional credit/week adjustments for remaining programs
-- New Associate degree programs (APS - 60 credit/104 weeks)
-- New certificate programs
-
-### Next Steps (Internal)
-- Marketing wireframe review with academics
-- January project kickoff with workstreams
-- BA Sociology enrollment discontinuation operationalization
+## Version History
+
+| Version | Date | Changes |
+|---|---|---|
+| **v4.0** | Jul 31, 2026 | Major update: Refocused on 10 specific program renames. Added enrollment data, live keyword volumes, designation market gap analysis (BA/BS vs BPS, MA/MS vs MPS), updated GSC data, per-program risk ratings, strategic recommendation to lean into Arts/Science demand. |
+| v3.3 | Jan 7, 2026 | Content Strategy v2: grouped launch blogs + program rename pieces |
+| v3.0 | Feb 16, 2026 | Added Risk Matrix, RACI, KPIs, Timeline, FAQ Bank, Technical Checklist, Rollback Plan, Monitoring Dashboard |
+| v2.0 | Jan 6, 2026 | Restructured for DPS/MPS launch; added keyword research |
+| v1.0 | Dec 12, 2025 | Initial report with GA4/GSC baseline and competitor analysis |
 
 ---
 
