@@ -1,8 +1,26 @@
 # SEO Impact Report — Improvement Todo List
 
 **Created:** February 16, 2026  
-**Status:** ✅ COMPLETE (All 4 Phases Implemented)  
-**Report:** `seo-impact-report.html`
+**Last documentation sync:** August 2026 (v4.1)  
+**Status:** ✅ COMPLETE (All 4 Phases Implemented) · **Current report version: 4.1**  
+**Report:** `seo-impact-report.html`  
+**Primary readme:** `readme.md`
+
+---
+
+## Current State (v4.1 — Aug 2026)
+
+Report and readme are aligned to ELT memo outcomes:
+
+| Status | Scope |
+|--------|--------|
+| **Approved** | 6 renames (5 BA + MPH→Community Health); AA→60 credits (4 programs); WECs (UG only) |
+| **Paused** | Business Administration → Strategic Management and Operations |
+| **Pending Carnegie** | 5 graduate MPS renames (Christie, 8/17) |
+
+**SEO action:** Execute mitigation for approved renames only. Hold assets for Carnegie/paused.
+
+Historical checklist below documents the v3.0 execution-readiness build (Feb 2026) and remains for audit trail.
 
 ---
 

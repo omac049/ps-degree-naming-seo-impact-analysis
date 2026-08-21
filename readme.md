@@ -92,6 +92,10 @@ Execute SEO mitigation for the **6 approved** renames now (preserve URLs, dual-l
 - **Designation Market Gap** — BA/BS vs BPS, MA/MS vs MPS structural comparison
 - **Updated Decisions** — ELT approvals, pauses, Carnegie holds + success criteria
 
+### Companion
+- **`program-rename-proposal-shareable.html`** — enrollment funnel briefing; rename map includes ELT status column (v4.1 sync)
+- **`report-improvements-todo.md`** — historical execution checklist + current v4.1 state note
+
 ### Part 2: Baseline Data
 - **Key Findings** — validated findings with risk ratings
 - **Risk Matrix** — per-program SEO risk assessment
