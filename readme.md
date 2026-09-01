@@ -1,14 +1,14 @@
 # Program Rename: SEO & Enrollment Impact Analysis
 
 **University of Arizona Global Campus (UAGC)**  
-**Report Date:** August 24, 2026  
-**Version:** 4.2
+**Report Date:** September 1, 2026  
+**Version:** 4.3
 
 ---
 
 ## Overview
 
-Data-driven analysis of how renaming UAGC programs affects search visibility, organic discovery, and enrollment — updated with **ELT memo outcomes (Aug 13–17, 2026)** and **Group A launch content results (Apr 21 – Aug 24, 2026)**.
+Data-driven analysis of how renaming UAGC programs affects search visibility, organic discovery, and enrollment — updated with **ELT memo outcomes (Aug 13–17, 2026)** and **verified Group A results (Apr 21 – Aug 31, 2026; re-pulled Sep 1)**.
 
 **Primary deliverable:** `seo-impact-report.html` — a self-contained HTML report with enrollment data, search demand analysis, Group A performance results, ELT decisions, and mitigation strategies. Styled to UAGC brand guidelines (Arizona Red/Blue, Proxima Nova).
 
@@ -16,26 +16,29 @@ Data-driven analysis of how renaming UAGC programs affects search visibility, or
 
 ---
 
-## Current Status (v4.2)
+## Current Status (v4.3)
 
 | Workstream | Status |
 |---|---|
-| **Group A** — April 21 Launch Content (15 blogs + 3 quick wins) | **Complete** — live performance data in report |
-| **Group B** — Program Rename Content (32 pieces across 3 tiers) | Next priority — blocked until sitemap is fixed |
+| **Group A** — April 21 Launch Content (15 blogs + 3 quick wins) | **Complete** — per-post GSC/GA4 data verified Sep 1 |
+| **Group B** — Program Rename Content (32 pieces, two waves) | **Cleared to start** — Wave 1 (19 pieces) for the 6 approved renames; Wave 2 (13) drafted, held for Carnegie |
 | **ELT-approved renames** (6 programs) | SEO mitigation ready |
 | **Carnegie-held / paused** | Hold SEO asset changes |
 
-### Group A Results Snapshot (Apr 21 – Aug 24, 2026)
+### Group A Results Snapshot (Apr 21 – Aug 31, 2026 — verified Sep 1)
 
 | Metric | Value |
 |---|---|
-| Blog posts published | 15 |
-| Quick wins optimized | 3 (646 organic clicks) |
-| Blog GSC clicks | 48.7K |
-| Blog GSC impressions | 11.4M |
-| Homepage avg position | Improved 10.1 → 5.6 |
+| New blog posts published | 15 (all in sitemap) |
+| Quick wins (refreshed posts) | 3 — **685** organic clicks, 124.9K impressions |
+| New-post organic clicks | **569** clicks, 64.8K impressions |
+| Group A total | **1,254 clicks · 190K impressions · 4,831 GA4 sessions** (~3.5% of blog clicks) |
+| Best new post | *AI in Communication* — 182 clicks, pos 7.0 |
+| Best overall | *Business Economics vs Business Administration* (refresh) — 346 clicks |
 
-**Critical blocker:** Blog sitemap (`/blog/sitemap.xml`) has not updated since February 2026 — April–August content is missing from the sitemap. Resolve before Group B launch.
+**Correction from v4.2:** the 48.7K clicks / 11.4M impressions previously reported were blog-wide totals, not Group A. **Sitemap blocker resolved:** `/blog/sitemap.xml` has 715 URLs, last modified Aug 27, 2026, and contains all Group A posts.
+
+**Key lessons (drive Group B):** "X vs Y" comparisons win · refreshing ranking posts beats new posts (685 vs 569 clicks) · explainer titles must use the searcher's exact phrase (MPS post: page 1 for "mps degree" but 0.15% CTR) · faculty/tips posts don't earn search (avg 20 clicks).
 
 ---
 
@@ -87,7 +90,7 @@ Data-driven analysis of how renaming UAGC programs affects search visibility, or
 - Graduate decisions grew **+15% YoY** under current names
 
 ### Strategic Recommendation
-Execute SEO mitigation for the **6 approved** renames now (preserve URLs, dual-language naming). Hold SEO asset changes for Carnegie-held and paused programs. Fix the blog sitemap before Group B content. Lean into Arts/Science market demand where designation stays unchanged.
+Execute SEO mitigation for the **6 approved** renames now (preserve URLs, dual-language naming). Hold SEO asset changes for Carnegie-held and paused programs. Start Group B Wave 1 now — lead with "what is applied social science" (1,300/mo, zero competition) and "what is community health" (1,000/mo). Lean into Arts/Science market demand where designation stays unchanged.
 
 ---
 
@@ -96,11 +99,11 @@ Execute SEO mitigation for the **6 approved** renames now (preserve URLs, dual-l
 | Source | Date Range | Status |
 |---|---|---|
 | **Enrollment/CRM Data** | Jul 2025 – Jun 2026 (vs YoY Jul 2024 – Jun 2025) | Verified |
-| **Keywords Everywhere** | Aug 24, 2026 (Group A / Group B keywords) | Verified |
-| **Google Search Console** | Apr 21 – Aug 24, 2026 (Group A); prior 90/180-day baseline Jul 31 | Verified |
-| **GA4 Analytics** | Apr 21 – Aug 24, 2026 (Group A); Dec 2025 baseline retained | Verified |
+| **Keywords Everywhere** | Sep 1, 2026 (Group B Wave 1 keywords re-pulled) | Verified |
+| **Google Search Console** | Apr 21 – Aug 31, 2026 (Group A per-post + URL inspection); prior 90/180-day baseline Jul 31 | Verified |
+| **GA4 Analytics** | Apr 21 – Aug 31, 2026 (Group A per-post sessions); Dec 2025 baseline retained | Verified |
 | **Google Trends** | 12-month lookback (US) | Verified |
-| **UAGC Blog Sitemap** | Checked Aug 24, 2026 — stale since Feb 2026 | Issue flagged |
+| **UAGC Blog Sitemap** | Checked Sep 1, 2026 — 715 URLs, lastmod Aug 27, 2026 | Resolved |
 | **ELT Memo** | Aug 13–17, 2026 | Decisions recorded |
 | **Competitor Research** | December 2025 – July 2026 | 14 universities documented |
 
@@ -130,8 +133,8 @@ Execute SEO mitigation for the **6 approved** renames now (preserve URLs, dual-l
 ### Part 3: Strategy & Content
 - **Strategic Recommendations** — prioritized action items
 - **SEO Mitigation Strategy** — dual-language naming, URL preservation, phased rollout
-- **Group A Results** — Apr 21 launch performance (GSC, GA4, Keywords Everywhere)
-- **Content Plan** — Group B (32 pieces) next; archived plan retained as reference
+- **Group A Results** — per-post GSC/GA4 performance, query-level reads, "What Group A taught us" rules
+- **Content Plan** — Group B in two waves: Wave 1 (19 pieces, approved renames) and Wave 2 (13 pieces, held)
 
 ### Part 4: Execution
 - **Implementation & Monitoring** — condensed RACI, runbook, rollback triggers, and monitoring cadence
@@ -140,12 +143,12 @@ Execute SEO mitigation for the **6 approved** renames now (preserve URLs, dual-l
 
 ## Strategic Recommendations (Summary)
 
-1. **Fix the blog sitemap** — unblock indexation before Group B
+1. **Rewrite the MPS post title/meta around "mps degree"** — the one open Group A item
 2. **Preserve All Existing URLs** — non-negotiable for approved renames
 3. **Implement Dual-Language Naming on Every Approved Page** — title tags, H1s, meta descriptions
 4. **Lean Into Arts Designation Keywords** — approved BA renames keep Arts; don't abandon that search market
 5. **Prioritize SEO work for the 6 approved programs** — hold assets for Carnegie / paused
-6. **Proceed to Group B content** after sitemap fix — 32 pieces across 3 tiers
+6. **Start Group B Wave 1 now** — 19 pieces for the 6 approved renames; hold Wave 2 (13) for Carnegie
 7. **Monitor GSC + Enrollment Weekly for 6 Months** — cross-reference search and funnel data
 8. **Build "What Is Professional Studies?" Hub Content** — especially for MPH → Community Health
 
@@ -174,6 +177,7 @@ BYU Pathway Worldwide, Excelsior University, Middle Tennessee State, Missouri St
 
 | Version | Date | Changes |
 |---|---|---|
+| **v4.3** | Sep 1, 2026 | Group A verified per-post against live GSC/GA4/KE/sitemap. Blog-wide totals corrected to Group A-only (1,254 clicks). Sitemap blocker resolved. Group B re-scoped to ELT-approved renames in two waves (19 + 13) with Sep 1 keyword volumes. "What Group A taught us" content rules added. |
 | **v4.2** | Aug 24, 2026 | Group A results integrated (15 blogs, 3 quick wins, GSC/GA4/KE). Sitemap issue flagged. Report rebranded to UAGC guidelines; FAQ Bank/Templates removed; RACI/Runbook/Rollback/Monitoring condensed into Implementation. |
 | **v4.1** | Aug 2026 | ELT memo decisions integrated: 6 approved renames, AA→60 credits, WECs (UG only), 1 paused (Business Admin), 5 pending Carnegie. |
 | **v4.0** | Jul 31, 2026 | Refocused on 10 specific program renames. Enrollment data, keyword volumes, designation market gap, per-program risk ratings. |
