@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Applied Social Science Brief</title>
+<meta name="description" content="Writer's brief for the Group B Wave 1 explainer 'What Is Applied Social Science?' — keyword targets, paste-ready title and meta, outline with word budgets, FAQ, links, and compliance notes.">
+<style>
+  :root {
+    --arizona-red: #AB0520; --arizona-blue: #0C234B; --blue: #0076A8; --sky: #81D3EB; --river: #007D8A; --orange: #EF9600;
+    --page: #FFFFFF; --ink: #111111; --muted: #53565A; --module: #F1F1F0; --rule: #D0D0CE; --card: #FFFFFF;
+    --head-bg: #0C234B; --head-ink: #FFFFFF; --sub-ink: #81D3EB; --th-bg: #0C234B; --th-ink: #FFFFFF; --zebra: #F1F1F0;
+    --heading: #0C234B; --code-bg: #F1F1F0; --code-ink: #0C234B; --link: #AB0520; --link-hover: #990019;
+    --draft-bg: #F4F8FB; --draft-rule: #0076A8; --warn-bg: #FFF4E0; --warn-ink: #7A4B00; --warn-rule: #EF9600;
+    --ok-bg: #E9F5F6; --ok-rule: #007D8A;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --page: #0B1526; --ink: #ECEFF4; --muted: #A9B4C2; --module: #13213A; --rule: #2A3A55; --card: #101C31;
+      --head-bg: #05193C; --th-bg: #05193C; --zebra: #13213A; --heading: #81D3EB; --code-bg: #1A2A45; --code-ink: #BFE7F5;
+      --link: #FF8A9A; --link-hover: #FFB3BE; --draft-bg: #0F2238; --warn-bg: #2A2110; --warn-ink: #FFD48A; --ok-bg: #0F2A2C;
+    }
+  }
+  :root[data-theme="dark"] {
+    --page: #0B1526; --ink: #ECEFF4; --muted: #A9B4C2; --module: #13213A; --rule: #2A3A55; --card: #101C31;
+    --head-bg: #05193C; --th-bg: #05193C; --zebra: #13213A; --heading: #81D3EB; --code-bg: #1A2A45; --code-ink: #BFE7F5;
+    --link: #FF8A9A; --link-hover: #FFB3BE; --draft-bg: #0F2238; --warn-bg: #2A2110; --warn-ink: #FFD48A; --ok-bg: #0F2A2C;
+  }
+  * { box-sizing: border-box; }
+  html { color-scheme: light dark; }
+  body { margin: 0; background: var(--page); color: var(--ink); font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; }
+  a { color: var(--link); text-decoration: underline; } a:hover { color: var(--link-hover); }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.85em; background: var(--code-bg); color: var(--code-ink); padding: 1px 5px; border-radius: 4px; }
+  h1, h2, h3, h4 { color: var(--heading); margin: 0; text-wrap: balance; }
+  h2 { font-size: 20px; line-height: 24px; font-weight: 600; margin: 32px 0 8px; }
+  h3 { font-size: 16px; line-height: 24px; font-weight: 600; margin: 16px 0 4px; }
+  p { margin: 0 0 12px; max-width: 78ch; }
+  ul, ol { margin: 0 0 12px; padding-left: 22px; max-width: 78ch; } li { margin: 4px 0; }
+  .eyebrow { font-size: 12px; line-height: 16px; letter-spacing: .08em; text-transform: uppercase; font-weight: 600; color: var(--muted); }
+  .num { font-variant-numeric: tabular-nums; }
+  .page { max-width: 960px; margin: 0 auto; padding: 0 24px 48px; }
+
+  header.band { background: var(--head-bg); color: var(--head-ink); padding: 24px 32px; margin: 24px 0; border-radius: 8px; display: grid; grid-template-columns: 1fr auto; gap: 16px 32px; align-items: end; }
+  header.band .eyebrow { color: var(--sub-ink); }
+  header.band h1 { color: #fff; font-size: 28px; line-height: 32px; font-weight: 700; margin-top: 8px; }
+  header.band p { margin: 8px 0 0; color: var(--sub-ink); font-size: 14px; line-height: 18px; max-width: none; }
+  header.band .meta { text-align: right; font-size: 14px; line-height: 20px; color: #fff; }
+  header.band .meta strong { display: block; color: var(--sub-ink); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; margin-top: 6px; }
+  header.band .meta strong:first-child { margin-top: 0; }
+
+  .snapshot { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 8px; }
+  .snapshot .tile { background: var(--module); border-radius: 8px; padding: 12px 16px; border-top: 4px solid var(--arizona-red); }
+  .snapshot .tile .eyebrow { margin-bottom: 2px; }
+  .snapshot .tile .big { font-size: 22px; line-height: 28px; font-weight: 700; color: var(--heading); }
+  .snapshot .tile p { margin: 0; font-size: 13px; line-height: 18px; color: var(--muted); }
+
+  table { border-collapse: collapse; width: 100%; font-size: 14px; line-height: 20px; }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 8px; margin-bottom: 12px; }
+  thead th { background: var(--th-bg); color: var(--th-ink); font-weight: 600; text-align: left; padding: 8px 12px; }
+  tbody td { padding: 8px 12px; border-top: 1px solid var(--rule); vertical-align: top; }
+  tbody tr:nth-child(even) td { background: var(--zebra); }
+  td.r, th.r { text-align: right; white-space: nowrap; }
+  td.k { font-weight: 600; white-space: nowrap; width: 160px; }
+
+  .draft { background: var(--draft-bg); border-left: 4px solid var(--draft-rule); border-radius: 8px; padding: 14px 20px; margin: 8px 0 16px; }
+  .draft .eyebrow { margin-bottom: 4px; }
+  .draft p:last-child { margin-bottom: 0; }
+  .paste { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 14px; line-height: 20px; background: var(--code-bg); color: var(--code-ink); padding: 8px 12px; border-radius: 6px; display: block; overflow-wrap: anywhere; }
+  .warn { background: var(--warn-bg); color: var(--warn-ink); border-left: 4px solid var(--warn-rule); border-radius: 8px; padding: 14px 20px; margin: 8px 0 16px; }
+  .warn p, .warn li { color: inherit; } .warn p:last-child { margin-bottom: 0; }
+  .ok { background: var(--ok-bg); border-left: 4px solid var(--ok-rule); border-radius: 8px; padding: 14px 20px; margin: 8px 0 16px; }
+  .ok p:last-child, .ok ul:last-child { margin-bottom: 0; }
+
+  .outline { border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; margin-bottom: 12px; }
+  .sec { padding: 12px 16px; border-top: 1px solid var(--rule); display: grid; grid-template-columns: 1fr 120px; gap: 8px 16px; }
+  .sec:first-child { border-top: 0; }
+  .sec h3 { margin: 0 0 4px; }
+  .sec h3 small { font-weight: 400; color: var(--muted); font-size: 13px; }
+  .sec .budget { text-align: right; font-size: 13px; line-height: 18px; color: var(--muted); }
+  .sec .budget b { display: block; font-size: 18px; line-height: 24px; color: var(--heading); }
+  .sec p, .sec ul { font-size: 14px; line-height: 20px; margin-bottom: 6px; }
+  .sec .cover { color: var(--muted); }
+  .faq dt { font-weight: 600; margin-top: 10px; } .faq dd { margin: 2px 0 0; color: var(--muted); font-size: 14px; line-height: 20px; max-width: 78ch; }
+  .check li { list-style: none; position: relative; padding-left: 26px; }
+  .check li::before { content: ""; position: absolute; left: 0; top: 4px; width: 14px; height: 14px; border: 2px solid var(--muted); border-radius: 3px; }
+  footer { border-top: 1px solid var(--rule); margin-top: 32px; padding-top: 12px; font-size: 12px; line-height: 16px; color: var(--muted); }
+  @media (max-width: 760px) { header.band { grid-template-columns: 1fr; } header.band .meta { text-align: left; } .snapshot { grid-template-columns: 1fr 1fr; } .sec { grid-template-columns: 1fr; } .sec .budget { text-align: left; } }
+  @media print { @page { size: letter; margin: 0.5in; } body { font-size: 12px; line-height: 16px; } .page { padding: 0; max-width: none; } header.band { margin-top: 0; border-radius: 0; } * { -webkit-print-color-adjust: exact; print-color-adjust: exact; } h2 { margin-top: 18px; } .sec, .draft, .warn, .ok, tr { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="band">
+    <div>
+      <p class="eyebrow">Group B · Wave 1 · Tier 1 explainer · Priority P1</p>
+      <h1>Content Brief: What Is Applied Social Science?</h1>
+      <p>Supports the BA in Social Science → BA in Applied Social Science rename. First piece in the Group B queue.</p>
+    </div>
+    <div class="meta">
+      <strong>Requested by</strong> Omar Corral, SEO
+      <strong>Assigned to</strong> Content Team — writer TBD
+      <strong>Brief date</strong> September 1, 2026 · Status: ready to write
+    </div>
+  </header>
+
+  <div class="snapshot">
+    <div class="tile"><p class="eyebrow">Primary keyword</p><p class="big">what is applied social science</p><p class="num">1,300 searches/mo (U.S.) · competition 0.00</p></div>
+    <div class="tile"><p class="eyebrow">UAGC today</p><p class="big num">0 impressions</p><p>No UAGC page surfaces for any "applied social science" query. Nobody owns the definition yet.</p></div>
+    <div class="tile"><p class="eyebrow">Length &amp; format</p><p class="big num">1,300–1,500 words</p><p>Explainer with one comparison table and a 6-question FAQ (FAQ schema).</p></div>
+    <div class="tile"><p class="eyebrow">Target URL</p><p class="big" style="font-size:16px;line-height:22px;word-break:break-all;">/blog/what-is-applied-social-science</p><p>New post. Publish-ready target: 3 weeks from assignment.</p></div>
+  </div>
+
+  <h2>Who is searching, and what they expect</h2>
+  <p>Two audiences share this query, and the piece has to satisfy both in order:</p>
+  <ol>
+    <li><strong>Students defining the term.</strong> The related searches (<em>applied social science disciplines</em>, <em>3 branches of applied social science</em>, <em>social work as an applied social science</em>, <em>communication as applied social science</em>) come from coursework that frames applied social science as three practice fields: counseling, social work, and communication. If the article doesn't give a clean definition and name those disciplines, it won't rank.</li>
+    <li><strong>Adults weighing a degree.</strong> Once the definition is handled, the piece pivots to what the work looks like, the skills involved, and the degree path. This is the audience the RFI is for.</li>
+  </ol>
+  <div class="warn">
+    <p><strong>Set expectations:</strong> this piece is our authority play for the rename — the goal is to own the definition on page 1 within 90 days. Because much of the demand is definitional, expect strong traffic and softer RFI conversion than the Tier 3 career pieces. That is the right trade for a P1 explainer.</p>
+  </div>
+
+  <h2>Search targets</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Keyword</th><th class="r">Vol/mo</th><th class="r">Comp.</th><th>Where it goes</th></tr></thead>
+      <tbody>
+        <tr><td><strong>what is applied social science</strong></td><td class="r num">1,300</td><td class="r num">0.00</td><td>Title, H1, first sentence, one H2, URL</td></tr>
+        <tr><td>applied social science disciplines / 3 branches of applied social science</td><td class="r">PASF</td><td class="r">—</td><td>Dedicated H2 ("The disciplines of applied social science")</td></tr>
+        <tr><td>applied social science jobs</td><td class="r">PASF</td><td class="r">—</td><td>Careers H2 (short; links to the Tier 3 careers piece)</td></tr>
+        <tr><td>applied social science practitioner</td><td class="r">PASF</td><td class="r">—</td><td>"What do applied social scientists do?" H2</td></tr>
+        <tr><td>applied social science degree</td><td class="r num">10</td><td class="r num">0.10</td><td>Degree H2 + meta</td></tr>
+        <tr><td>social science degree careers</td><td class="r num">170</td><td class="r num">0.04</td><td>Link only — already owned by the refreshed Quick Win post</td></tr>
+        <tr><td>importance of applied social science</td><td class="r">Related</td><td class="r">—</td><td>One paragraph inside the definition section</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:13px;color:var(--muted)">Source: Keywords Everywhere (U.S., Sep 1, 2026); PASF = "People also search for." Google Search Console shows zero UAGC impressions for any query containing "applied social science" (Apr 21 – Aug 31, 2026).</p>
+
+  <h2>Paste-ready SEO elements</h2>
+  <div class="tablewrap">
+    <table>
+      <tbody>
+        <tr><td class="k">Title tag</td><td><span class="paste">What Is Applied Social Science? Definition, Fields &amp; Degrees</span><span style="font-size:12px;color:var(--muted)">60 characters. Omit "| UAGC" — it would push past 60.</span></td></tr>
+        <tr><td class="k">Meta description</td><td><span class="paste">Applied social science puts sociology, psychology, and economics to work on real problems. See what it means, its main fields, careers, and the degree path.</span><span style="font-size:12px;color:var(--muted)">156 characters.</span></td></tr>
+        <tr><td class="k">H1</td><td><span class="paste">What Is Applied Social Science? Definition, Fields &amp; Degrees</span></td></tr>
+        <tr><td class="k">URL</td><td><span class="paste">/blog/what-is-applied-social-science</span></td></tr>
+        <tr><td class="k">og:title / og:description</td><td>Set to the title and meta above. Do not leave og:description to auto-generate.</td></tr>
+        <tr><td class="k">Category</td><td>Degree Programs → Social &amp; Behavioral Science</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Opening paragraph (draft — edit, don't rebuild)</h2>
+  <p>The first 50 words carry the definition. Mobile readers see nothing else before scrolling, and Google lifts this paragraph for the featured answer.</p>
+  <div class="draft">
+    <p class="eyebrow">Draft opening · 58 words</p>
+    <p><strong>Applied social science</strong> is the practice of using research and theory from fields like sociology, psychology, economics, and political science to solve real problems in communities, organizations, and public policy. Where traditional social science asks <em>why</em> people behave the way they do, applied social science asks <em>what we should do about it</em> — and then tests whether it worked.</p>
+  </div>
+
+  <h2>Outline with word budgets</h2>
+  <p>Eight H2s plus the FAQ. Keep the H2 wording as written — each one is a search phrase or a People-Also-Ask question.</p>
+  <div class="outline">
+
+    <div class="sec">
+      <div>
+        <h3>H2 · What Is Applied Social Science? <small>definition section</small></h3>
+        <p class="cover">Expand the opening: pure vs. applied in one sentence each; one concrete example (a city uses survey data and community interviews to redesign a transit route — that's applied social science). One paragraph on <em>why it matters</em> (covers "importance of applied social science").</p>
+      </div>
+      <div class="budget"><b class="num">180</b>words</div>
+    </div>
+
+    <div class="sec">
+      <div>
+        <h3>H2 · Applied Social Science vs. Social Science: What's the Difference?</h3>
+        <p class="cover">Comparison table, 5 rows: <em>Main question · Typical output · Where it happens · Who it serves · Example</em>. Then two sentences making clear they are the same body of knowledge used for different ends — not competing fields.</p>
+      </div>
+      <div class="budget"><b class="num">170</b>words + table</div>
+    </div>
+
+    <div class="sec">
+      <div>
+        <h3>H2 · The Disciplines of Applied Social Science</h3>
+        <p class="cover">Lead with the three fields searchers are taught: <strong>counseling, social work, and communication</strong> — one short paragraph each on what the field applies and to whom. Then a second group under an H3 "Other fields that apply social science": public policy and program evaluation, community development, human resources and organizational behavior, market and survey research, public health. This section is why the page ranks; don't shortcut it.</p>
+      </div>
+      <div class="budget"><b class="num">300</b>words</div>
+    </div>
+
+    <div class="sec">
+      <div>
+        <h3>H2 · What Do Applied Social Scientists Actually Do?</h3>
+        <p class="cover">Four day-to-day tasks, each one sentence of task + one sentence of example: run a community needs assessment; evaluate whether a program works; turn survey data into a recommendation; write a policy brief. Covers "applied social science practitioner."</p>
+      </div>
+      <div class="budget"><b class="num">150</b>words</div>
+    </div>
+
+    <div class="sec">
+      <div>
+        <h3>H2 · Skills You Build in Applied Social Science</h3>
+        <p class="cover">Five skills as a bulleted list, each tied to a UAGC course so it's concrete, not generic: applied research design (<em>PSY 326 Research Methods</em>), qualitative methods (<em>SSC 460 Qualitative Research Methods in the Social Sciences</em>), data analysis and interpretation, intercultural communication (<em>COM 370</em>), diagnosing social problems and designing action (<em>SOC 302 Social Problems and Social Action</em>). Course names must match the catalog exactly.</p>
+      </div>
+      <div class="budget"><b class="num">160</b>words</div>
+    </div>
+
+    <div class="sec">
+      <div>
+        <h3>H2 · Careers With an Applied Social Science Degree</h3>
+        <p class="cover">Short on purpose — the Tier 3 careers post owns this topic. Six roles, one line each with the BLS occupation linked: social and community service manager · survey researcher · market research analyst · human resources specialist · community health worker · program or policy analyst. No salary figures here; link to <em>What Can You Do With a Social Science Degree? 2026 Career Guide</em> for pay data.</p>
+      </div>
+      <div class="budget"><b class="num">140</b>words</div>
+    </div>
+
+    <div class="sec">
+      <div>
+        <h3>H2 · Is an Applied Social Science Degree Right for You?</h3>
+        <p class="cover">Three reader profiles in "you" voice: the working adult in human services who wants credentials to move up; the career changer who likes people and data; the student who wants a broad, flexible bachelor's that maps to real jobs. Close each with one sentence on how the degree fits.</p>
+      </div>
+      <div class="budget"><b class="num">150</b>words</div>
+    </div>
+
+    <div class="sec">
+      <div>
+        <h3>H2 · Earning a Bachelor of Arts in Applied Social Science Online at UAGC</h3>
+        <p class="cover">Use the dual-name sentence from the compliance box below. Facts to include (all from the current program page): College of Integrative Learning · 120 credits, 36 in the major · fully online, no GRE/SAT/ACT · credit for prior learning and military service · WSCUC accredited · curriculum "rooted in an applied interdisciplinary approach" building applied research, data analysis, problem-solving, and digital literacy. Program-page link and the RFI CTA sit here.</p>
+      </div>
+      <div class="budget"><b class="num">170</b>words</div>
+    </div>
+
+    <div class="sec">
+      <div>
+        <h3>H2 · Frequently Asked Questions <small>FAQ schema</small></h3>
+        <p class="cover">Six questions below; 40–60 words each. Answer in the first sentence.</p>
+      </div>
+      <div class="budget"><b class="num">300</b>words</div>
+    </div>
+
+  </div>
+  <p style="font-size:13px;color:var(--muted)">Total ≈ 1,720 words with the FAQ. Trim the disciplines or careers sections before trimming the definition.</p>
+
+  <h2>FAQ — questions and answer direction</h2>
+  <dl class="faq">
+    <dt>What is applied social science in simple terms?</dt>
+    <dd>One-sentence definition, then the "why → what to do about it" contrast. Reuse the opening's wording so the answer is consistent across the page.</dd>
+    <dt>What are the three branches of applied social science?</dt>
+    <dd>Counseling, social work, and communication. Say plainly that these are the three fields most often taught, then note the broader set (policy, HR, community development).</dd>
+    <dt>What is the difference between social science and applied social science?</dt>
+    <dd>Same knowledge, different purpose: understanding vs. intervention. Point back to the comparison table.</dd>
+    <dt>What jobs can you get with an applied social science degree?</dt>
+    <dd>Name four roles from the careers section and link to the careers guide. No salary promises.</dd>
+    <dt>Is applied social science a good degree?</dt>
+    <dd>Answer honestly: good fit for people-plus-data work across many sectors; the value comes from the research and analysis skills, which transfer. Link to the "right for you" section.</dd>
+    <dt>Is the BA in Applied Social Science the same as UAGC's BA in Social Science?</dt>
+    <dd>Yes — same program, updated name that reflects the applied focus. Use the compliance-approved sentence below verbatim.</dd>
+  </dl>
+
+  <h2>Links</h2>
+  <h3>Internal (required: program page + at least two posts)</h3>
+  <ul>
+    <li><strong>Program page:</strong> <code>/online-degrees/bachelors/social-science</code> — link from the degree section and once from the opening definition ("UAGC's BA in Social Science…").</li>
+    <li><code>/blog/what-can-you-do-social-science-degree-2026-career-guide</code> — from the careers section (the refreshed Quick Win; it ranks at 7.7).</li>
+    <li><code>/blog/what-social-theory</code> — from the definition section (1,471 clicks this period; strong page to borrow from).</li>
+    <li><code>/blog/what-is-social-and-behavioral-science</code> — from the disciplines section.</li>
+    <li><code>/blog/careers-public-policy-how-social-science-and-policy-analysis-shape-public-</code> — from the "other fields" H3 (public policy).</li>
+    <li><code>/blog/professional-studies-vs-ba-or-bs-bps-vs-ba</code> — one link from the degree section (keeps the Professional Studies cluster connected).</li>
+  </ul>
+  <h3>External (2–3, authoritative)</h3>
+  <ul>
+    <li>U.S. Bureau of Labor Statistics, Occupational Outlook Handbook — link each career role to its BLS page (social and community service managers; survey researchers; market research analysts; human resources specialists; community health workers).</li>
+    <li>One academic or professional definition of applied social science (a university department page or an association such as the Society for Applied Anthropology / American Sociological Association section on practice) — cite in the definition section.</li>
+  </ul>
+  <h3>Reverse links (Web Team, publish day)</h3>
+  <ul>
+    <li>Add this post to the related-articles block on <code>/online-degrees/bachelors/social-science</code>.</li>
+    <li>Add a "Related" link from the refreshed <em>Social Science Degree Careers</em> post.</li>
+  </ul>
+
+  <h2>Compliance and naming</h2>
+  <div class="ok">
+    <p><strong>Dual naming — use this sentence verbatim in the degree section and in FAQ #6:</strong></p>
+    <p><span class="paste">UAGC's Bachelor of Arts in Social Science is becoming the Bachelor of Arts in Applied Social Science. The name change reflects the program's applied, career-focused curriculum; the coursework, credits, and accreditation stay the same.</span></p>
+    <ul>
+      <li>Both names appear in the meta description's spirit (the page speaks to "degree path"), the first paragraph of the degree section, and FAQ #6. Keep this for 6–12 months after the rename is live.</li>
+      <li><strong>Before publish, confirm with SEO whether the new name is live in the catalog.</strong> If it is, change "is becoming" to "is now." If not, keep "is becoming."</li>
+    </ul>
+  </div>
+  <div class="warn">
+    <p><strong>Do not:</strong> state or imply guaranteed employment, salary, or licensure. Any pay figure must be BLS-sourced and linked. Include the standard footer disclaimer used on the program page ("UAGC does not guarantee employment placement, any specific salary from employment, or career advancement…" and the licensure note). Keep course names exactly as the catalog lists them.</p>
+  </div>
+
+  <h2>Format and voice</h2>
+  <ul>
+    <li>Student-first "you" voice; grade 8 reading level; Oxford comma; title case for H1/H2, sentence case for H3.</li>
+    <li>Paragraphs of 2–4 sentences. The comparison table must collapse cleanly on mobile (two columns max, or stacked rows).</li>
+    <li>Two RFI placements: after the opening definition, and at the end of the degree section. Program-page text link mid-page.</li>
+    <li>Images: one hero (people working with data or in a community setting — no stock "graduate in a cap"); alt text describes the scene, not the keyword.</li>
+    <li>FAQ schema on the six questions; validate before publish.</li>
+  </ul>
+
+  <h2>Publish-day checklist</h2>
+  <ul class="check">
+    <li>Title, meta, H1, og:title, og:description entered exactly as above.</li>
+    <li>URL is <code>/blog/what-is-applied-social-science</code>; canonical self-referencing.</li>
+    <li>Dual-name sentence present and tense confirmed with SEO.</li>
+    <li>Program page and related-articles block link to the post; post links to the program page and ≥ 2 posts.</li>
+    <li>FAQ schema validates; no duplicate H1/H2 text.</li>
+    <li>Page appears in <code>/blog/sitemap.xml</code>; URL submitted in Search Console.</li>
+    <li>Logged in the Group B tracker with publish date and target keyword.</li>
+  </ul>
+
+  <h2>How we'll judge it</h2>
+  <ul>
+    <li><strong>14 days:</strong> indexed and receiving impressions for "what is applied social science."</li>
+    <li><strong>90 days:</strong> page 1 for the primary keyword; impressions for at least three of the PASF variants.</li>
+    <li><strong>Ongoing:</strong> assisted RFIs from the page (GA4), reported in the weekly SEO update.</li>
+  </ul>
+
+  <footer>Source: Google Search Console (sc-domain:uagc.edu, Apr 21 – Aug 31, 2026) · Keywords Everywhere (U.S., Sep 1, 2026) · UAGC program page and catalog (Sep 1, 2026) · Group B Content Plan v1 · Questions: Omar Corral, SEO</footer>
+</div>
+</body>
+</html>

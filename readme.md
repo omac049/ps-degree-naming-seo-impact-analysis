@@ -123,6 +123,7 @@ Execute SEO mitigation for the **6 approved** renames now (preserve URLs, dual-l
 ### Companion
 - **`program-rename-proposal-shareable.html`** — enrollment funnel briefing; rename map includes ELT status column
 - **`group-b-content-plan.html`** — Content Team one-pager (Wave 1 / Wave 2 briefs, spec, checklist)
+- **`briefs/`** — per-piece writer briefs (first: `what-is-applied-social-science.html`)
 - **`report-improvements-todo.md`** — historical execution checklist
 
 ### Part 2: Baseline Data
