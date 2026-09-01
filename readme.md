@@ -14,6 +14,8 @@ Data-driven analysis of how renaming UAGC programs affects search visibility, or
 
 **Companion report:** `program-rename-proposal-shareable.html` — enrollment funnel data, demographics, migration flows, and Sankey diagrams.
 
+**Content Team brief:** `group-b-content-plan.html` — standalone one-pager for the Content Manager: 19 Wave 1 pieces (titles, slugs, keywords, program links, briefs), 13 Wave 2 pieces on hold, per-piece spec, publish-day checklist, and the MPS pre-flight rewrite.
+
 ---
 
 ## Current Status (v4.3)
@@ -120,6 +122,7 @@ Execute SEO mitigation for the **6 approved** renames now (preserve URLs, dual-l
 
 ### Companion
 - **`program-rename-proposal-shareable.html`** — enrollment funnel briefing; rename map includes ELT status column
+- **`group-b-content-plan.html`** — Content Team one-pager (Wave 1 / Wave 2 briefs, spec, checklist)
 - **`report-improvements-todo.md`** — historical execution checklist
 
 ### Part 2: Baseline Data

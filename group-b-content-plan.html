@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Group B Content Plan</title>
+<meta name="description" content="Content Team brief for UAGC's program-rename content: 19 Wave 1 pieces for the six ELT-approved renames, 13 Wave 2 pieces on hold, per-piece specs, publish checklist, and the MPS pre-flight rewrite.">
+<style>
+  :root {
+    --arizona-red: #AB0520; --arizona-red-dark: #990019;
+    --arizona-blue: #0C234B; --arizona-blue-dark: #05193C; --arizona-blue-light: #092E6C;
+    --blue: #0076A8; --sky: #81D3EB; --river: #007D8A; --orange: #EF9600; --yellow: #F9E17D;
+    --light-gray-30: #F1F1F0; --light-gray: #D0D0CE; --dark-gray: #53565A; --tan: #D6D2C4;
+    /* surfaces */
+    --page: #FFFFFF; --ink: #111111; --muted: #53565A; --module: #F1F1F0; --rule: #D0D0CE;
+    --card: #FFFFFF; --head-bg: #0C234B; --head-ink: #FFFFFF; --sub-ink: #81D3EB;
+    --th-bg: #0C234B; --th-ink: #FFFFFF; --zebra: #F1F1F0; --total: rgba(12,35,75,0.08);
+    --tier1: #E3F1F4; --tier2: #E8F4F6; --tier3: #F3EFE6;
+    --chip-new-bg: #0076A8; --chip-new-ink: #FFFFFF; --chip-ref-bg: #007D8A; --chip-ref-ink: #FFFFFF;
+    --p1: #AB0520; --p2: #0076A8; --p3: #53565A;
+    --hold-bg: #FFF4E0; --hold-ink: #7A4B00; --hold-rule: #EF9600;
+    --code-bg: #F1F1F0; --code-ink: #0C234B;
+    --link: #AB0520; --link-hover: #990019;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --page: #0B1526; --ink: #ECEFF4; --muted: #A9B4C2; --module: #13213A; --rule: #2A3A55;
+      --card: #101C31; --head-bg: #05193C; --head-ink: #FFFFFF; --sub-ink: #81D3EB;
+      --th-bg: #05193C; --th-ink: #FFFFFF; --zebra: #13213A; --total: rgba(129,211,235,0.12);
+      --tier1: #12283A; --tier2: #112B36; --tier3: #24231C;
+      --p1: #FF6B7F; --p2: #6CC6EA; --p3: #A9B4C2;
+      --hold-bg: #2A2110; --hold-ink: #FFD48A; --hold-rule: #EF9600;
+      --code-bg: #1A2A45; --code-ink: #BFE7F5;
+      --link: #FF8A9A; --link-hover: #FFB3BE;
+    }
+  }
+  :root[data-theme="dark"] {
+    --page: #0B1526; --ink: #ECEFF4; --muted: #A9B4C2; --module: #13213A; --rule: #2A3A55;
+    --card: #101C31; --head-bg: #05193C; --head-ink: #FFFFFF; --sub-ink: #81D3EB;
+    --th-bg: #05193C; --th-ink: #FFFFFF; --zebra: #13213A; --total: rgba(129,211,235,0.12);
+    --tier1: #12283A; --tier2: #112B36; --tier3: #24231C;
+    --p1: #FF6B7F; --p2: #6CC6EA; --p3: #A9B4C2;
+    --hold-bg: #2A2110; --hold-ink: #FFD48A; --hold-rule: #EF9600;
+    --code-bg: #1A2A45; --code-ink: #BFE7F5;
+    --link: #FF8A9A; --link-hover: #FFB3BE;
+  }
+
+  * { box-sizing: border-box; }
+  html { color-scheme: light dark; }
+  body {
+    margin: 0; background: var(--page); color: var(--ink);
+    font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px; line-height: 24px;
+  }
+  a { color: var(--link); text-decoration: underline; }
+  a:hover, a:active { color: var(--link-hover); }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.85em; background: var(--code-bg); color: var(--code-ink); padding: 1px 5px; border-radius: 4px; white-space: nowrap; }
+  h1, h2, h3 { color: var(--arizona-blue); margin: 0; text-wrap: balance; }
+  :root[data-theme="dark"] h2, :root[data-theme="dark"] h3 { color: var(--sub-ink); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) h2, :root:not([data-theme="light"]) h3 { color: var(--sub-ink); } }
+  .eyebrow { font-size: 12px; line-height: 16px; letter-spacing: .08em; text-transform: uppercase; font-weight: 600; color: var(--muted); }
+  .num { font-variant-numeric: tabular-nums; }
+
+  .page { max-width: 1120px; margin: 0 auto; padding: 0 24px 48px; }
+
+  header.band { background: var(--head-bg); color: var(--head-ink); padding: 24px 32px; margin: 24px 0 24px; border-radius: 8px; display: grid; grid-template-columns: 1fr auto; gap: 16px 32px; align-items: end; }
+  header.band .eyebrow { color: var(--sub-ink); }
+  header.band h1 { color: #fff; font-size: 28px; line-height: 32px; font-weight: 700; margin-top: 8px; }
+  header.band p { margin: 8px 0 0; color: var(--sub-ink); font-size: 14px; line-height: 18px; }
+  header.band .meta { text-align: right; font-size: 14px; line-height: 20px; color: #fff; }
+  header.band .meta strong { display: block; color: var(--sub-ink); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; }
+
+  .context { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+  .context .tile { background: var(--module); border-radius: 8px; padding: 16px 20px; border-top: 4px solid var(--arizona-red); }
+  .context .tile .eyebrow { margin-bottom: 4px; }
+  .context .tile p { margin: 0; font-size: 14px; line-height: 20px; }
+  .context .tile .big { font-size: 24px; line-height: 32px; font-weight: 700; color: var(--arizona-blue); }
+  :root[data-theme="dark"] .context .tile .big { color: #fff; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .context .tile .big { color: #fff; } }
+
+  section { margin-bottom: 32px; }
+  section > h2 { font-size: 20px; line-height: 24px; font-weight: 600; margin-bottom: 4px; }
+  section > .lede { margin: 0 0 16px; color: var(--muted); font-size: 14px; line-height: 20px; max-width: 70ch; }
+
+  .rules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .rule { background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: 14px 16px; font-size: 14px; line-height: 20px; }
+  .rule strong { display: block; color: var(--arizona-blue); margin-bottom: 2px; }
+  :root[data-theme="dark"] .rule strong { color: var(--sub-ink); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .rule strong { color: var(--sub-ink); } }
+  .rule .ev { color: var(--muted); }
+
+  .tablewrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 8px; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; line-height: 18px; }
+  table.plan { table-layout: fixed; min-width: 1040px; }
+  table.plan thead th { white-space: normal; }
+  thead th { background: var(--th-bg); color: var(--th-ink); font-weight: 600; text-align: left; padding: 10px 12px; position: sticky; top: 0; white-space: nowrap; }
+  tbody td { padding: 10px 12px; border-top: 1px solid var(--rule); vertical-align: top; }
+  tbody tr:nth-child(even) td { background: var(--zebra); }
+  td.r, th.r { text-align: right; }
+  td.c, th.c { text-align: center; }
+  tr.tier td { background: var(--tier1) !important; font-weight: 600; color: var(--ink); padding: 8px 12px; }
+  tr.tier.t2 td { background: var(--tier2) !important; }
+  tr.tier.t3 td { background: var(--tier3) !important; }
+  tr.tier .eyebrow { display: inline; margin-right: 8px; color: var(--ink); }
+  tr.tier .why { font-weight: 400; color: var(--muted); }
+  .title { font-weight: 600; }
+  .slug { display: block; color: var(--muted); font-size: 12px; line-height: 16px; margin-top: 2px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; overflow-wrap: anywhere; }
+  .kw { overflow-wrap: anywhere; }
+  .sec { display: block; color: var(--muted); font-size: 12px; line-height: 16px; margin-top: 2px; }
+  .vol { font-weight: 700; }
+  .comp { color: var(--muted); font-size: 12px; }
+  .prog { overflow-wrap: anywhere; }
+  .prog small { display: block; color: var(--muted); font-size: 12px; line-height: 16px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; overflow-wrap: anywhere; }
+  .chip { display: inline-block; font-size: 11px; line-height: 16px; font-weight: 700; letter-spacing: .04em; padding: 1px 7px; border-radius: 4px; white-space: nowrap; }
+  .chip.new { background: var(--chip-new-bg); color: var(--chip-new-ink); }
+  .chip.ref { background: var(--chip-ref-bg); color: var(--chip-ref-ink); }
+  .pri { display: inline-block; width: 28px; height: 22px; line-height: 22px; text-align: center; border-radius: 4px; font-weight: 700; font-size: 12px; color: #fff; }
+  .pri.p1 { background: var(--p1); } .pri.p2 { background: var(--p2); } .pri.p3 { background: var(--p3); }
+  :root[data-theme="dark"] .pri { color: #0B1526; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .pri { color: #0B1526; } }
+  .brief { font-size: 13px; line-height: 18px; }
+  .brief b { color: var(--ink); }
+
+  .hold { background: var(--hold-bg); color: var(--hold-ink); border-left: 4px solid var(--hold-rule); border-radius: 8px; padding: 14px 20px; font-size: 14px; line-height: 20px; }
+  .hold strong { color: inherit; }
+  .hold ul { margin: 6px 0 0; padding-left: 18px; }
+  .hold li { margin: 2px 0; }
+
+  .twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .panel { background: var(--module); border-radius: 8px; padding: 20px 24px; }
+  .panel h3 { font-size: 16px; line-height: 24px; font-weight: 600; margin-bottom: 8px; }
+  .panel dl { margin: 0; display: grid; grid-template-columns: 150px 1fr; gap: 6px 12px; font-size: 14px; line-height: 20px; }
+  .panel dt { font-weight: 600; color: var(--muted); }
+  .panel dd { margin: 0; }
+  .panel ol, .panel ul { margin: 0; padding-left: 20px; font-size: 14px; line-height: 20px; }
+  .panel li { margin: 4px 0; }
+  .check li { list-style: none; position: relative; padding-left: 26px; }
+  .check li::before { content: ""; position: absolute; left: 0; top: 3px; width: 14px; height: 14px; border: 2px solid var(--muted); border-radius: 3px; }
+
+  .preflight { border: 1px solid var(--rule); border-left: 4px solid var(--river); border-radius: 8px; padding: 16px 20px; background: var(--card); }
+  .preflight h3 { font-size: 16px; line-height: 24px; font-weight: 600; margin-bottom: 4px; }
+  .preflight .why { font-size: 14px; line-height: 20px; color: var(--muted); margin: 0 0 10px; max-width: 80ch; }
+  .preflight table { font-size: 13px; line-height: 18px; }
+  .preflight code { white-space: normal; }
+
+  footer { border-top: 1px solid var(--rule); margin-top: 8px; padding-top: 12px; font-size: 12px; line-height: 16px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+
+  @media (max-width: 860px) {
+    header.band { grid-template-columns: 1fr; }
+    header.band .meta { text-align: left; }
+    .context, .rules, .twocol { grid-template-columns: 1fr; }
+    .panel dl { grid-template-columns: 1fr; gap: 2px 0; }
+    .panel dt { margin-top: 6px; }
+  }
+  @media print {
+    @page { size: letter; margin: 0.5in; }
+    body { font-size: 11px; line-height: 15px; }
+    .page { max-width: none; padding: 0; }
+    header.band { margin-top: 0; border-radius: 0; padding: 14px 18px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    section { margin-bottom: 14px; break-inside: avoid-page; }
+    .tablewrap { overflow: visible; border: none; }
+    table { font-size: 10px; line-height: 13px; }
+    table.plan { min-width: 0; }
+    thead th, tbody td { padding: 5px 7px; }
+    tr { break-inside: avoid; }
+    .rules, .twocol { gap: 8px; }
+    .rule, .panel, .context .tile { padding: 8px 10px; }
+    .slug { font-size: 9px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="band">
+    <div>
+      <p class="eyebrow">University of Arizona Global Campus · SEO → Content Team</p>
+      <h1>Group B Content Plan — Program Rename Support</h1>
+      <p>Everything the Content Team needs to brief, write, and publish the 32 pieces that support the 2026 program renames. Keyword volumes verified September 1, 2026.</p>
+    </div>
+    <div class="meta">
+      <strong>Prepared by</strong> Omar Corral, SEO
+      <strong style="margin-top:6px">For</strong> Erin &amp; Content Team · Web Team (publish)
+      <strong style="margin-top:6px">As of</strong> September 1, 2026 · Internal
+    </div>
+  </header>
+
+  <div class="context">
+    <div class="tile">
+      <p class="eyebrow">Why now</p>
+      <p class="big">6 renames approved</p>
+      <p>ELT approved six program names on Aug 13. Five more are pending Carnegie review and one is paused. Wave 1 supports only the six that are approved; Wave 2 is drafted and held.</p>
+    </div>
+    <div class="tile">
+      <p class="eyebrow">What Group A proved</p>
+      <p class="big num">685 vs 569 clicks</p>
+      <p>Three refreshed posts out-earned 15 new ones. The best single page was a "vs" comparison. Faculty and tips posts averaged 20 clicks. Those findings shape every choice below.</p>
+    </div>
+    <div class="tile">
+      <p class="eyebrow">Biggest opening</p>
+      <p class="big num">1,300 / mo · 0 competition</p>
+      <p>"What is applied social science" has no competing answer in Google. "What is community health" (1,000/mo) is the same. UAGC currently has zero impressions for either. Start there.</p>
+    </div>
+  </div>
+
+  <section>
+    <h2>Six Rules for Every Group B Piece</h2>
+    <p class="lede">Each rule comes from a Group A result, not a best-practice list. Apply all six to every brief.</p>
+    <div class="rules">
+      <div class="rule"><strong>1. Lead with the exact search phrase.</strong> Put the primary keyword first in the title tag and H1, then the payoff. <span class="ev">Evidence: the MPS post reached page 1 for "mps degree" in six weeks but won 0.15% of clicks because the phrase was buried.</span></div>
+      <div class="rule"><strong>2. Answer in the first 50 words.</strong> Define the term or answer the question before any preamble; expand after. <span class="ev">Evidence: two-thirds of blog clicks are mobile (24.1K of 35.8K).</span></div>
+      <div class="rule"><strong>3. Every rename gets an "Old Name vs New Name" piece.</strong> Comparison table, FAQ block, both names in the meta. <span class="ev">Evidence: <em>Business Economics vs Business Administration</em> was the top Group A page (346 clicks, 62.7K impressions).</span></div>
+      <div class="rule"><strong>4. Refresh before you write new.</strong> Where a UAGC post already ranks for the target, update it instead of publishing a competitor to it. <span class="ev">Evidence: 3 refreshes = 685 clicks; 15 new posts = 569.</span></div>
+      <div class="rule"><strong>5. Use both names for 6–12 months.</strong> Meta description, first paragraph, and one H2 carry the old and new program name together. <span class="ev">Evidence: current names still hold ~13,900 monthly searches; proposed names hold ~50.</span></div>
+      <div class="rule"><strong>6. Link it in on day one.</strong> Program page → post, post → program page, post → one existing Professional Studies post. <span class="ev">Evidence: the existing <em>BPS vs BA</em> post still carries 22K impressions for Professional Studies queries — borrow that authority.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Wave 1 — 19 Pieces for the Six Approved Renames</h2>
+    <p class="lede">Work top to bottom within each priority. P1 = start this month; P2 = next; P3 = when P1–P2 are in production. Volumes are U.S. monthly searches; Comp. is a 0–1 paid-competition index (lower is easier to rank).</p>
+    <div class="tablewrap">
+      <table class="plan">
+        <colgroup><col style="width:52px"><col style="width:21%"><col style="width:17%"><col style="width:68px"><col style="width:76px"><col style="width:17%"><col></colgroup>
+        <thead>
+          <tr>
+            <th class="c">Pri.</th>
+            <th>Working title &amp; URL</th>
+            <th>Primary keyword <span style="font-weight:400;opacity:.8">(secondary)</span></th>
+            <th class="r">Vol/mo</th>
+            <th class="c">Type</th>
+            <th>Program &amp; link target</th>
+            <th>Brief</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="tier"><td colspan="7"><span class="eyebrow">Tier 1 · "What Is" explainers — 6</span><span class="why">Define the new name and own the definition before anyone else does. 1,000–1,500 words.</span></td></tr>
+
+          <tr>
+            <td class="c"><span class="pri p1">P1</span></td>
+            <td><span class="title">What Is Applied Social Science? Definition, Fields &amp; Degrees</span><span class="slug">/blog/what-is-applied-social-science</span></td>
+            <td><span class="kw">what is applied social science</span><span class="sec">applied social science degree (10)</span></td>
+            <td class="r num"><span class="vol">1,300</span><br><span class="comp">comp 0.00</span></td>
+            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="prog">BA Applied Social Science<small>/online-degrees/bachelors/social-science</small></td>
+            <td class="brief">Applied vs. theoretical social science; the fields it feeds (public policy, human services, research and analytics); how the BA maps to them. FAQ: "Is applied social science a good degree?" Link to the refreshed <em>Social Science Degree Careers</em> quick win.</td>
+          </tr>
+          <tr>
+            <td class="c"><span class="pri p1">P1</span></td>
+            <td><span class="title">What Is Community Health? Definition, Careers &amp; Degrees</span><span class="slug">/blog/what-is-community-health</span></td>
+            <td><span class="kw">what is community health</span><span class="sec">community health degree (210)</span></td>
+            <td class="r num"><span class="vol">1,000</span><br><span class="comp">comp 0.00</span></td>
+            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="prog">MPS Community Health<small>/online-degrees/masters/public-health</small></td>
+            <td class="brief">Community health vs. public health scope; where the Master of Professional Studies designation fits (same credit hours and accreditation as the MPH — say so plainly). Link to <em>What Is an MPS Degree?</em> and <em>What Is a Community Health Worker?</em>.</td>
+          </tr>
+          <tr>
+            <td class="c"><span class="pri p1">P1</span></td>
+            <td><span class="title">What Is Applied Psychology? A Complete Guide</span><span class="slug">/blog/what-is-applied-psychology</span></td>
+            <td><span class="kw">what is applied psychology</span><span class="sec">applied psychology degree (140)</span></td>
+            <td class="r num"><span class="vol">880</span><br><span class="comp">comp 0.07</span></td>
+            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="prog">BA Applied Psychology<small>/online-degrees/bachelors/psychology</small></td>
+            <td class="brief">Applied vs. clinical/research psychology; settings (HR, health, education, UX); skills learned; careers preview that links to the Tier 3 careers piece. FAQ: "Is applied psychology the same as psychology?"</td>
+          </tr>
+          <tr>
+            <td class="c"><span class="pri p2">P2</span></td>
+            <td><span class="title">What Is a Leadership Degree? What You Learn &amp; Where It Leads</span><span class="slug">/blog/what-is-a-leadership-degree</span></td>
+            <td><span class="kw">leadership degree</span><span class="sec">leadership degree online (260)</span></td>
+            <td class="r num"><span class="vol">480</span><br><span class="comp">comp 0.59</span></td>
+            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="prog">BA Leadership<small>/online-degrees/bachelors/business-leadership</small></td>
+            <td class="brief">Leadership vs. management vs. MBA; who it's for; what's in the curriculum. Competitive term — win with a comparison table and the strongest FAQ block. Link to <em>5 Principles of Great Management</em> and <em>4 Leadership Styles in Business</em> (both rank today).</td>
+          </tr>
+          <tr>
+            <td class="c"><span class="pri p2">P2</span></td>
+            <td><span class="title">What Is Applied Liberal Arts? A Modern Take on a Classic Degree</span><span class="slug">/blog/what-is-applied-liberal-arts</span></td>
+            <td><span class="kw">applied liberal arts degree</span><span class="sec">liberal arts degree online (40)</span></td>
+            <td class="r num"><span class="vol">10</span><br><span class="comp">comp 0.00</span></td>
+            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="prog">BA Applied Liberal Arts<small>/online-degrees/bachelors/liberal-arts</small></td>
+            <td class="brief">First-mover: no one defines this term yet. "Applied" = liberal arts skills mapped to workplace outcomes. Keep it concrete — three example career paths with the courses that feed them. Link to the refreshed <em>Liberal Arts Degree Jobs</em>.</td>
+          </tr>
+          <tr>
+            <td class="c"><span class="pri p3">P3</span></td>
+            <td><span class="title">What Is Early Childhood Differentiated Education?</span><span class="slug">/blog/what-is-early-childhood-differentiated-education</span></td>
+            <td><span class="kw">differentiated instruction early childhood</span><span class="sec">early childhood education degree online (4,400) as context</span></td>
+            <td class="r num"><span class="vol">20</span><br><span class="comp">comp 0.07</span></td>
+            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="prog">BA Early Childhood Differentiated Education<small>/online-degrees/bachelors/early-childhood-development-differentiated-instruction</small></td>
+            <td class="brief"><b>Draft now, hold publish</b> until the January 2027 catalog listing is confirmed. Differentiated instruction basics for ages 0–8, why it's its own degree, and the classroom roles it prepares you for.</td>
+          </tr>
+
+          <tr class="tier t2"><td colspan="7"><span class="eyebrow">Tier 2 · "Old Name vs New Name" comparisons — 6</span><span class="why">The Group A winner format. Comparison table + 5–8 question FAQ with FAQ schema. 1,200–1,800 words.</span></td></tr>
+
+          <tr>
+            <td class="c"><span class="pri p1">P1</span></td>
+            <td><span class="title">Applied Psychology vs Psychology: What's the Difference?</span><span class="slug">/blog/applied-psychology-vs-psychology</span></td>
+            <td><span class="kw">applied psychology vs psychology</span><span class="sec">psychology degree online (2,900) audience</span></td>
+            <td class="r num"><span class="vol">140</span><br><span class="comp">comp 0.09</span></td>
+            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="prog">BA Applied Psychology<small>/online-degrees/bachelors/psychology</small></td>
+            <td class="brief">The bridge for everyone searching the old name. Side-by-side table: focus, coursework, outcomes, who it suits. State that UAGC's BA in Psychology becomes the BA in Applied Psychology and what stays the same.</td>
+          </tr>
+          <tr>
+            <td class="c"><span class="pri p1">P1</span></td>
+            <td><span class="title">Public Health vs Community Health: Which Degree Is Right for You?</span><span class="slug">/blog/public-health-vs-community-health</span></td>
+            <td><span class="kw">public health vs community health</span><span class="sec">mph online (720)</span></td>
+            <td class="r num"><span class="vol">90</span><br><span class="comp">comp 0.00</span></td>
+            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="prog">MPS Community Health<small>/online-degrees/masters/public-health</small></td>
+            <td class="brief">Critical transition piece. Scope, settings, typical employers, and the MPH → Master of Community Health change explained in one paragraph. Link to the program page (URL is preserved) and to <em>Is a Professional Studies Degree Respected?</em></td>
+          </tr>
+          <tr>
+            <td class="c"><span class="pri p2">P2</span></td>
+            <td><span class="title">MPH vs Master of Community Health (MPS): Side-by-Side</span><span class="slug">/blog/mph-vs-master-of-community-health</span></td>
+            <td><span class="kw">master of community health</span><span class="sec">master of public health online (720)</span></td>
+            <td class="r num"><span class="vol">140</span><br><span class="comp">comp 0.56</span></td>
+            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="prog">MPS Community Health<small>/online-degrees/masters/public-health</small></td>
+            <td class="brief">The designation explainer: what "Master of Professional Studies" means, accreditation, credit hours, employer acceptance. Reuse the dual-language pattern from the SEO report. FAQ: "Is an MPS the same as an MPH?"</td>
+          </tr>
+          <tr>
+            <td class="c"><span class="pri p3">P3</span></td>
+            <td><span class="title">Social Science vs Applied Social Science</span><span class="slug">/blog/social-science-vs-applied-social-science</span></td>
+            <td><span class="kw">social science vs applied social science</span></td>
+            <td class="r num"><span class="vol">0</span><br><span class="comp">comp 0.00</span></td>
+            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="prog">BA Applied Social Science<small>/online-degrees/bachelors/social-science</small></td>
+            <td class="brief">Short (800–1,000 words). No demand yet; exists so UAGC ranks the day the rename is live. Table + FAQ; both names in meta.</td>
+          </tr>
+          <tr>
+            <td class="c"><span class="pri p3">P3</span></td>
+            <td><span class="title">Liberal Arts vs Applied Liberal Arts</span><span class="slug">/blog/liberal-arts-vs-applied-liberal-arts</span></td>
+            <td><span class="kw">liberal arts vs applied liberal arts</span></td>
+            <td class="r num"><span class="vol">0</span><br><span class="comp">comp 0.00</span></td>
+            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="prog">BA Applied Liberal Arts<small>/online-degrees/bachelors/liberal-arts</small></td>
+            <td class="brief">Same pattern as above. Emphasize that curriculum breadth is unchanged; "applied" adds career mapping.</td>
+          </tr>
+          <tr>
+            <td class="c"><span class="pri p3">P3</span></td>
+            <td><span class="title">Business Leadership vs Leadership Degree: What Changed</span><span class="slug">/blog/business-leadership-vs-leadership-degree</span></td>
+            <td><span class="kw">business leadership vs leadership</span><span class="sec">business leadership degree online (10)</span></td>
+            <td class="r num"><span class="vol">0</span><br><span class="comp">comp 0.00</span></td>
+            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="prog">BA Leadership<small>/online-degrees/bachelors/business-leadership</small></td>
+            <td class="brief">Rename transition note for current and prospective students: same courses, broader name. Short; FAQ-led.</td>
+          </tr>
+
+          <tr class="tier t3"><td colspan="7"><span class="eyebrow">Tier 3 · Career outcomes — 7 (3 refreshes)</span><span class="why">Highest volume, lowest competition, and the format that already works. 1,200–1,800 words; salary data from BLS with citation.</span></td></tr>
+
+          <tr>
+            <td class="c"><span class="pri p1">P1</span></td>
+            <td><span class="title">What Can You Do With a Psychology Degree? 2026 Career Guide</span><span class="slug">/blog/i-have-ba-psychology-now-what-24-jobs-6-fields-consider</span></td>
+            <td><span class="kw">what can you do with a psychology degree</span><span class="sec">psychology degree careers (390)</span></td>
+            <td class="r num"><span class="vol">6,600</span><br><span class="comp">comp 0.13</span></td>
+            <td class="c"><span class="chip ref">REFRESH</span></td>
+            <td class="prog">BA Applied Psychology<small>/online-degrees/bachelors/psychology</small></td>
+            <td class="brief"><b>Largest opportunity in Group B.</b> Existing post sits at position 27.6 with 118 clicks. Retitle with the exact phrase + "2026," update every salary figure, add an "Applied Psychology" section, add FAQ. Keep the URL.</td>
+          </tr>
+          <tr>
+            <td class="c"><span class="pri p1">P1</span></td>
+            <td><span class="title">What Can You Do With a Master's in Public Health?</span><span class="slug">/blog/what-can-you-do-with-a-masters-in-public-health</span></td>
+            <td><span class="kw">what can you do with a masters in public health</span></td>
+            <td class="r num"><span class="vol">2,900</span><br><span class="comp">comp 0.09</span></td>
+            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="prog">MPS Community Health<small>/online-degrees/masters/public-health</small></td>
+            <td class="brief">Captures MPH intent and hands it to the renamed program. 10–12 roles, with community-health roles called out. One paragraph on the MPH → Community Health name change.</td>
+          </tr>
+          <tr>
+            <td class="c"><span class="pri p1">P1</span></td>
+            <td><span class="title">Community Health Jobs: 12 Careers &amp; Salaries</span><span class="slug">/blog/community-health-jobs</span></td>
+            <td><span class="kw">community health jobs</span><span class="sec">community health careers (1,300)</span></td>
+            <td class="r num"><span class="vol">1,900</span><br><span class="comp">comp 0.15</span></td>
+            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="prog">MPS Community Health<small>/online-degrees/masters/public-health</small></td>
+            <td class="brief">Role-by-role: what they do, typical employer, BLS median pay, degree needed. Link up to <em>What Is Community Health?</em> and to the program page.</td>
+          </tr>
+          <tr>
+            <td class="c"><span class="pri p1">P1</span></td>
+            <td><span class="title">Liberal Arts Degree Jobs: 25 Careers You Can Pursue</span><span class="slug">/blog/what-can-i-do-liberal-arts-degree</span></td>
+            <td><span class="kw">liberal arts degree jobs</span><span class="sec">liberal arts degree careers (1,600)</span></td>
+            <td class="r num"><span class="vol">1,600</span><br><span class="comp">comp 0.02</span></td>
+            <td class="c"><span class="chip ref">REFRESH</span></td>
+            <td class="prog">BA Applied Liberal Arts<small>/online-degrees/bachelors/liberal-arts</small></td>
+            <td class="brief">Existing post at position 12.9 with 22 clicks — page 1 is one refresh away. Expand to 25 roles grouped by field, add an "Applied Liberal Arts" section, FAQ. Keep the URL.</td>
+          </tr>
+          <tr>
+            <td class="c"><span class="pri p2">P2</span></td>
+            <td><span class="title">Early Childhood Education Careers: Roles Beyond the Classroom</span><span class="slug">/blog/what-can-i-do-with-an-associate-degree-in-early-childhood-education</span></td>
+            <td><span class="kw">early childhood education careers</span></td>
+            <td class="r num"><span class="vol">720</span><br><span class="comp">comp 0.17</span></td>
+            <td class="c"><span class="chip ref">REFRESH</span></td>
+            <td class="prog">BA Early Childhood Differentiated Education<small>/online-degrees/bachelors/early-childhood-development-differentiated-instruction</small></td>
+            <td class="brief">Existing post ranks 10.4 with 337 clicks. Broaden from associate-only to the full ECE path, add a differentiated-education section. Keep the URL.</td>
+          </tr>
+          <tr>
+            <td class="c"><span class="pri p2">P2</span></td>
+            <td><span class="title">Applied Psychology Careers: Where the Degree Takes You</span><span class="slug">/blog/applied-psychology-careers</span></td>
+            <td><span class="kw">applied psychology careers</span></td>
+            <td class="r num"><span class="vol">260</span><br><span class="comp">comp 0.11</span></td>
+            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="prog">BA Applied Psychology<small>/online-degrees/bachelors/psychology</small></td>
+            <td class="brief">Pairs with the Tier 1 explainer. 8–10 roles across HR, health, education, and UX research; note which need graduate study.</td>
+          </tr>
+          <tr>
+            <td class="c"><span class="pri p3">P3</span></td>
+            <td><span class="title">Leadership Degree Jobs (with an Applied Social Science careers section)</span><span class="slug">/blog/leadership-degree-jobs</span></td>
+            <td><span class="kw">leadership degree jobs</span><span class="sec">applied social science careers (10)</span></td>
+            <td class="r num"><span class="vol">40</span><br><span class="comp">comp 0.05</span></td>
+            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="prog">BA Leadership<small>/online-degrees/bachelors/business-leadership</small></td>
+            <td class="brief">Low demand; short piece. If the calendar is tight, fold the content into the two Tier 1 explainers instead of publishing separately.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Wave 2 — 13 Pieces on Hold</h2>
+    <div class="hold">
+      <strong>Draft only. Do not publish until ELT or Carnegie confirms the rename.</strong> Covers Financial Leadership, Strategic Business Intelligence &amp; Technology, Applied Psychology (MA), Accessible Education, Educational Technology (all pending Carnegie), and Strategic Management &amp; Operations (paused).
+      <ul>
+        <li><b>5 explainers</b> — What Is Financial Leadership? / Strategic Business Intelligence? / Accessible Education? / Educational Technology? / Strategic Management? (only "educational technology degree," 720/mo, has real demand today)</li>
+        <li><b>4 comparisons</b> — Finance vs Financial Leadership · Information Systems vs Strategic BI · Special Education vs Accessible Education · MBA vs Strategic Management</li>
+        <li><b>4 career pieces</b> — Finance Degree Careers (5,400/mo) · Information Systems Careers (3,600/mo) · EdTech Careers · Master's in Psychology Careers. <b>Finance and IS careers are name-agnostic and can ship anytime under the current names</b> — volumes are from the February pull; SEO will re-verify before briefing.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="twocol">
+      <div class="panel">
+        <h3>Spec for every piece</h3>
+        <dl>
+          <dt>Title tag</dt><dd>≤ 60 characters. Exact primary phrase first, then the payoff. No "| UAGC" if it pushes past 60.</dd>
+          <dt>Meta description</dt><dd>145–155 characters. Names the four things the page delivers. Old + new program name for 6–12 months.</dd>
+          <dt>H1</dt><dd>Matches the title tag.</dd>
+          <dt>Opening</dt><dd>Direct answer or definition in the first 50 words. Both program names in the first paragraph where a rename applies.</dd>
+          <dt>Structure</dt><dd>4–6 H2s in the searcher's language. Comparisons: side-by-side table. Careers: one H2 per role or role group, BLS pay with link.</dd>
+          <dt>FAQ</dt><dd>5–8 questions pulled from People-Also-Ask; FAQ schema on comparisons.</dd>
+          <dt>Length</dt><dd>Explainers 1,000–1,500 · Comparisons and careers 1,200–1,800 · P3 "vs" pieces 800–1,000.</dd>
+          <dt>Internal links</dt><dd>At least 3: the program page, one related Group B piece, one existing Professional Studies post (<code>professional-studies-vs-ba-or-bs-bps-vs-ba</code>, <code>what-professional-studies-degree</code>, or <code>professional-studies-degree-respected</code>).</dd>
+          <dt>Citations</dt><dd>2–3 authoritative external sources (BLS, accreditor, peer-reviewed).</dd>
+          <dt>CTA</dt><dd>2 RFI placements: after the opening answer and at the close. Program-page link mid-page.</dd>
+          <dt>URL</dt><dd><code>/blog/what-is-[topic]</code>, <code>/blog/[old]-vs-[new]</code>, <code>/blog/[topic]-jobs</code>. Refreshes keep their existing URL.</dd>
+          <dt>Voice</dt><dd>Student-first ("you"), grade 8 reading level, Oxford comma, title case H1/H2, sentence case H3+.</dd>
+        </dl>
+      </div>
+      <div class="panel">
+        <h3>Publish-day checklist (Web Team + SEO)</h3>
+        <ul class="check">
+          <li>Title, meta, H1, and og:title / og:description entered exactly as briefed — no auto-generated og:description.</li>
+          <li>Canonical is self-referencing; URL matches the brief (refreshes keep the old URL).</li>
+          <li>Page appears in <code>/blog/sitemap.xml</code>; submit the URL in Search Console.</li>
+          <li>Link added <em>from</em> the program page and the related-articles block <em>to</em> the new post.</li>
+          <li>Post links to the program page and to at least one Professional Studies post.</li>
+          <li>FAQ schema validates (comparisons); no duplicate H1/H2 text.</li>
+          <li>Mobile render checked — tables collapse, answer visible without scrolling.</li>
+          <li>Logged in the Group B tracker with publish date and target keyword.</li>
+        </ul>
+        <h3 style="margin-top:16px">How we'll know it worked</h3>
+        <ul>
+          <li><b>14 days:</b> indexed and receiving impressions for the primary keyword.</li>
+          <li><b>90 days:</b> page 1 for every zero-competition term (Tier 1 P1s, Tier 2 P1s).</li>
+          <li><b>Refreshes, 30 days:</b> position improves ≥ 5 places on the primary keyword.</li>
+          <li>SEO reports weekly from Search Console; wins and misses feed the next brief.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="preflight">
+      <h3>Pre-flight: MPS post title &amp; meta rewrite (do this first — under one hour)</h3>
+      <p class="why">Page: <code>/blog/what-mps-degree-master-professional-studies-degree-guide</code>. It sits on page 1 for "mps degree" (1,317 impressions, position 8.2) but converts 0.15% of them: the title is 73 characters with the key phrase buried, the meta is 188 characters and truncates before its hook, and og:description is pulling raw "Key Takeaways" body text. "mps degree" and "master of professional studies" each carry 1,600 searches a month.</p>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th style="width:160px">Element</th><th>Paste exactly</th><th class="r" style="width:70px">Chars</th></tr></thead>
+          <tbody>
+            <tr><td><b>Title tag</b></td><td><code>MPS Degree (Master of Professional Studies): Is It Worth It?</code></td><td class="r num">60</td></tr>
+            <tr><td><b>Meta description</b></td><td><code>What an MPS degree (Master of Professional Studies) means, how it compares to an MBA or MS, how long it takes, and whether employers respect it.</code></td><td class="r num">144</td></tr>
+            <tr><td><b>H1</b></td><td>Match the new title tag.</td><td class="r">—</td></tr>
+            <tr><td><b>og:title / og:description</b></td><td>Set explicitly to the title and meta above.</td><td class="r">—</td></tr>
+            <tr><td><b>Duplicate H2</b> <span class="comp">(optional)</span></td><td>Rename the H2 that repeats the H1 to <code>MPS Degree Meaning: What Is a Master of Professional Studies?</code></td><td class="r">—</td></tr>
+            <tr><td><b>New H2</b> <span class="comp">(optional)</span></td><td>Add <code>Are MPS Degrees Respected by Employers?</code> — 3–4 sentences; link to <code>/blog/professional-studies-degree-respected</code>.</td><td class="r">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="why" style="margin:10px 0 0">Success check at 30 days: click-through on "mps degree" ≥ 1.0% with position held at 8 or better.</p>
+    </div>
+  </section>
+
+  <footer>
+    <span>Source: Google Search Console (sc-domain:uagc.edu, Apr 21 – Aug 31, 2026) · GA4 · Keywords Everywhere (U.S., Sep 1, 2026) · ELT memo Aug 13–17, 2026 · Grain: one row per content piece</span>
+    <span>Full analysis: <em>Program Rename SEO &amp; Enrollment Impact Analysis</em> v4.3 · Questions: Omar Corral, SEO</span>
+  </footer>
+
+</div>
+</body>
+</html>
