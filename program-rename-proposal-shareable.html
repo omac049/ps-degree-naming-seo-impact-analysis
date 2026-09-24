@@ -3,35 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <title>UAGC Program Rename Proposal — Marketing & Enrollment Context</title>
 <style>
 :root {
     --arizona-red: #AB0520;
+    --arizona-red-dark: #990019;
+    --arizona-red-light: #C10121;
     --arizona-blue: #0C234B;
+    --arizona-blue-dark: #05193C;
+    --arizona-blue-light: #092E6C;
+    --black: #111111;
+    --white: #FFFFFF;
+    --light-gray-30: #F1F1F0;
+    --light-gray: #D0D0CE;
+    --dark-gray: #53565A;
+    --sky: #81D3EB;
+    --sky-hover: #43A9C8;
+    --blue: #0076A8;
+    --tan: #D6D2C4;
+    --silver: #98A4AE;
+    --river: #007D8A;
+    --yellow: #F9E17D;
+    --orange: #EF9600;
+    --purple: #621244;
     --uagc-red: var(--arizona-red);
     --uagc-dark: var(--arizona-blue);
-    --bg: #f4f4f3;
-    --card: #ffffff;
-    --surface-alt: #f4f4f3;
-    --border: #D0D0CE;
-    --text: #53565A;
-    --muted: #98A4AE;
-    --link: #0076A8;
-    --highlight-blue: #81D3EB;
-    --positive: #007D8A;
+    --bg: var(--light-gray-30);
+    --card: var(--white);
+    --surface-alt: var(--light-gray-30);
+    --border: var(--light-gray);
+    --text: var(--dark-gray);
+    --muted: var(--silver);
+    --link: var(--arizona-red);
+    --highlight-blue: var(--sky);
+    --positive: var(--river);
     --negative: var(--arizona-red);
-    --font-sans: "Montserrat", Calibri, "Segoe UI", system-ui, sans-serif;
+    --font-sans: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: var(--font-sans); background: var(--bg); color: var(--text); line-height: 1.45; font-size: 0.875rem; }
+body { font-family: var(--font-sans); background: var(--bg); color: var(--black); line-height: 1.45; font-size: 0.875rem; }
+a:link { color: var(--arizona-red); text-decoration: underline; }
+a:hover, a:active { color: var(--arizona-red-dark); }
+a:visited { color: var(--purple); }
 .container { max-width: 100%; margin: 0 auto; padding: 1.25rem 1.25rem 2rem; }
 h1 { color: var(--uagc-dark); font-size: 1.5rem; font-weight: 700; margin-bottom: 0.2rem; letter-spacing: -0.01em; }
 .subtitle { color: var(--muted); margin-bottom: 0.5rem; font-size: 0.875rem; }
 .sample-note { font-size: 0.8rem; color: var(--text); margin-bottom: 1.25rem; line-height: 1.4; max-width: 52rem; }
-.sample-note a { color: var(--link); text-decoration: none; font-weight: 500; }
-.sample-note a:hover { text-decoration: underline; }
+.sample-note a { color: var(--arizona-red); text-decoration: underline; font-weight: 500; }
+.sample-note a:hover { color: var(--arizona-red-dark); }
 .link-muted { color: var(--muted); font-size: 0.72rem; }
 .card { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 1rem 1.15rem; margin-bottom: 1.25rem; }
 .card h2 { color: var(--uagc-dark); margin-bottom: 0.65rem; font-size: 1.1rem; font-weight: 700; }
@@ -3870,7 +3889,7 @@ tr:hover { background: rgba(0, 118, 168, 0.06); }
             <h4>Agent skills (project)</h4>
             <table class="methodology-table">
             <thead><tr><th>Skill</th><th>Role</th><th>How it was used</th></tr></thead>
-            <tbody><tr><td><code>sql-query</code></td><td>Primary</td><td>BigQuery and SQL Server patterns for lead funnel, program metrics, and enrollment pulls (<code>vw_lead_extract_details</code>, SRM).</td></tr><tr><td><code>uagc-brand</code></td><td>Primary</td><td>Official UAGC colors, typography (Montserrat), and editorial rules applied to report CSS and chart ramps.</td></tr><tr><td><code>ui-ux-pro-max</code></td><td>Reference</td><td>Design-system lookup (styles, palettes, chart guidance); stub in repo pending full package from team.</td></tr></tbody></table>
+            <tbody><tr><td><code>sql-query</code></td><td>Primary</td><td>BigQuery and SQL Server patterns for lead funnel, program metrics, and enrollment pulls (<code>vw_lead_extract_details</code>, SRM).</td></tr><tr><td><code>uagc-brand</code></td><td>Primary</td><td>Official UAGC colors, typography (Proxima Nova — not Extra Condensed on internal reports), and editorial rules applied to report CSS and chart ramps.</td></tr><tr><td><code>ui-ux-pro-max</code></td><td>Reference</td><td>Design-system lookup (styles, palettes, chart guidance); stub in repo pending full package from team.</td></tr></tbody></table>
             <p class="methodology-note">
                 Additional global Cursor skills (SDK, create-rule, canvas, code-review, etc.) are
                 installed in the IDE but were secondary to the project skills above for this deliverable.

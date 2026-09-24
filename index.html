@@ -10,24 +10,25 @@
   <style>
     :root {
       --arizona-red: #AB0520;
+      --arizona-red-dark: #990019;
       --arizona-blue: #0C234B;
+      --black: #111111;
+      --white: #FFFFFF;
       --light-gray-30: #F1F1F0;
       --dark-gray: #53565A;
+      --purple: #621244;
     }
     body {
       margin: 0;
       min-height: 100vh;
       display: grid;
       place-items: center;
-      font-family: "Proxima Nova", "Segoe UI", sans-serif;
+      font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
       background: var(--light-gray-30);
       color: var(--arizona-blue);
       padding: 2rem;
     }
-    main {
-      max-width: 36rem;
-      text-align: center;
-    }
+    main { max-width: 36rem; text-align: center; }
     .brand {
       font-size: 0.75rem;
       font-weight: 700;
@@ -40,22 +41,24 @@
       font-size: 1.5rem;
       margin: 0 0 0.75rem;
       line-height: 1.25;
+      color: var(--arizona-blue);
     }
     p {
       color: var(--dark-gray);
       margin: 0 0 1.5rem;
       line-height: 1.5;
     }
-    a {
+    a.cta {
       display: inline-block;
       background: var(--arizona-red);
-      color: #fff;
+      color: var(--white);
       text-decoration: none;
       font-weight: 600;
       padding: 0.75rem 1.25rem;
-      border-radius: 4px;
+      border-radius: 8px;
     }
-    a:hover { background: #990019; }
+    a.cta:hover, a.cta:active { background: var(--arizona-red-dark); color: var(--white); }
+    a.cta:visited { color: var(--white); }
     .links {
       margin-top: 1.25rem;
       display: flex;
@@ -64,21 +67,22 @@
       justify-content: center;
     }
     .links a {
-      background: transparent;
       color: var(--arizona-red);
       text-decoration: underline;
       padding: 0.25rem 0.5rem;
       font-weight: 500;
       font-size: 0.9rem;
     }
+    .links a:hover, .links a:active { color: var(--arizona-red-dark); }
+    .links a:visited { color: var(--purple); }
   </style>
 </head>
 <body>
   <main>
-    <div class="brand">UAGC · v4.4</div>
+    <div class="brand">University of Arizona Global Campus · Internal</div>
     <h1>Program Rename SEO &amp; Enrollment Impact Analysis</h1>
     <p>Redirecting to the January 2027 catalog transition report…</p>
-    <a href="seo-impact-report.html">Open SEO Impact Report</a>
+    <a class="cta" href="seo-impact-report.html">Open SEO Impact Report</a>
     <div class="links">
       <a href="group-b-content-plan.html">Group B Content Plan</a>
       <a href="program-rename-proposal-shareable.html">Enrollment Briefing</a>

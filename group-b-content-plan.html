@@ -4,23 +4,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Group B Content Plan</title>
-<meta name="description" content="Content Team brief for UAGC's January 2027 catalog transition: Wave 1 for 4 BA renames + MPS-CH launch (not a rename), Applied definition framework, Wave 2 on hold, publish checklist, and the MPS pre-flight rewrite.">
+<meta name="description" content="Content Team brief for UAGC's January 2027 catalog transition: NEW vs existing work types with 12-mo GSC+GA4 impact scoring, Wave 1 for 4 BA renames + MPS-CH launch, existing blog update queue, Wave 2 on hold, and the MPS pre-flight rewrite.">
 <style>
   :root {
-    --arizona-red: #AB0520; --arizona-red-dark: #990019;
+    /* uagc-brand tokens */
+    --arizona-red: #AB0520; --arizona-red-dark: #990019; --arizona-red-light: #C10121;
     --arizona-blue: #0C234B; --arizona-blue-dark: #05193C; --arizona-blue-light: #092E6C;
-    --blue: #0076A8; --sky: #81D3EB; --river: #007D8A; --orange: #EF9600; --yellow: #F9E17D;
-    --light-gray-30: #F1F1F0; --light-gray: #D0D0CE; --dark-gray: #53565A; --tan: #D6D2C4;
-    /* surfaces */
-    --page: #FFFFFF; --ink: #111111; --muted: #53565A; --module: #F1F1F0; --rule: #D0D0CE;
-    --card: #FFFFFF; --head-bg: #0C234B; --head-ink: #FFFFFF; --sub-ink: #81D3EB;
-    --th-bg: #0C234B; --th-ink: #FFFFFF; --zebra: #F1F1F0; --total: rgba(12,35,75,0.08);
-    --tier1: #E3F1F4; --tier2: #E8F4F6; --tier3: #F3EFE6;
-    --chip-new-bg: #0076A8; --chip-new-ink: #FFFFFF; --chip-ref-bg: #007D8A; --chip-ref-ink: #FFFFFF;
-    --p1: #AB0520; --p2: #0076A8; --p3: #53565A;
-    --hold-bg: #FFF4E0; --hold-ink: #7A4B00; --hold-rule: #EF9600;
-    --code-bg: #F1F1F0; --code-ink: #0C234B;
-    --link: #AB0520; --link-hover: #990019;
+    --black: #111111; --white: #FFFFFF;
+    --light-gray-30: #F1F1F0; --light-gray: #D0D0CE; --dark-gray: #53565A;
+    --sky: #81D3EB; --sky-hover: #43A9C8; --blue: #0076A8;
+    --tan: #D6D2C4; --silver: #98A4AE; --river: #007D8A;
+    --yellow: #F9E17D; --orange: #EF9600; --purple: #621244;
+    /* surfaces (internal report) */
+    --page: var(--white); --ink: var(--black); --muted: var(--dark-gray); --module: var(--light-gray-30); --rule: var(--light-gray);
+    --card: var(--white); --head-bg: var(--arizona-blue); --head-ink: var(--white); --sub-ink: var(--sky);
+    --th-bg: var(--arizona-blue); --th-ink: var(--white); --zebra: var(--light-gray-30); --total: rgba(12,35,75,0.08);
+    --tier1: #E8F4F5; --tier2: #E8F4F8; --tier3: #F3F0EA; /* river / blue / tan washes */
+    --chip-new-bg: var(--blue); --chip-new-ink: var(--white); --chip-ref-bg: var(--river); --chip-ref-ink: var(--white);
+    --p1: var(--arizona-red); --p2: var(--blue); --p3: var(--dark-gray);
+    --hold-bg: #FFF4E0; --hold-ink: #7A4B00; --hold-rule: var(--orange); /* orange = warning only */
+    --code-bg: var(--light-gray-30); --code-ink: var(--arizona-blue);
+    --link: var(--arizona-red); --link-hover: var(--arizona-red-dark);
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
@@ -50,10 +54,11 @@
   body {
     margin: 0; background: var(--page); color: var(--ink);
     font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 16px; line-height: 24px;
+    font-size: 16px; line-height: 24px; /* P Small — uagc-brand */
   }
-  a { color: var(--link); text-decoration: underline; }
+  a:link { color: var(--link); text-decoration: underline; }
   a:hover, a:active { color: var(--link-hover); }
+  a:visited { color: var(--purple); }
   code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.85em; background: var(--code-bg); color: var(--code-ink); padding: 1px 5px; border-radius: 4px; white-space: nowrap; }
   h1, h2, h3 { color: var(--arizona-blue); margin: 0; text-wrap: balance; }
   :root[data-theme="dark"] h2, :root[data-theme="dark"] h3 { color: var(--sub-ink); }
@@ -61,7 +66,7 @@
   .eyebrow { font-size: 12px; line-height: 16px; letter-spacing: .08em; text-transform: uppercase; font-weight: 600; color: var(--muted); }
   .num { font-variant-numeric: tabular-nums; }
 
-  .page { max-width: 1120px; margin: 0 auto; padding: 0 24px 48px; }
+  .page { max-width: 1280px; margin: 0 auto; padding: 0 28px 56px; }
 
   header.band { background: var(--head-bg); color: var(--head-ink); padding: 24px 32px; margin: 24px 0 24px; border-radius: 8px; display: grid; grid-template-columns: 1fr auto; gap: 16px 32px; align-items: end; }
   header.band .eyebrow { color: var(--sub-ink); }
@@ -89,37 +94,73 @@
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .rule strong { color: var(--sub-ink); } }
   .rule .ev { color: var(--muted); }
 
-  .tablewrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 8px; }
-  table { border-collapse: collapse; width: 100%; font-size: 14px; line-height: 18px; }
-  table.plan { table-layout: fixed; min-width: 1040px; }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 8px; -webkit-overflow-scrolling: touch; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; line-height: 20px; }
+  table.plan { table-layout: fixed; min-width: 960px; }
+  table.queue { min-width: 900px; }
   table.plan thead th { white-space: normal; }
-  thead th { background: var(--th-bg); color: var(--th-ink); font-weight: 600; text-align: left; padding: 10px 12px; position: sticky; top: 0; white-space: nowrap; }
-  tbody td { padding: 10px 12px; border-top: 1px solid var(--rule); vertical-align: top; }
+  thead th { background: var(--th-bg); color: var(--th-ink); font-weight: 600; text-align: left; padding: 12px 14px; position: sticky; top: 0; z-index: 1; white-space: nowrap; font-size: 12px; letter-spacing: .02em; }
+  tbody td { padding: 14px 14px; border-top: 1px solid var(--rule); vertical-align: top; }
   tbody tr:nth-child(even) td { background: var(--zebra); }
+  tbody tr.data:hover td { background: var(--total); }
   td.r, th.r { text-align: right; }
   td.c, th.c { text-align: center; }
-  tr.tier td { background: var(--tier1) !important; font-weight: 600; color: var(--ink); padding: 8px 12px; }
+  tr.tier td { background: var(--tier1) !important; font-weight: 600; color: var(--ink); padding: 10px 14px; }
   tr.tier.t2 td { background: var(--tier2) !important; }
   tr.tier.t3 td { background: var(--tier3) !important; }
-  tr.tier .eyebrow { display: inline; margin-right: 8px; color: var(--ink); }
-  tr.tier .why { font-weight: 400; color: var(--muted); }
-  .title { font-weight: 600; }
-  .slug { display: block; color: var(--muted); font-size: 12px; line-height: 16px; margin-top: 2px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; overflow-wrap: anywhere; }
+  tr.tier .eyebrow { display: block; margin: 0 0 2px; color: var(--ink); }
+  tr.tier .why { display: block; font-weight: 400; color: var(--muted); font-size: 13px; line-height: 18px; }
+  .title { font-weight: 600; font-size: 14px; line-height: 20px; display: block; }
+  .slug { display: block; color: var(--muted); font-size: 11px; line-height: 15px; margin-top: 4px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; overflow-wrap: anywhere; }
   .kw { overflow-wrap: anywhere; }
   .sec { display: block; color: var(--muted); font-size: 12px; line-height: 16px; margin-top: 2px; }
-  .vol { font-weight: 700; }
+  .vol { font-weight: 700; font-variant-numeric: tabular-nums; }
   .comp { color: var(--muted); font-size: 12px; }
-  .prog { overflow-wrap: anywhere; }
-  .prog small { display: block; color: var(--muted); font-size: 12px; line-height: 16px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; overflow-wrap: anywhere; }
-  .chip { display: inline-block; font-size: 11px; line-height: 16px; font-weight: 700; letter-spacing: .04em; padding: 1px 7px; border-radius: 4px; white-space: nowrap; }
+  .prog { overflow-wrap: anywhere; font-size: 13px; line-height: 18px; }
+  .prog small { display: block; color: var(--muted); font-size: 11px; line-height: 15px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; overflow-wrap: anywhere; margin-top: 2px; }
+  .chip { display: inline-block; font-size: 11px; line-height: 18px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 4px; white-space: nowrap; }
   .chip.new { background: var(--chip-new-bg); color: var(--chip-new-ink); }
-  .chip.ref { background: var(--chip-ref-bg); color: var(--chip-ref-ink); }
-  .pri { display: inline-block; width: 28px; height: 22px; line-height: 22px; text-align: center; border-radius: 4px; font-weight: 700; font-size: 12px; color: #fff; }
+  .chip.full { background: var(--chip-ref-bg); color: var(--chip-ref-ink); }
+  .chip.rename { background: var(--arizona-red); color: #fff; }
+  .chip.term { background: #FFF4E0; color: #7A4B00; border: 1px solid var(--orange); }
+  .chip.meta { background: var(--arizona-blue); color: #fff; }
+  .chip.holdchip { background: var(--hold-bg); color: var(--hold-ink); border: 1px solid var(--hold-rule); }
+  .chip.impact { margin-bottom: 8px; }
+  .chip.impact.hi { background: var(--arizona-red); color: #fff; }
+  .chip.impact.med { background: #FFF4E0; color: #7A4B00; border: 1px solid var(--orange); }
+  .chip.impact.lo { background: var(--module); color: var(--muted); border: 1px solid var(--rule); }
+  .perf { min-width: 118px; }
+  .metrics { margin: 0; display: grid; gap: 3px 0; }
+  .metrics > div { display: grid; grid-template-columns: 44px 1fr; gap: 6px; align-items: baseline; font-size: 12px; line-height: 16px; }
+  .metrics dt { margin: 0; color: var(--muted); font-weight: 500; font-size: 11px; }
+  .metrics dd { margin: 0; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--ink); text-align: right; }
+  .chip.origin { background: transparent; color: var(--muted); border: 1px solid var(--rule); font-weight: 600; }
+  .chip.origin.ex { border-color: var(--river); color: var(--river); }
+  .chip.origin.nw { border-color: var(--chip-new-bg); color: var(--chip-new-bg); }
+  .worktypes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 8px; }
+  .worktypes .wt { background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: 14px 16px; font-size: 13px; line-height: 18px; }
+  .worktypes .wt .chips { margin-bottom: 8px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .worktypes .wt strong.lbl { display: block; margin-bottom: 4px; color: var(--arizona-blue); font-size: 14px; }
+  :root[data-theme="dark"] .worktypes .wt strong.lbl { color: var(--sub-ink); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .worktypes .wt strong.lbl { color: var(--sub-ink); } }
+  .worktypes .wt .ev { color: var(--muted); font-size: 12px; line-height: 16px; margin-top: 6px; }
+  .scope { display: block; color: var(--muted); font-size: 12px; line-height: 16px; margin-top: 4px; }
+  .change { display: block; font-size: 13px; line-height: 18px; color: var(--ink); margin-top: 6px; }
+  .prog-line { display: block; font-size: 12px; line-height: 16px; font-weight: 600; color: var(--arizona-blue); }
+  :root[data-theme="dark"] .prog-line { color: var(--sub-ink); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .prog-line { color: var(--sub-ink); } }
+  .typecell { text-align: left; }
+  .pri { display: inline-block; min-width: 28px; height: 22px; line-height: 22px; text-align: center; border-radius: 4px; font-weight: 700; font-size: 12px; color: #fff; padding: 0 4px; }
   .pri.p1 { background: var(--p1); } .pri.p2 { background: var(--p2); } .pri.p3 { background: var(--p3); }
   :root[data-theme="dark"] .pri { color: #0B1526; }
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .pri { color: #0B1526; } }
-  .brief { font-size: 13px; line-height: 18px; }
+  .brief { font-size: 13px; line-height: 19px; max-width: 42ch; }
   .brief b { color: var(--ink); }
+  :root[data-theme="dark"] .chip.term, :root[data-theme="dark"] .chip.impact.med { background: #2A2110; color: #FFD48A; border-color: var(--orange); }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .chip.term,
+    :root:not([data-theme="light"]) .chip.impact.med { background: #2A2110; color: #FFD48A; border-color: var(--orange); }
+  }
 
   .hold { background: var(--hold-bg); color: var(--hold-ink); border-left: 4px solid var(--hold-rule); border-radius: 8px; padding: 14px 20px; font-size: 14px; line-height: 20px; }
   .hold strong { color: inherit; }
@@ -148,7 +189,7 @@
   @media (max-width: 860px) {
     header.band { grid-template-columns: 1fr; }
     header.band .meta { text-align: left; }
-    .context, .rules, .twocol { grid-template-columns: 1fr; }
+    .context, .rules, .twocol, .worktypes { grid-template-columns: 1fr; }
     .panel dl { grid-template-columns: 1fr; gap: 2px 0; }
     .panel dt { margin-top: 6px; }
   }
@@ -177,12 +218,12 @@
     <div>
       <p class="eyebrow">University of Arizona Global Campus · SEO → Content Team</p>
       <h1>Group B Content Plan — Program Rename Support</h1>
-      <p>Everything the Content Team needs to brief, write, and publish the 32 pieces that support the January 2027 catalog transition. Keyword volumes verified September 1, 2026; scope updated September 21, 2026.</p>
+      <p>Everything the Content Team needs to brief, write, and publish for the January 2027 catalog transition — with a clear split between <strong>new URLs</strong> and <strong>updates to existing posts</strong>. Keyword volumes verified September 1, 2026; blog audit September 24, 2026.</p>
     </div>
     <div class="meta">
       <strong>Prepared by</strong> Omar Corral, SEO
       <strong style="margin-top:6px">For</strong> Erin &amp; Content Team · Web Team (publish)
-      <strong style="margin-top:6px">As of</strong> September 21, 2026 · Internal · v4.4
+      <strong style="margin-top:6px">As of</strong> September 24, 2026 · Internal · v4.9
     </div>
   </header>
 
@@ -218,8 +259,51 @@
   </section>
 
   <section>
+    <h2>How to Read This Plan — Origin &amp; Update Types</h2>
+    <p class="lede">Every row is either a <strong>new URL</strong> or an <strong>existing post</strong>. Existing posts use one of four update depths — pick the chip, then do only that scope. Do not open a FULL REFRESH brief when the row says TERM PASS.</p>
+    <div class="worktypes">
+      <div class="wt">
+        <div class="chips"><span class="chip new">NEW</span></div>
+        <strong class="lbl">New URL — does not exist yet</strong>
+        Write the full piece (1,000–1,800 words per spec). Publish a new <code>/blog/…</code> slug. Most of Wave 1 Tier 1–2.
+        <p class="ev">Effort: full brief + draft + SEO QA.</p>
+      </div>
+      <div class="wt">
+        <div class="chips"><span class="chip full">FULL REFRESH</span></div>
+        <strong class="lbl">Existing URL — rewrite hard</strong>
+        Retitle (exact search phrase), restructure H2s, update salaries/data, add Applied or launch section, FAQ. Same slug.
+        <p class="ev">Effort: near-new draft on the live URL. Group A’s highest-ROI move.</p>
+      </div>
+      <div class="wt">
+        <div class="chips"><span class="chip rename">RENAME PASS</span></div>
+        <strong class="lbl">Existing URL — fix the program name</strong>
+        Title, meta, H1, opener, and CTAs carry dual-name (BA renames) or MPS-CH launch guardrails. Not a full rewrite of body sections.
+        <p class="ev">Effort: half-day. Use when the old name is still in the title.</p>
+      </div>
+      <div class="wt">
+        <div class="chips"><span class="chip term">TERM PASS</span></div>
+        <strong class="lbl">Existing URL — light language</strong>
+        Body/CTA only: Applied dual-name, AA→60 credits, Sociology sunset note, or MPS-CH “distinct program” line. Structure stays.
+        <p class="ev">Effort: 1–2 hours. No retitle unless a factual error.</p>
+      </div>
+      <div class="wt">
+        <div class="chips"><span class="chip meta">META ONLY</span></div>
+        <strong class="lbl">Existing URL — surgical SERP fix</strong>
+        Title tag + meta (+ optional H2). Paste-ready copy in the Pre-flight section.
+        <p class="ev">Effort: under one hour. MPS degree guide.</p>
+      </div>
+      <div class="wt">
+        <div class="chips"><span class="chip holdchip">HOLD</span></div>
+        <strong class="lbl">Do not publish</strong>
+        Wave 2 / Carnegie / paused Business Admin / ECD Differentiated rename. Draft only until catalog confirms.
+        <p class="ev">Inventory kept so we do not forget these URLs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
     <h2>Wave 1 — Jan 2027 Scope (4 BA Renames + MPS-CH Launch)</h2>
-    <p class="lede">Work top to bottom within each priority. P1 = start this month; P2 = next; P3 = when P1–P2 are in production. Volumes are U.S. monthly searches; Comp. is a 0–1 paid-competition index (lower is easier to rank).</p>
+    <p class="lede">Work top to bottom within each priority. P1 = start this month; P2 = next; P3 = when P1–P2 are in production. Work type: <span class="chip new">NEW</span> = new URL; <span class="chip full">FULL REFRESH</span> = existing URL, hard rewrite. Volumes are U.S. monthly searches; Comp. is a 0–1 paid-competition index (lower is easier to rank).</p>
     <div class="context" style="margin:0 0 1.25rem">
       <div class="tile">
         <p class="eyebrow">Approved “Applied” definition</p>
@@ -239,7 +323,7 @@
             <th>Working title &amp; URL</th>
             <th>Primary keyword <span style="font-weight:400;opacity:.8">(secondary)</span></th>
             <th class="r">Vol/mo</th>
-            <th class="c">Type</th>
+            <th>Work type</th>
             <th>Program &amp; link target</th>
             <th>Brief</th>
           </tr>
@@ -252,7 +336,7 @@
             <td><span class="title">What Is Applied Social Science? Definition, Fields &amp; Degrees</span><span class="slug">/blog/what-is-applied-social-science</span></td>
             <td><span class="kw">what is applied social science</span><span class="sec">applied social science degree (10)</span></td>
             <td class="r num"><span class="vol">1,300</span><br><span class="comp">comp 0.00</span></td>
-            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="typecell"><span class="chip new">NEW</span></td>
             <td class="prog">BA Applied Social Science<small>/online-degrees/bachelors/social-science</small></td>
             <td class="brief">Applied vs. theoretical social science; the fields it feeds (public policy, human services, research and analytics); how the BA maps to them. FAQ: "Is applied social science a good degree?" Link to the refreshed <em>Social Science Degree Careers</em> quick win.</td>
           </tr>
@@ -261,7 +345,7 @@
             <td><span class="title">What Is Community Health? Definition, Careers &amp; Degrees</span><span class="slug">/blog/what-is-community-health</span></td>
             <td><span class="kw">what is community health</span><span class="sec">community health degree (210)</span></td>
             <td class="r num"><span class="vol">1,000</span><br><span class="comp">comp 0.00</span></td>
-            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="typecell"><span class="chip new">NEW</span></td>
             <td class="prog">MPS Community Health<small>NEW URL (not /public-health)</small></td>
             <td class="brief"><b>LAUNCH — not a rename.</b> Define community health; introduce the 30-credit MPS-CH curriculum, capstone, optional internship. Do <b>not</b> say “formerly MPH” or claim equivalence. Link to <em>What Is an MPS Degree?</em> and the new program page when live.</td>
           </tr>
@@ -270,7 +354,7 @@
             <td><span class="title">What Is Applied Psychology? A Complete Guide</span><span class="slug">/blog/what-is-applied-psychology</span></td>
             <td><span class="kw">what is applied psychology</span><span class="sec">applied psychology degree (140)</span></td>
             <td class="r num"><span class="vol">880</span><br><span class="comp">comp 0.07</span></td>
-            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="typecell"><span class="chip new">NEW</span></td>
             <td class="prog">BA Applied Psychology<small>/online-degrees/bachelors/psychology</small></td>
             <td class="brief">Applied vs. clinical/research psychology; settings (HR, health, education, UX); skills learned; careers preview that links to the Tier 3 careers piece. FAQ: "Is applied psychology the same as psychology?"</td>
           </tr>
@@ -279,7 +363,7 @@
             <td><span class="title">What Is a Leadership Degree? What You Learn &amp; Where It Leads</span><span class="slug">/blog/what-is-a-leadership-degree</span></td>
             <td><span class="kw">leadership degree</span><span class="sec">leadership degree online (260)</span></td>
             <td class="r num"><span class="vol">480</span><br><span class="comp">comp 0.59</span></td>
-            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="typecell"><span class="chip new">NEW</span></td>
             <td class="prog">BA Leadership<small>/online-degrees/bachelors/business-leadership</small></td>
             <td class="brief">Leadership vs. management vs. MBA; who it's for; what's in the curriculum. Competitive term — win with a comparison table and the strongest FAQ block. Link to <em>5 Principles of Great Management</em> and <em>4 Leadership Styles in Business</em> (both rank today).</td>
           </tr>
@@ -288,7 +372,7 @@
             <td><span class="title">What Is Applied Liberal Arts? A Modern Take on a Classic Degree</span><span class="slug">/blog/what-is-applied-liberal-arts</span></td>
             <td><span class="kw">applied liberal arts degree</span><span class="sec">liberal arts degree online (40)</span></td>
             <td class="r num"><span class="vol">10</span><br><span class="comp">comp 0.00</span></td>
-            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="typecell"><span class="chip new">NEW</span></td>
             <td class="prog">BA Applied Liberal Arts<small>/online-degrees/bachelors/liberal-arts</small></td>
             <td class="brief">First-mover: no one defines this term yet. "Applied" = liberal arts skills mapped to workplace outcomes. Keep it concrete — three example career paths with the courses that feed them. Link to the refreshed <em>Liberal Arts Degree Jobs</em>.</td>
           </tr>
@@ -297,7 +381,7 @@
             <td><span class="title">What Is Early Childhood Differentiated Education?</span><span class="slug">/blog/what-is-early-childhood-differentiated-education</span></td>
             <td><span class="kw">differentiated instruction early childhood</span><span class="sec">early childhood education degree online (4,400) as context</span></td>
             <td class="r num"><span class="vol">20</span><br><span class="comp">comp 0.07</span></td>
-            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="typecell"><span class="chip new">NEW</span></td>
             <td class="prog">BA Early Childhood Differentiated Education<small>/online-degrees/bachelors/early-childhood-development-differentiated-instruction</small></td>
             <td class="brief"><b>Draft now, hold publish</b> until the January 2027 catalog listing is confirmed. Differentiated instruction basics for ages 0–8, why it's its own degree, and the classroom roles it prepares you for.</td>
           </tr>
@@ -309,7 +393,7 @@
             <td><span class="title">Applied Psychology vs Psychology: What's the Difference?</span><span class="slug">/blog/applied-psychology-vs-psychology</span></td>
             <td><span class="kw">applied psychology vs psychology</span><span class="sec">psychology degree online (2,900) audience</span></td>
             <td class="r num"><span class="vol">140</span><br><span class="comp">comp 0.09</span></td>
-            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="typecell"><span class="chip new">NEW</span></td>
             <td class="prog">BA Applied Psychology<small>/online-degrees/bachelors/psychology</small></td>
             <td class="brief">The bridge for everyone searching the old name. Side-by-side table: focus, coursework, outcomes, who it suits. State that UAGC's BA in Psychology becomes the BA in Applied Psychology and what stays the same.</td>
           </tr>
@@ -318,7 +402,7 @@
             <td><span class="title">Public Health vs Community Health: Which Degree Is Right for You?</span><span class="slug">/blog/public-health-vs-community-health</span></td>
             <td><span class="kw">public health vs community health</span><span class="sec">mph online (720)</span></td>
             <td class="r num"><span class="vol">90</span><br><span class="comp">comp 0.00</span></td>
-            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="typecell"><span class="chip new">NEW</span></td>
             <td class="prog">MPS Community Health<small>NEW URL</small></td>
             <td class="brief"><b>LAUNCH comparison.</b> Scope, settings, employers — educational only. One clear paragraph that MPS-CH is a <em>distinct</em> redesigned program, not a rename. Link to new MPS-CH page; never “formerly MPH.”</td>
           </tr>
@@ -327,7 +411,7 @@
             <td><span class="title">MPH vs Master of Community Health (MPS): Side-by-Side</span><span class="slug">/blog/mph-vs-master-of-community-health</span></td>
             <td><span class="kw">master of community health</span><span class="sec">master of public health online (720)</span></td>
             <td class="r num"><span class="vol">140</span><br><span class="comp">comp 0.56</span></td>
-            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="typecell"><span class="chip new">NEW</span></td>
             <td class="prog">MPS Community Health<small>NEW URL</small></td>
             <td class="brief"><b>LAUNCH designation explainer.</b> What MPS means; 30-credit structure; curriculum differences vs legacy MPH (honest contrast, not equivalence). FAQ: "Is an MPS the same as an MPH?" Answer: no — different program.</td>
           </tr>
@@ -336,7 +420,7 @@
             <td><span class="title">Social Science vs Applied Social Science</span><span class="slug">/blog/social-science-vs-applied-social-science</span></td>
             <td><span class="kw">social science vs applied social science</span></td>
             <td class="r num"><span class="vol">0</span><br><span class="comp">comp 0.00</span></td>
-            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="typecell"><span class="chip new">NEW</span></td>
             <td class="prog">BA Applied Social Science<small>/online-degrees/bachelors/social-science</small></td>
             <td class="brief">Short (800–1,000 words). No demand yet; exists so UAGC ranks the day the rename is live. Table + FAQ; both names in meta.</td>
           </tr>
@@ -345,7 +429,7 @@
             <td><span class="title">Liberal Arts vs Applied Liberal Arts</span><span class="slug">/blog/liberal-arts-vs-applied-liberal-arts</span></td>
             <td><span class="kw">liberal arts vs applied liberal arts</span></td>
             <td class="r num"><span class="vol">0</span><br><span class="comp">comp 0.00</span></td>
-            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="typecell"><span class="chip new">NEW</span></td>
             <td class="prog">BA Applied Liberal Arts<small>/online-degrees/bachelors/liberal-arts</small></td>
             <td class="brief">Same pattern as above. Emphasize that curriculum breadth is unchanged; "applied" adds career mapping.</td>
           </tr>
@@ -354,28 +438,28 @@
             <td><span class="title">Business Leadership vs Leadership Degree: What Changed</span><span class="slug">/blog/business-leadership-vs-leadership-degree</span></td>
             <td><span class="kw">business leadership vs leadership</span><span class="sec">business leadership degree online (10)</span></td>
             <td class="r num"><span class="vol">0</span><br><span class="comp">comp 0.00</span></td>
-            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="typecell"><span class="chip new">NEW</span></td>
             <td class="prog">BA Leadership<small>/online-degrees/bachelors/business-leadership</small></td>
             <td class="brief">Rename transition note for current and prospective students: same courses, broader name. Short; FAQ-led.</td>
           </tr>
 
-          <tr class="tier t3"><td colspan="7"><span class="eyebrow">Tier 3 · Career outcomes — 7 (3 refreshes)</span><span class="why">Highest volume, lowest competition, and the format that already works. 1,200–1,800 words; salary data from BLS with citation.</span></td></tr>
+          <tr class="tier t3"><td colspan="7"><span class="eyebrow">Tier 3 · Career outcomes — 7 (3 FULL REFRESH · 4 NEW)</span><span class="why">Highest volume, lowest competition, and the format that already works. 1,200–1,800 words; salary data from BLS with citation. Refresh existing URLs before inventing new careers posts.</span></td></tr>
 
           <tr>
             <td class="c"><span class="pri p1">P1</span></td>
             <td><span class="title">What Can You Do With a Psychology Degree? 2026 Career Guide</span><span class="slug">/blog/i-have-ba-psychology-now-what-24-jobs-6-fields-consider</span></td>
             <td><span class="kw">what can you do with a psychology degree</span><span class="sec">psychology degree careers (390)</span></td>
             <td class="r num"><span class="vol">6,600</span><br><span class="comp">comp 0.13</span></td>
-            <td class="c"><span class="chip ref">REFRESH</span></td>
+            <td class="typecell"><span class="chip full">FULL REFRESH</span></td>
             <td class="prog">BA Applied Psychology<small>/online-degrees/bachelors/psychology</small></td>
-            <td class="brief"><b>Largest opportunity in Group B.</b> Existing post sits at position 27.6 with 118 clicks. Retitle with the exact phrase + "2026," update every salary figure, add an "Applied Psychology" section, add FAQ. Keep the URL.</td>
+            <td class="brief"><b>Largest opportunity in Group B.</b> 12 mo: 637 clicks · 142K impr · pos 20.0 · 2,477 sessions. Retitle with the exact phrase + "2026," update every salary figure, add an "Applied Psychology" section, add FAQ. Keep the URL.</td>
           </tr>
           <tr>
             <td class="c"><span class="pri p1">P1</span></td>
             <td><span class="title">What Can You Do With a Master's in Public Health?</span><span class="slug">/blog/what-can-you-do-with-a-masters-in-public-health</span></td>
             <td><span class="kw">what can you do with a masters in public health</span></td>
             <td class="r num"><span class="vol">2,900</span><br><span class="comp">comp 0.09</span></td>
-            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="typecell"><span class="chip new">NEW</span></td>
             <td class="prog">MPS Community Health<small>NEW URL</small></td>
             <td class="brief"><b>LAUNCH demand capture.</b> May answer MPH-intent queries, but CTA to MPS-CH as a distinct program. 10–12 roles with community-health roles called out. No “formerly” language.</td>
           </tr>
@@ -384,7 +468,7 @@
             <td><span class="title">Community Health Jobs: 12 Careers &amp; Salaries</span><span class="slug">/blog/community-health-jobs</span></td>
             <td><span class="kw">community health jobs</span><span class="sec">community health careers (1,300)</span></td>
             <td class="r num"><span class="vol">1,900</span><br><span class="comp">comp 0.15</span></td>
-            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="typecell"><span class="chip new">NEW</span></td>
             <td class="prog">MPS Community Health<small>NEW URL</small></td>
             <td class="brief">Role-by-role: what they do, typical employer, BLS median pay, degree needed. Link up to <em>What Is Community Health?</em> and to the program page.</td>
           </tr>
@@ -393,25 +477,25 @@
             <td><span class="title">Liberal Arts Degree Jobs: 25 Careers You Can Pursue</span><span class="slug">/blog/what-can-i-do-liberal-arts-degree</span></td>
             <td><span class="kw">liberal arts degree jobs</span><span class="sec">liberal arts degree careers (1,600)</span></td>
             <td class="r num"><span class="vol">1,600</span><br><span class="comp">comp 0.02</span></td>
-            <td class="c"><span class="chip ref">REFRESH</span></td>
+            <td class="typecell"><span class="chip full">FULL REFRESH</span></td>
             <td class="prog">BA Applied Liberal Arts<small>/online-degrees/bachelors/liberal-arts</small></td>
-            <td class="brief">Existing post at position 12.9 with 22 clicks — page 1 is one refresh away. Expand to 25 roles grouped by field, add an "Applied Liberal Arts" section, FAQ. Keep the URL.</td>
+            <td class="brief">12 mo: 73 clicks · 40K impr · pos 7.5 · 429 sessions. Expand to 25 roles grouped by field, add an "Applied Liberal Arts" section, FAQ. Keep the URL.</td>
           </tr>
           <tr>
-            <td class="c"><span class="pri p2">P2</span></td>
+            <td class="c"><span class="pri p1">P1</span></td>
             <td><span class="title">Early Childhood Education Careers: Roles Beyond the Classroom</span><span class="slug">/blog/what-can-i-do-with-an-associate-degree-in-early-childhood-education</span></td>
             <td><span class="kw">early childhood education careers</span></td>
             <td class="r num"><span class="vol">720</span><br><span class="comp">comp 0.17</span></td>
-            <td class="c"><span class="chip ref">REFRESH</span></td>
+            <td class="typecell"><span class="chip full">FULL REFRESH</span></td>
             <td class="prog">BA Early Childhood Differentiated Education<small>/online-degrees/bachelors/early-childhood-development-differentiated-instruction</small></td>
-            <td class="brief">Existing post ranks 10.4 with 337 clicks. Broaden for AA ECE / 60-credit messaging. <b>Hold</b> any ECD rename section until that BA is in catalog. Keep the URL.</td>
+            <td class="brief">12 mo: 1,117 clicks · 135K impr · pos 8.2 · 2,602 sessions · 7 conv. Broaden for AA ECE / 60-credit messaging. <b>Hold</b> any ECD rename section until that BA is in catalog. Keep the URL.</td>
           </tr>
           <tr>
             <td class="c"><span class="pri p2">P2</span></td>
             <td><span class="title">Applied Psychology Careers: Where the Degree Takes You</span><span class="slug">/blog/applied-psychology-careers</span></td>
             <td><span class="kw">applied psychology careers</span></td>
             <td class="r num"><span class="vol">260</span><br><span class="comp">comp 0.11</span></td>
-            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="typecell"><span class="chip new">NEW</span></td>
             <td class="prog">BA Applied Psychology<small>/online-degrees/bachelors/psychology</small></td>
             <td class="brief">Pairs with the Tier 1 explainer. 8–10 roles across HR, health, education, and UX research; note which need graduate study.</td>
           </tr>
@@ -420,10 +504,424 @@
             <td><span class="title">Leadership Degree Jobs (with an Applied Social Science careers section)</span><span class="slug">/blog/leadership-degree-jobs</span></td>
             <td><span class="kw">leadership degree jobs</span><span class="sec">applied social science careers (10)</span></td>
             <td class="r num"><span class="vol">40</span><br><span class="comp">comp 0.05</span></td>
-            <td class="c"><span class="chip new">NEW</span></td>
+            <td class="typecell"><span class="chip new">NEW</span></td>
             <td class="prog">BA Leadership<small>/online-degrees/bachelors/business-leadership</small></td>
             <td class="brief">Low demand; short piece. If the calendar is tight, fold the content into the two Tier 1 explainers instead of publishing separately.</td>
           </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Existing Posts — Update Queue</h2>
+    <p class="lede">From <a href="https://www.uagc.edu/blog/sitemap.xml">/blog/sitemap.xml</a> (563 URLs). All rows are <strong>existing</strong> URLs. Performance = GSC + GA4 for <strong>Sep 24, 2025 – Sep 23, 2026</strong>. Ordered HIGH → LOW impact within each update type. Do not escalate a TERM PASS into a FULL REFRESH without SEO.</p>
+    <div class="context" style="margin:0 0 1.25rem">
+      <div class="tile">
+        <p class="eyebrow">How to read a row</p>
+        <p><b>Update type</b> = ceiling of work.<br>
+        <b>Performance</b> = 12-mo popularity.<br>
+        <b>Brief</b> = program + what to change + notes.<br>
+        <span class="ev" style="display:block;margin-top:6px;color:var(--muted);font-size:12px">Impact: HIGH / MED / LOW by score (3×clicks + 0.4×sessions + 25×conversions). P1 can still be LOW when rename risk is high.</span></p>
+      </div>
+      <div class="tile">
+        <p class="eyebrow">Finish these existing URLs first</p>
+        <p class="big num">1,117 / 637 clk</p>
+        <p>AA ECE careers, then Psych careers (FULL REFRESH). Social Science careers is #3 — TERM PASS only.</p>
+      </div>
+      <div class="tile">
+        <p class="eyebrow">Wave 1 new content</p>
+        <p class="big num">16 new URLs</p>
+        <p>Explainers, comparisons, and net-new careers live in Wave 1 above — not rescored here.</p>
+      </div>
+    </div>
+    <div class="tablewrap">
+      <table class="plan queue">
+        <colgroup>
+          <col style="width:52px">
+          <col style="width:28%">
+          <col style="width:120px">
+          <col style="width:140px">
+          <col>
+        </colgroup>
+        <thead>
+          <tr>
+            <th class="c">Pri.</th>
+            <th>Post</th>
+            <th>Update type</th>
+            <th>Performance <span style="font-weight:400;opacity:.75">(12 mo)</span></th>
+            <th>Brief</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="tier"><td colspan="5"><span class="eyebrow">A · Already briefed in Wave 1 / Pre-flight</span><span class="why">Execute from Wave 1 Tier 3 or the Pre-flight paste block — do not open a second brief.</span></td></tr>
+          <tr class="data">
+            <td class="c"><span class="pri p1">P1</span></td>
+            <td><span class="title">Early Childhood Education Careers</span><span class="slug">/blog/what-can-i-do-with-an-associate-degree-in-early-childhood-education</span></td>
+            <td class="typecell"><span class="chip full">FULL REFRESH</span></td>
+            <td class="perf">
+              <span class="chip impact hi">HIGH</span>
+              <dl class="metrics">
+                <div><dt>Clicks</dt><dd class="num">1,117</dd></div>
+                <div><dt>Impr</dt><dd class="num">135K</dd></div>
+                <div><dt>Pos</dt><dd class="num">8.2</dd></div>
+                <div><dt>Sess</dt><dd class="num">2,602</dd></div>
+                <div><dt>Conv</dt><dd class="num">7</dd></div>
+              </dl>
+            </td>
+            <td class="brief"><span class="prog-line">AA ECE / BA ECD</span><span class="change">Retitle / H2s / AA→60 messaging · keep URL · hold ECD rename copy</span><span class="scope">See Wave 1 Tier 3 — do not open a second brief.</span> Highest 12-mo traffic in this queue.</td>
+          </tr>
+          <tr class="data">
+            <td class="c"><span class="pri p1">P1</span></td>
+            <td><span class="title">What Can You Do With a Psychology Degree? 2026 Career Guide</span><span class="slug">/blog/i-have-ba-psychology-now-what-24-jobs-6-fields-consider</span></td>
+            <td class="typecell"><span class="chip full">FULL REFRESH</span></td>
+            <td class="perf">
+              <span class="chip impact hi">HIGH</span>
+              <dl class="metrics">
+                <div><dt>Clicks</dt><dd class="num">637</dd></div>
+                <div><dt>Impr</dt><dd class="num">142K</dd></div>
+                <div><dt>Pos</dt><dd class="num">20.0</dd></div>
+                <div><dt>Sess</dt><dd class="num">2,477</dd></div>
+                <div><dt>Conv</dt><dd class="num">0</dd></div>
+              </dl>
+            </td>
+            <td class="brief"><span class="prog-line">BA Applied Psychology</span><span class="change">Retitle / salaries / Applied section / FAQ · keep URL</span><span class="scope">See Wave 1 Tier 3 — do not open a second brief.</span> Largest rename opportunity by search + sessions.</td>
+          </tr>
+          <tr class="data">
+            <td class="c"><span class="pri p1">P1</span></td>
+            <td><span class="title">Liberal Arts Degree Jobs</span><span class="slug">/blog/what-can-i-do-liberal-arts-degree</span></td>
+            <td class="typecell"><span class="chip full">FULL REFRESH</span></td>
+            <td class="perf">
+              <span class="chip impact med">MED</span>
+              <dl class="metrics">
+                <div><dt>Clicks</dt><dd class="num">73</dd></div>
+                <div><dt>Impr</dt><dd class="num">40K</dd></div>
+                <div><dt>Pos</dt><dd class="num">7.5</dd></div>
+                <div><dt>Sess</dt><dd class="num">429</dd></div>
+                <div><dt>Conv</dt><dd class="num">0</dd></div>
+              </dl>
+            </td>
+            <td class="brief"><span class="prog-line">BA Applied Liberal Arts</span><span class="change">Expand roles / Applied section / FAQ · keep URL</span><span class="scope">See Wave 1 Tier 3 — do not open a second brief.</span></td>
+          </tr>
+          <tr class="data">
+            <td class="c"><span class="pri p1">P1</span></td>
+            <td><span class="title">What Is an MPS Degree?</span><span class="slug">/blog/what-mps-degree-master-professional-studies-degree-guide</span></td>
+            <td class="typecell"><span class="chip meta">META ONLY</span></td>
+            <td class="perf">
+              <span class="chip impact lo">LOW</span>
+              <dl class="metrics">
+                <div><dt>Clicks</dt><dd class="num">49</dd></div>
+                <div><dt>Impr</dt><dd class="num">17K</dd></div>
+                <div><dt>Pos</dt><dd class="num">6.9</dd></div>
+                <div><dt>Sess</dt><dd class="num">139</dd></div>
+                <div><dt>Conv</dt><dd class="num">0</dd></div>
+              </dl>
+            </td>
+            <td class="brief"><span class="prog-line">MPS (umbrella)</span><span class="change">Title + meta + og tags only (optional H2 in Pre-flight)</span><span class="scope">See Pre-flight paste block.</span> Lower traffic, but page-1 for “mps degree” — CTR fix is high leverage.</td>
+          </tr>
+
+          <tr class="tier t2"><td colspan="5"><span class="eyebrow">B · RENAME PASS</span><span class="why">Fix title / meta / H1 / opener / CTAs. Not a full rewrite. LOW traffic can still be P1 for catalog risk.</span></td></tr>
+          <tr class="data">
+            <td class="c"><span class="pri p1">P1</span></td>
+            <td><span class="title">What Can I Do With a Business Leadership Degree?</span><span class="slug">/blog/what-can-I-do-with-a-business-leadership-degree</span></td>
+            <td class="typecell"><span class="chip rename">RENAME PASS</span></td>
+            <td class="perf">
+              <span class="chip impact lo">LOW</span>
+              <dl class="metrics">
+                <div><dt>Clicks</dt><dd class="num">22</dd></div>
+                <div><dt>Impr</dt><dd class="num">6.5K</dd></div>
+                <div><dt>Pos</dt><dd class="num">25.9</dd></div>
+                <div><dt>Sess</dt><dd class="num">177</dd></div>
+                <div><dt>Conv</dt><dd class="num">0</dd></div>
+              </dl>
+            </td>
+            <td class="brief"><span class="prog-line">BA Leadership</span><span class="change">Retitle toward Leadership · dual-name opener · CTAs · keep URL</span>Old name still in the title. Low traffic, high catalog-mismatch risk. Link to <em>What Is a Leadership Degree?</em>.</td>
+          </tr>
+          <tr class="data">
+            <td class="c"><span class="pri p1">P1</span></td>
+            <td><span class="title">What Is a Bachelor’s in Psychology?</span><span class="slug">/blog/what-is-a-bachelors-in-psychology</span></td>
+            <td class="typecell"><span class="chip rename">RENAME PASS</span></td>
+            <td class="perf">
+              <span class="chip impact lo">LOW</span>
+              <dl class="metrics">
+                <div><dt>Clicks</dt><dd class="num">4</dd></div>
+                <div><dt>Impr</dt><dd class="num">7.2K</dd></div>
+                <div><dt>Pos</dt><dd class="num">49.4</dd></div>
+                <div><dt>Sess</dt><dd class="num">156</dd></div>
+                <div><dt>Conv</dt><dd class="num">0</dd></div>
+              </dl>
+            </td>
+            <td class="brief"><span class="prog-line">BA Applied Psychology</span><span class="change">Dual-name in title/meta/H1/opener · Applied definition · CTAs · keep URL</span>Live explainer still under the old name. Link to the NEW Applied explainer and vs comparison.</td>
+          </tr>
+
+          <tr class="tier t3"><td colspan="5"><span class="eyebrow">C · TERM PASS</span><span class="why">Light body / CTA language only. Finish HIGH impact rows first.</span></td></tr>
+          <tr class="data">
+            <td class="c"><span class="pri p1">P1</span></td>
+            <td><span class="title">What Can You Do With a Social Science Degree? 2026 Career Guide</span><span class="slug">/blog/what-can-you-do-social-science-degree-2026-career-guide</span></td>
+            <td class="typecell"><span class="chip term">TERM PASS</span></td>
+            <td class="perf">
+              <span class="chip impact hi">HIGH</span>
+              <dl class="metrics">
+                <div><dt>Clicks</dt><dd class="num">238</dd></div>
+                <div><dt>Impr</dt><dd class="num">48K</dd></div>
+                <div><dt>Pos</dt><dd class="num">7.0</dd></div>
+                <div><dt>Sess</dt><dd class="num">979</dd></div>
+                <div><dt>Conv</dt><dd class="num">1</dd></div>
+              </dl>
+            </td>
+            <td class="brief"><span class="prog-line">BA Applied Social Science</span><span class="change">Meta + opener + one H2 dual-name · keep URL</span>Quick Win already ranking. Link to <em>What Is Applied Social Science?</em>. No competing careers URL.</td>
+          </tr>
+          <tr class="data">
+            <td class="c"><span class="pri p2">P2</span></td>
+            <td><span class="title">What Is an AA in Early Childhood Education?</span><span class="slug">/blog/what-is-an-aa-in-early-childhood-education</span></td>
+            <td class="typecell"><span class="chip term">TERM PASS</span></td>
+            <td class="perf">
+              <span class="chip impact hi">HIGH</span>
+              <dl class="metrics">
+                <div><dt>Clicks</dt><dd class="num">206</dd></div>
+                <div><dt>Impr</dt><dd class="num">65K</dd></div>
+                <div><dt>Pos</dt><dd class="num">7.7</dd></div>
+                <div><dt>Sess</dt><dd class="num">821</dd></div>
+                <div><dt>Conv</dt><dd class="num">4</dd></div>
+              </dl>
+            </td>
+            <td class="brief"><span class="prog-line">AA ECE → 60-credit</span><span class="change">AA→60 credit-hour language · hold ECD Differentiated rename</span>High sessions + conversions for a TERM PASS.</td>
+          </tr>
+          <tr class="data">
+            <td class="c"><span class="pri p3">P3</span></td>
+            <td><span class="title">How Long Does an Associate’s in ECE Take?</span><span class="slug">/blog/how-long-does-it-take-to-earn-an-associates-in-early-childhood-education</span></td>
+            <td class="typecell"><span class="chip term">TERM PASS</span></td>
+            <td class="perf">
+              <span class="chip impact hi">HIGH</span>
+              <dl class="metrics">
+                <div><dt>Clicks</dt><dd class="num">192</dd></div>
+                <div><dt>Impr</dt><dd class="num">104K</dd></div>
+                <div><dt>Pos</dt><dd class="num">8.0</dd></div>
+                <div><dt>Sess</dt><dd class="num">642</dd></div>
+                <div><dt>Conv</dt><dd class="num">3</dd></div>
+              </dl>
+            </td>
+            <td class="brief"><span class="prog-line">AA ECE → 60-credit</span><span class="change">Check duration / credit claims vs 60-credit · keep URL</span>Update only if credit hours or timeline claims are stale.</td>
+          </tr>
+          <tr class="data">
+            <td class="c"><span class="pri p3">P3</span></td>
+            <td><span class="title">Careers in Public Policy &amp; Social Science</span><span class="slug">/blog/careers-public-policy-how-social-science-and-policy-analysis-shape-public-decision-making</span></td>
+            <td class="typecell"><span class="chip term">TERM PASS</span></td>
+            <td class="perf">
+              <span class="chip impact hi">HIGH</span>
+              <dl class="metrics">
+                <div><dt>Clicks</dt><dd class="num">196</dd></div>
+                <div><dt>Impr</dt><dd class="num">52K</dd></div>
+                <div><dt>Pos</dt><dd class="num">8.8</dd></div>
+                <div><dt>Sess</dt><dd class="num">775</dd></div>
+                <div><dt>Conv</dt><dd class="num">0</dd></div>
+              </dl>
+            </td>
+            <td class="brief"><span class="prog-line">BA Applied Social Science</span><span class="change">One dual-name mention + link (optional)</span>Strong 12-mo traffic — elevate if calendar allows.</td>
+          </tr>
+          <tr class="data">
+            <td class="c"><span class="pri p2">P2</span></td>
+            <td><span class="title">Sociology vs Psychology</span><span class="slug">/blog/sociology-vs-psychology-which-bachelors-degree</span></td>
+            <td class="typecell"><span class="chip term">TERM PASS</span></td>
+            <td class="perf">
+              <span class="chip impact hi">HIGH</span>
+              <dl class="metrics">
+                <div><dt>Clicks</dt><dd class="num">107</dd></div>
+                <div><dt>Impr</dt><dd class="num">238K</dd></div>
+                <div><dt>Pos</dt><dd class="num">10.6</dd></div>
+                <div><dt>Sess</dt><dd class="num">1,097</dd></div>
+                <div><dt>Conv</dt><dd class="num">0</dd></div>
+              </dl>
+            </td>
+            <td class="brief"><span class="prog-line">BA Applied Psychology · Sociology sunset</span><span class="change">Psych dual-name · Sociology sunset CTA</span>Do not sell Sociology as an open BA if enrollment is closed (web/AP down 11/25/2026).</td>
+          </tr>
+          <tr class="data">
+            <td class="c"><span class="pri p2">P2</span></td>
+            <td><span class="title">BA vs BS in Psychology</span><span class="slug">/blog/what-is-the-difference-between-ba-and-bs-in-psychology</span></td>
+            <td class="typecell"><span class="chip term">TERM PASS</span></td>
+            <td class="perf">
+              <span class="chip impact med">MED</span>
+              <dl class="metrics">
+                <div><dt>Clicks</dt><dd class="num">137</dd></div>
+                <div><dt>Impr</dt><dd class="num">498K</dd></div>
+                <div><dt>Pos</dt><dd class="num">10.6</dd></div>
+                <div><dt>Sess</dt><dd class="num">607</dd></div>
+                <div><dt>Conv</dt><dd class="num">0</dd></div>
+              </dl>
+            </td>
+            <td class="brief"><span class="prog-line">BA Applied Psychology</span><span class="change">Note UAGC BA path = Applied Psychology · add links</span>Link to Applied explainer + Wave 1 careers FULL REFRESH.</td>
+          </tr>
+          <tr class="data">
+            <td class="c"><span class="pri p2">P2</span></td>
+            <td><span class="title">Associate vs Bachelor’s in Early Childhood Education</span><span class="slug">/blog/difference-between-associate-and-bachelors-degree-early-childhood-education</span></td>
+            <td class="typecell"><span class="chip term">TERM PASS</span></td>
+            <td class="perf">
+              <span class="chip impact med">MED</span>
+              <dl class="metrics">
+                <div><dt>Clicks</dt><dd class="num">111</dd></div>
+                <div><dt>Impr</dt><dd class="num">27K</dd></div>
+                <div><dt>Pos</dt><dd class="num">8.1</dd></div>
+                <div><dt>Sess</dt><dd class="num">532</dd></div>
+                <div><dt>Conv</dt><dd class="num">1</dd></div>
+              </dl>
+            </td>
+            <td class="brief"><span class="prog-line">AA ECE / BA ECD</span><span class="change">AA→60 on associate side · BA stays current ECD name</span>BA rename waits for Jan 2027 Differentiated Education listing.</td>
+          </tr>
+          <tr class="data">
+            <td class="c"><span class="pri p3">P3</span></td>
+            <td><span class="title">What Is a BA in Early Childhood Education?</span><span class="slug">/blog/what-is-a-bachelor-of-arts-in-early-childhood-education</span></td>
+            <td class="typecell"><span class="chip term">TERM PASS</span></td>
+            <td class="perf">
+              <span class="chip impact med">MED</span>
+              <dl class="metrics">
+                <div><dt>Clicks</dt><dd class="num">89</dd></div>
+                <div><dt>Impr</dt><dd class="num">49K</dd></div>
+                <div><dt>Pos</dt><dd class="num">11.5</dd></div>
+                <div><dt>Sess</dt><dd class="num">398</dd></div>
+                <div><dt>Conv</dt><dd class="num">0</dd></div>
+              </dl>
+            </td>
+            <td class="brief"><span class="prog-line">BA ECD</span><span class="change">Accuracy pass only · hold Differentiated rename copy</span><b>Do not</b> publish Differentiated Education rename copy until catalog confirmation.</td>
+          </tr>
+          <tr class="data">
+            <td class="c"><span class="pri p2">P2</span></td>
+            <td><span class="title">Benefits of a Social Science Degree</span><span class="slug">/blog/benefits-social-science-degree</span></td>
+            <td class="typecell"><span class="chip term">TERM PASS</span></td>
+            <td class="perf">
+              <span class="chip impact lo">LOW</span>
+              <dl class="metrics">
+                <div><dt>Clicks</dt><dd class="num">50</dd></div>
+                <div><dt>Impr</dt><dd class="num">12K</dd></div>
+                <div><dt>Pos</dt><dd class="num">11.9</dd></div>
+                <div><dt>Sess</dt><dd class="num">367</dd></div>
+                <div><dt>Conv</dt><dd class="num">0</dd></div>
+              </dl>
+            </td>
+            <td class="brief"><span class="prog-line">BA Applied Social Science</span><span class="change">Dual-name opener + links · keep URL</span>Link to Applied explainer and the 2026 careers Quick Win.</td>
+          </tr>
+          <tr class="data">
+            <td class="c"><span class="pri p2">P2</span></td>
+            <td><span class="title">What Are Liberal Arts?</span><span class="slug">/blog/what-liberal-arts</span></td>
+            <td class="typecell"><span class="chip term">TERM PASS</span></td>
+            <td class="perf">
+              <span class="chip impact lo">LOW</span>
+              <dl class="metrics">
+                <div><dt>Clicks</dt><dd class="num">46</dd></div>
+                <div><dt>Impr</dt><dd class="num">54K</dd></div>
+                <div><dt>Pos</dt><dd class="num">12.7</dd></div>
+                <div><dt>Sess</dt><dd class="num">239</dd></div>
+                <div><dt>Conv</dt><dd class="num">0</dd></div>
+              </dl>
+            </td>
+            <td class="brief"><span class="prog-line">BA Applied Liberal Arts</span><span class="change">Applied definition + dual-name + CTAs · keep URL</span>CTA to program page and Wave 1 Applied Liberal Arts explainer.</td>
+          </tr>
+          <tr class="data">
+            <td class="c"><span class="pri p2">P2</span></td>
+            <td><span class="title">5 Benefits of a Liberal Arts Education</span><span class="slug">/blog/5-benefits-liberal-arts-education</span></td>
+            <td class="typecell"><span class="chip term">TERM PASS</span></td>
+            <td class="perf">
+              <span class="chip impact lo">LOW</span>
+              <dl class="metrics">
+                <div><dt>Clicks</dt><dd class="num">4</dd></div>
+                <div><dt>Impr</dt><dd class="num">2.3K</dd></div>
+                <div><dt>Pos</dt><dd class="num">33.8</dd></div>
+                <div><dt>Sess</dt><dd class="num">234</dd></div>
+                <div><dt>Conv</dt><dd class="num">0</dd></div>
+              </dl>
+            </td>
+            <td class="brief"><span class="prog-line">BA Applied Liberal Arts</span><span class="change">Opener/CTA dual-name + links · keep URL</span>Link to careers FULL REFRESH and Applied explainer.</td>
+          </tr>
+          <tr class="data">
+            <td class="c"><span class="pri p2">P2</span></td>
+            <td><span class="title">What Is a Community Health Worker?</span><span class="slug">/blog/what-community-health-worker</span></td>
+            <td class="typecell"><span class="chip term">TERM PASS</span></td>
+            <td class="perf">
+              <span class="chip impact lo">LOW</span>
+              <dl class="metrics">
+                <div><dt>Clicks</dt><dd class="num">7</dd></div>
+                <div><dt>Impr</dt><dd class="num">2.7K</dd></div>
+                <div><dt>Pos</dt><dd class="num">32.8</dd></div>
+                <div><dt>Sess</dt><dd class="num">141</dd></div>
+                <div><dt>Conv</dt><dd class="num">0</dd></div>
+              </dl>
+            </td>
+            <td class="brief"><span class="prog-line">MPS Community Health</span><span class="change">MPS-CH CTA · launch guardrail (never “formerly MPH”)</span>Role explainer can stay; treat MPS-CH as a distinct program.</td>
+          </tr>
+
+          <tr class="tier"><td colspan="5"><span class="eyebrow">D · Link targets &amp; HOLD</span><span class="why">Professional Studies = Wave 1 link targets. HOLD waits on Carnegie / pause.</span></td></tr>
+          <tr class="data">
+            <td class="c"><span class="pri p3">P3</span></td>
+            <td><span class="title">What Is a Professional Studies Degree?</span><span class="slug">/blog/what-professional-studies-degree</span></td>
+            <td class="typecell"><span class="chip term">TERM PASS</span></td>
+            <td class="perf">
+              <span class="chip impact med">MED</span>
+              <dl class="metrics">
+                <div><dt>Clicks</dt><dd class="num">95</dd></div>
+                <div><dt>Impr</dt><dd class="num">37K</dd></div>
+                <div><dt>Pos</dt><dd class="num">11.4</dd></div>
+                <div><dt>Sess</dt><dd class="num">1,026</dd></div>
+                <div><dt>Conv</dt><dd class="num">1</dd></div>
+              </dl>
+            </td>
+            <td class="brief"><span class="prog-line">MPS umbrella</span><span class="change">Optional MPS-CH example line when launch is live</span>Wave 1 internal-link target — no separate rename brief.</td>
+          </tr>
+          <tr class="data">
+            <td class="c"><span class="pri p3">P3</span></td>
+            <td><span class="title">Professional Studies vs BA/BS</span><span class="slug">/blog/professional-studies-vs-ba-or-bs-bps-vs-ba</span></td>
+            <td class="typecell"><span class="chip term">TERM PASS</span></td>
+            <td class="perf">
+              <span class="chip impact med">MED</span>
+              <dl class="metrics">
+                <div><dt>Clicks</dt><dd class="num">128</dd></div>
+                <div><dt>Impr</dt><dd class="num">29K</dd></div>
+                <div><dt>Pos</dt><dd class="num">9.0</dd></div>
+                <div><dt>Sess</dt><dd class="num">451</dd></div>
+                <div><dt>Conv</dt><dd class="num">0</dd></div>
+              </dl>
+            </td>
+            <td class="brief"><span class="prog-line">MPS umbrella</span><span class="change">Optional MPS-CH example line when launch is live</span>Required internal link from every Wave 1 piece.</td>
+          </tr>
+          <tr class="data">
+            <td class="c"><span class="pri p3">P3</span></td>
+            <td><span class="title">Are Professional Studies Degrees Respected?</span><span class="slug">/blog/professional-studies-degree-respected</span></td>
+            <td class="typecell"><span class="chip term">TERM PASS</span></td>
+            <td class="perf">
+              <span class="chip impact med">MED</span>
+              <dl class="metrics">
+                <div><dt>Clicks</dt><dd class="num">68</dd></div>
+                <div><dt>Impr</dt><dd class="num">10K</dd></div>
+                <div><dt>Pos</dt><dd class="num">8.0</dd></div>
+                <div><dt>Sess</dt><dd class="num">299</dd></div>
+                <div><dt>Conv</dt><dd class="num">0</dd></div>
+              </dl>
+            </td>
+            <td class="brief"><span class="prog-line">MPS umbrella</span><span class="change">Optional MPS-CH example line when launch is live</span>Link target for MPS Pre-flight optional H2.</td>
+          </tr>
+
+          <tr class="data">
+            <td class="c"><span class="pri p3">P3</span></td>
+            <td><span class="title">MA Psychology cluster (4)</span><span class="slug">is-getting-a-masters-degree-in-psychology-worth-it · ma-vs-ms-psychology · +2</span></td>
+            <td class="typecell"><span class="chip holdchip">HOLD</span></td>
+            <td class="perf"><span class="chip impact hi">HIGH*</span><span class="scope">ma-vs-ms alone: 1,193 clk / 12 mo — Wave 2 only</span></td>
+            <td class="brief"><span class="prog-line">MPS Applied Psychology (pending Carnegie)</span><span class="change">Future RENAME / TERM after Carnegie</span>Keep MA language until Carnegie. BA Applied rename does <b>not</b> cover these. *Note only — do not brief now.</td>
+          </tr>
+
+          <tr class="data">
+            <td class="c"><span class="pri p3">P3</span></td>
+            <td><span class="title">Business Administration cluster (8)</span><span class="slug">what-is-business-administration · +7 more</span></td>
+            <td class="typecell"><span class="chip holdchip">HOLD</span></td>
+            <td class="perf"><span class="comp">Not scored — paused</span></td>
+            <td class="brief"><span class="prog-line">Strategic Management &amp; Operations (paused 8/13)</span><span class="change">No rename work</span>Leave live under Business Administration.</td>
+          </tr>
+
+          <tr class="data">
+            <td class="c">—</td>
+            <td><span class="title">Out of scope</span><span class="slug">faculty profiles · soft leadership/psych · nursing leadership</span></td>
+            <td class="typecell"><span class="chip holdchip">HOLD</span></td>
+            <td class="perf"><span class="comp">—</span></td>
+            <td class="brief"><span class="prog-line">—</span><span class="change">No program-name change</span>Skip unless a CTA points at a sunset or renamed program page.</td>
+          </tr>
+
         </tbody>
       </table>
     </div>
@@ -485,8 +983,8 @@
 
   <section>
     <div class="preflight">
-      <h3>Pre-flight: MPS post title &amp; meta rewrite (do this first — under one hour)</h3>
-      <p class="why">Page: <code>/blog/what-mps-degree-master-professional-studies-degree-guide</code>. It sits on page 1 for "mps degree" (1,317 impressions, position 8.2) but converts 0.15% of them: the title is 73 characters with the key phrase buried, the meta is 188 characters and truncates before its hook, and og:description is pulling raw "Key Takeaways" body text. "mps degree" and "master of professional studies" each carry 1,600 searches a month.</p>
+      <h3>Pre-flight: MPS post title &amp; meta rewrite <span class="chip meta">META ONLY</span> (do this first — under one hour)</h3>
+      <p class="why">Page: <code>/blog/what-mps-degree-master-professional-studies-degree-guide</code>. 12 mo: <b>49</b> clicks · 16,726 impr · pos 6.9 · 139 sessions. It sits on page 1 for "mps degree" (1,317 impressions, position 8.2) but converts 0.15% of them: the title is 73 characters with the key phrase buried, the meta is 188 characters and truncates before its hook, and og:description is pulling raw "Key Takeaways" body text. "mps degree" and "master of professional studies" each carry 1,600 searches a month.</p>
       <div class="tablewrap">
         <table>
           <thead><tr><th style="width:160px">Element</th><th>Paste exactly</th><th class="r" style="width:70px">Chars</th></tr></thead>
@@ -505,8 +1003,8 @@
   </section>
 
   <footer>
-    <span>Source: Google Search Console (sc-domain:uagc.edu, Apr 21 – Aug 31, 2026) · GA4 · Keywords Everywhere (U.S., Sep 1, 2026) · ELT memo Aug 13–17, 2026 · Catalog Strategy V3 + Program Changes workbook Sep 2026 · Grain: one row per content piece</span>
-    <span>Full analysis: <em>Program Rename SEO &amp; Enrollment Impact Analysis</em> v4.4 · Questions: Omar Corral, SEO</span>
+    <span>Source: Google Search Console (sc-domain:uagc.edu) + GA4 · As of September 24, 2026 · Grain: one row per content piece · Existing-post window Sep 24, 2025 – Sep 23, 2026 · Keywords Everywhere (U.S., Sep 1, 2026) · Blog sitemap audit Sep 24, 2026 (563 URLs) · ELT memo Aug 13–17, 2026 · Catalog Strategy V3</span>
+    <span>UAGC Internal · Content plan v4.9 · Full analysis: <em>Program Rename SEO &amp; Enrollment Impact Analysis</em> v4.4 · Questions: Omar Corral, SEO</span>
   </footer>
 
 </div>

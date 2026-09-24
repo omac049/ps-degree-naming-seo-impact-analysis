@@ -10,11 +10,13 @@
 
 Data-driven analysis of how UAGC program naming and catalog changes affect search visibility, organic discovery, and enrollment — updated with **January 2027 Catalog Marketing Transition Strategy V3**, the **Program Changes for 1-1-2027** workbook, **ELT memo outcomes (Aug 13–17, 2026)**, and **verified Group A results (Apr 21 – Aug 31, 2026; re-pulled Sep 1)**.
 
+**Brand skills:** Deliverables follow **uagc-brand** + **uagc-ai-formats** (Proxima Nova, Arizona Red/Blue tokens, Arizona Red underlined links / Purple visited, table headers Arizona Blue, source · as-of · grain footers). Orange is warning-only.
+
 **Primary deliverable:** `seo-impact-report.html` — self-contained HTML report with catalog transition timeline, enrollment data, search demand, Group A results, ELT decisions, and mitigation strategies. Styled to UAGC brand guidelines (Arizona Red/Blue, Proxima Nova).
 
 **Companion report:** `program-rename-proposal-shareable.html` — enrollment funnel data, demographics, migration flows, and Sankey diagrams.
 
-**Content Team brief:** `group-b-content-plan.html` — Content Manager one-pager aligned to Jan 2027 scope (BA dual-language + MPS-CH launch framing).
+**Content Team brief:** `group-b-content-plan.html` — Content Manager plan (v4.9) with NEW vs existing work types, 12-mo GSC/GA4 impact scoring, and Jan 2027 scope (BA dual-language + MPS-CH launch framing).
 
 ---
 
